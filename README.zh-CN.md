@@ -5,7 +5,7 @@
 `v0.2.0-alpha.1` · [English](README.md) · [部署文档](docs/operations.md) · [测试结果](results/release-v0.2.0-alpha.1/README.md)
 
 <!-- validation-status:start -->
-Alpha：源码已开放，最终镜像的完整回归测试正在运行。[查看进度](results/release-v0.2.0-alpha.1/README.md)
+Alpha：新缓存部署后的连续 128K 输入仍有内存分配问题。[问题与测试记录](docs/known-issues.md)
 <!-- validation-status:end -->
 
 基于 [TensorFold](https://github.com/bertholomus/TensorFold)，主要增加了：

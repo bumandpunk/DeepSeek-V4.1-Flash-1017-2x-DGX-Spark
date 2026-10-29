@@ -1,0 +1,17 @@
+[
+  {
+    "name": "json-schema",
+    "passed": true,
+    "seconds": 4.868259126087651
+  },
+  {
+    "name": "tool-call",
+    "passed": true,
+    "seconds": 0.8965435069985688
+  },
+  {
+    "name": "regex",
+    "passed": true,
+    "seconds": 5.796488664927892
+  }
+]

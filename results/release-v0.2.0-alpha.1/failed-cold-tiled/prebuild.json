@@ -1,0 +1,12 @@
+[
+  {
+    "rank": 0,
+    "passed": true,
+    "log": "[tensorfold] building CUDA extension tensorfold_rdma_gather_v5 (first start after an install or update; later starts reuse it)\n[tensorfold] building CUDA extension tensorfold_exl3_linear_v6 (first start after an install or update; later starts reuse it)\n[tensorfold] building CUDA extension tensorfold_exl3_experts_v18 (first start after an install or update; later starts reuse it)\n[tensorfold] building CUDA extension tensorfold_exl3_l2_prefetch_v6 (first start after an install or update; later starts reuse it)\n[tensorfold] building CUDA extension spark1017_rdma_segmented_v3 (first start after an install or update; later starts reuse it)\nRequired runtime extensions built; model weights were not loaded.\n"
+  },
+  {
+    "rank": 1,
+    "passed": true,
+    "log": "[tensorfold] building CUDA extension tensorfold_rdma_gather_v5 (first start after an install or update; later starts reuse it)\n[tensorfold] building CUDA extension tensorfold_exl3_linear_v6 (first start after an install or update; later starts reuse it)\n[tensorfold] building CUDA extension tensorfold_exl3_experts_v18 (first start after an install or update; later starts reuse it)\n[tensorfold] building CUDA extension tensorfold_exl3_l2_prefetch_v6 (first start after an install or update; later starts reuse it)\n[tensorfold] building CUDA extension spark1017_rdma_segmented_v3 (first start after an install or update; later starts reuse it)\nRequired runtime extensions built; model weights were not loaded.\n"
+  }
+]

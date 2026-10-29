@@ -1,0 +1,47 @@
+{"event": "stage", "profile": "baseline", "index": 0, "harness": "health.py", "mode": ["--base"]}
+{"passed": 5, "checks": ["model_listing", "chat_generation", "completion_generation", "streaming_generation", "invalid_key_rejected"]}
+{"event": "stage", "profile": "baseline", "index": 1, "harness": "api_contract.py", "mode": ["--base"]}
+{"name": "json-schema", "passed": true, "seconds": 4.868259126087651}
+{"name": "tool-call", "passed": true, "seconds": 0.8965435069985688}
+{"name": "regex", "passed": true, "seconds": 5.796488664927892}
+{"event": "stage", "profile": "baseline", "index": 2, "harness": "run_suite.py", "mode": ["--label"]}
+{"event": "ready", "ready_after_s": 0.0754384994506836, "probe_started_unix": 1793241731.0961628}
+{"event": "begin", "section": "decode"}
+{"prompt": "code", "decode_tps_median": 95.00976995259896, "decode_tps_all": [95.076, 95.381, 95.159, 95.207, 95.01, 94.944, 94.881, 94.951, 94.726], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"prompt": "prose", "decode_tps_median": 57.369362822855486, "decode_tps_all": [57.439, 57.258, 57.124, 57.386, 56.938, 57.32, 57.485, 57.555, 57.369], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"prompt": "structured", "decode_tps_median": 140.58176217186386, "decode_tps_all": [140.546, 140.92, 140.582, 139.71, 140.555, 141.288, 141.567, 140.215, 140.985], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"event": "end", "section": "decode"}
+{"event": "begin", "section": "concurrent"}
+{"streams": 2, "rep": 0, "aggregate_tps": 81.38528295150033, "per_stream_decode_tps": [72.685, 41.436]}
+{"streams": 2, "rep": 1, "aggregate_tps": 81.92862819036249, "per_stream_decode_tps": [72.728, 41.48]}
+{"streams": 2, "rep": 2, "aggregate_tps": 81.82780540977973, "per_stream_decode_tps": [72.615, 41.498]}
+{"streams": 4, "rep": 0, "aggregate_tps": 103.44085660045737, "per_stream_decode_tps": [72.739, 37.622, 91.73, 59.984]}
+{"streams": 4, "rep": 1, "aggregate_tps": 106.3990127680545, "per_stream_decode_tps": [73.441, 29.578, 120.179, 71.141]}
+{"streams": 4, "rep": 2, "aggregate_tps": 106.47007524831511, "per_stream_decode_tps": [80.102, 29.815, 104.34, 71.849]}
+{"event": "end", "section": "concurrent"}
+{"event": "begin", "section": "prefill"}
+{"length": 8192, "rep": 0, "prompt_tokens": 8192, "ttft_s": 4.049728528014384, "prefill_tps": 2022.8516413707873}
+{"length": 8192, "rep": 1, "prompt_tokens": 8192, "ttft_s": 3.8386594770709053, "prefill_tps": 2134.07832836762}
+{"length": 8192, "rep": 2, "prompt_tokens": 8192, "ttft_s": 3.8397580190794542, "prefill_tps": 2133.4677756500796}
+{"length": 32768, "rep": 0, "prompt_tokens": 32768, "ttft_s": 18.062368633924052, "prefill_tps": 1814.158522844916}
+{"length": 32768, "rep": 1, "prompt_tokens": 32768, "ttft_s": 15.457565534044988, "prefill_tps": 2119.868094871027}
+{"length": 32768, "rep": 2, "prompt_tokens": 32768, "ttft_s": 14.96970808703918, "prefill_tps": 2188.953839946327}
+{"length": 131072, "rep": 0, "prompt_tokens": 131072, "ttft_s": 67.17097012896556, "prefill_tps": 1951.319144986994}
+Traceback (most recent call last):
+  File "/lab-root/release-20261028/project/benchmarks/run_suite.py", line 47, in <module>
+    run('prefill',dict(lengths='8192,32768' if a.quick else '8192,32768,131072',reps=1 if a.quick else 3))
+  File "/lab-root/release-20261028/project/benchmarks/run_suite.py", line 41, in run
+    result=getattr(kit,'cmd_'+name)(c,types.SimpleNamespace(**args));summary[name]=result
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lab-root/release-20261028/project/benchmarks/kit_bench.py", line 302, in cmd_prefill
+    r = c.stream({"prompt": ids, "max_tokens": 1, "temperature": 0}, "/v1/completions")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lab-root/release-20261028/project/benchmarks/run_suite.py", line 22, in stream
+    raise RuntimeError('Server returned no completed generation; raw request and partial response preserved. Check engine logs.')
+RuntimeError: Server returned no completed generation; raw request and partial response preserved. Check engine logs.
+Traceback (most recent call last):
+  File "/lab-root/release-20261028/validate_client.py", line 35, in <module>
+    subprocess.run(command,check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', '-u', '/lab-root/release-20261028/project/benchmarks/run_suite.py', '--label', 'baseline-speed', '--base', 'http://HEAD_MANAGEMENT_IP:19890', '--key-file', '/lab-root/release-20261028/api.key', '--output', '/lab-root/release-20261028/bench/baseline-speed']' returned non-zero exit status 1.

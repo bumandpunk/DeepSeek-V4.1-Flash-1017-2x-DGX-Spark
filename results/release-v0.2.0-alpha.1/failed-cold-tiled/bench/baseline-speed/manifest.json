@@ -1,0 +1,19 @@
+{
+  "label": "baseline-speed",
+  "quick": false,
+  "profile_only": false,
+  "utc": "2026-10-29T02:42:11.096018+00:00",
+  "kit_sha256": "1f4866e03fb4e3328c4aafd378f1e984fe11a927274a19fa6f504e0ab77a2561",
+  "wrapper_sha256": "f95b24f7b484eb0c16f9843caeaaae462c6e62e418d8f1ef94e3aee50225b795",
+  "decode_set": "b",
+  "max_tokens": 384,
+  "repetitions": 9,
+  "context_capacity": 262144,
+  "engine_slots": 2,
+  "thinking": false,
+  "temperature": 0,
+  "driver": "standard-library HTTP streaming client",
+  "base": "http://HEAD_MANAGEMENT_IP:19890",
+  "quality_boundary": "Speed prompts are not training data. Quality evaluated separately.",
+  "prefix_seed_scheme": "20261027 + (length << 4) + occurrence; wrapper v2"
+}

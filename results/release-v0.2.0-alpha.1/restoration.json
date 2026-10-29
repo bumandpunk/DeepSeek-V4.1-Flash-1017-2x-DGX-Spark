@@ -1,0 +1,74 @@
+{
+  "utc": "2026-10-29T02:52:20.339701+00:00",
+  "passed": true,
+  "nodes": {
+    "head": {
+      "original_files_checked": 44,
+      "original_files_unchanged": true,
+      "containers": {
+        "tfv41-r0": {
+          "image_equal": true,
+          "command_equal": true,
+          "entrypoint_equal": true,
+          "environment_equal": true,
+          "mounts_equal": true,
+          "running": true
+        },
+        "dsv4-profile-gateway": {
+          "image_equal": true,
+          "command_equal": true,
+          "entrypoint_equal": true,
+          "environment_equal": true,
+          "mounts_equal": true,
+          "running": true
+        },
+        "dsv4-router": {
+          "image_equal": true,
+          "command_equal": true,
+          "entrypoint_equal": true,
+          "environment_equal": true,
+          "mounts_equal": true,
+          "running": true
+        }
+      },
+      "release_containers_absent": true
+    },
+    "worker": {
+      "original_files_checked": 6,
+      "original_files_unchanged": true,
+      "containers": {
+        "tfv41-r1": {
+          "image_equal": true,
+          "command_equal": true,
+          "entrypoint_equal": true,
+          "environment_equal": true,
+          "mounts_equal": true,
+          "running": true
+        }
+      },
+      "release_containers_absent": true
+    }
+  },
+  "original_service_api": {
+    "passed": 5,
+    "checks": [
+      "model_listing",
+      "chat_generation",
+      "completion_generation",
+      "streaming_generation",
+      "invalid_key_rejected"
+    ],
+    "web_status": 200,
+    "selected_service": "active",
+    "selected_enabled": "enabled",
+    "independent_timers_disarmed": {
+      "codex-alpha-restore.timer": true,
+      "codex-alpha-final-restore.timer": true,
+      "codex-alpha-budget-restore.timer": true,
+      "codex-alpha-engram-restore.timer": true
+    },
+    "independent_timer_disarmed": true,
+    "release_timer_disarmed": true
+  },
+  "secrets_included": false
+}

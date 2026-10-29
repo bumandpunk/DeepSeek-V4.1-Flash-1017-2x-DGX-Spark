@@ -1,0 +1,117 @@
+[tensorfold] loading DeepSeek-V4.1-Flash-1017: DeepSeek-V4.1-Flash (deepseek_v41) on CUDA, rank 1 of 2
+[tensorfold] TORCH_ALLOW_TF32_CUBLAS_OVERRIDE=1 (NVIDIA's PyTorch container default) set to 0: DeepSeek-V4.1-Flash's fp32 GEMMs stay fp32
+[tensorfold] rank 1: rank cache writing /cache/rank/rank1of2-527f63d09cf4e4cf568b.bin
+[tensorfold] rank 1: layers 0..4 loaded (41 s, 13.7 GiB)
+[tensorfold] rank 1: layers 0..9 loaded (80 s, 26.0 GiB)
+[tensorfold] rank 1: layers 0..14 loaded (118 s, 38.2 GiB)
+[tensorfold] rank 1: layers 0..19 loaded (151 s, 48.9 GiB)
+[tensorfold] rank 1: layers 0..24 loaded (186 s, 58.7 GiB)
+[tensorfold] rank 1: layers 0..29 loaded (224 s, 70.9 GiB)
+[tensorfold] rank 1: layers 0..34 loaded (262 s, 83.2 GiB)
+[tensorfold] rank 1: layers 0..39 loaded (299 s, 95.4 GiB)
+[tensorfold] rank 1: DSpark (3 stages) loaded, 99.0 GiB
+[tensorfold] rank 1: weights in 310 s (written to the rank cache)
+[tensorfold] rank 1: allocator ceiling 102.0 GiB (holds 100.5, host available 4.5, total reserve 4.0, includes kernel 1.0, workspace 1.0, protected host floor 3.0)
+[tensorfold] rank 1 ready in 386.5s, following rank 0
+[spark1017] rank 1: allocator cap 101.719 -> 101.875 GiB; host available 4.175, protected floor 3.000
+[spark1017] rank 1: allocator cap 101.781 -> 102.156 GiB; host available 3.649, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.094 -> 102.312 GiB; host available 3.911, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.312 -> 102.125 GiB; host available 3.713, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.125 -> 102.281 GiB; host available 3.874, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.281 -> 102.062 GiB; host available 3.640, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.250 -> 102.094 GiB; host available 3.666, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.281 -> 102.094 GiB; host available 3.689, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.219 -> 102.375 GiB; host available 3.839, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.375 -> 102.219 GiB; host available 3.671, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.219 -> 102.344 GiB; host available 4.793, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.344 -> 102.188 GiB; host available 3.640, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.344 -> 102.188 GiB; host available 3.663, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.188 -> 102.375 GiB; host available 4.837, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.312 -> 102.438 GiB; host available 4.035, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.438 -> 102.312 GiB; host available 3.785, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.312 -> 102.500 GiB; host available 3.967, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.500 -> 102.375 GiB; host available 3.825, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.312 -> 102.188 GiB; host available 3.639, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.219 -> 102.594 GiB; host available 4.168, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.594 -> 102.438 GiB; host available 4.010, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.531 -> 102.406 GiB; host available 3.997, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.406 -> 102.281 GiB; host available 3.874, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.188 -> 102.406 GiB; host available 3.870, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.531 -> 102.344 GiB; host available 3.799, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.438 -> 102.562 GiB; host available 4.143, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.625 -> 102.500 GiB; host available 4.082, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.438 -> 102.594 GiB; host available 4.180, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.594 -> 102.469 GiB; host available 4.049, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.406 -> 102.531 GiB; host available 3.990, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.438 -> 102.656 GiB; host available 4.117, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.656 -> 102.500 GiB; host available 3.959, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.344 -> 102.469 GiB; host available 3.940, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.406 -> 102.562 GiB; host available 4.035, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.500 -> 102.625 GiB; host available 4.072, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.625 -> 102.500 GiB; host available 3.974, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.500 -> 102.688 GiB; host available 4.140, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.438 -> 102.312 GiB; host available 3.782, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.219 -> 102.375 GiB; host available 3.824, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.375 -> 102.625 GiB; host available 4.052, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.594 -> 102.719 GiB; host available 4.145, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.719 -> 102.594 GiB; host available 4.036, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.594 -> 102.469 GiB; host available 3.910, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.438 -> 102.688 GiB; host available 4.136, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.469 -> 102.281 GiB; host available 3.712, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.312 -> 102.469 GiB; host available 3.979, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.406 -> 102.531 GiB; host available 4.044, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.500 -> 102.688 GiB; host available 4.202, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.500 -> 103.531 GiB; host available 4.797, protected floor 3.000
+[spark1017] rank 1: allocator cap 103.531 -> 103.062 GiB; host available 4.324, protected floor 3.000
+[spark1017] rank 1: allocator cap 103.000 -> 102.844 GiB; host available 4.108, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.844 -> 102.500 GiB; host available 3.748, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.531 -> 102.375 GiB; host available 3.974, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.375 -> 102.094 GiB; host available 3.678, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.094 -> 102.219 GiB; host available 3.792, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.156 -> 103.438 GiB; host available 4.890, protected floor 3.000
+[spark1017] rank 1: allocator cap 103.375 -> 103.094 GiB; host available 4.555, protected floor 3.000
+[spark1017] rank 1: allocator cap 103.000 -> 102.812 GiB; host available 4.283, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.750 -> 102.594 GiB; host available 4.070, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.531 -> 103.500 GiB; host available 4.948, protected floor 3.000
+[spark1017] rank 1: allocator cap 103.438 -> 103.062 GiB; host available 4.523, protected floor 3.000
+[tensorfold] rank 1: the lane is broken (rank 0 lost a rank); every step fails from now on
+Traceback (most recent call last):
+  File "/usr/local/bin/tensorfold", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/tensorfold/src/tensorfold/cli.py", line 42, in main
+    return int(args.func(args) or 0)
+               ^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/cli.py", line 384, in cmd_serve
+    return _serve_cuda(args, family, model_dir, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/cli.py", line 293, in _serve_cuda
+    engine.follow()
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/engine.py", line 408, in follow
+    self.multi.follow(Link(self.nccl.store, rank=self.rank, world=self.world, host=self._master))
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/multi.py", line 1702, in follow
+    self._fill(next(f for f in self.filling if f.sid == int(op[1])))
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/multi.py", line 1129, in _fill
+    s.filled = next(s.steps)
+               ^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/engine.py", line 494, in prefill_steps
+    out = m.forward(sc, ids, s, taps=taps, host_ids=host[s:e], replay=replay, image=block)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/model.py", line 1240, in forward
+    return self._forward_k(sc, ids, start, all_logits, taps, h, pre, hashes, shared, replay, img)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/model.py", line 1342, in _forward_k
+    g = None if posted else self.comm.gather(pa)
+                            ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/model.py", line 139, in gather
+    self.nccl.all_gather(x.view(-1), out.view(-1))
+  File "/opt/tensorfold/src/tensorfold/cuda/rdma.py", line 129, in all_gather
+    self.nccl.all_gather(send, recv)
+  File "/opt/tensorfold/src/tensorfold/cuda/comm.py", line 91, in all_gather
+    self._check(self.lib.ncclAllGather(send.data_ptr(), recv.data_ptr(), send.numel(), _DTYPES[send.dtype],
+  File "/opt/tensorfold/src/tensorfold/cuda/comm.py", line 83, in _check
+    raise RuntimeError(f"NCCL error {code}: {self.lib.ncclGetErrorString(code).decode()}")
+RuntimeError: NCCL error 4: invalid argument (run with NCCL_DEBUG=WARN for details)

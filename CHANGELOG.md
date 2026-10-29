@@ -2,6 +2,8 @@
 
 ## v0.2.0-alpha.1 — 2026-10-29
 
+Known issue: the final cold deployment failed at its second repeated 128K prefill after 55 completed requests. Full SciCode/CanItEdit was not reached. Original services were restored; this version is a source alpha.
+
 - Bound two-rank Engram gather storage with deterministic row tiles and direct FP32-sum/BF16 output slices. Add a CUDA bitwise, tile-boundary, ownership and peak-allocation gate. Retain the rejected whole-gather candidate; other rank counts use the upstream reduction.
 
 - Add an arm64 serving image built from the verified official NGC base, a pinned public TensorFold commit and published patches. Constrain the NGC numerical stack, bound retries for public-source download interruptions, and record the installed packages and source hashes.

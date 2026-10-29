@@ -5,7 +5,7 @@ Run DeepSeek-V4.1-Flash-1017 EXL3 2.9 bpw on two DGX Spark machines, with code-e
 `v0.2.0-alpha.1` · [简体中文](README.zh-CN.md) · [Deployment](docs/operations.md) · [Results](results/release-v0.2.0-alpha.1/README.md)
 
 <!-- validation-status:start -->
-Alpha: source is public; the final image's full regression run is in progress. [Validation status](results/release-v0.2.0-alpha.1/README.md)
+Alpha: repeated 128K input after a cold deployment has a known allocation failure. [Details and test results](docs/known-issues.md)
 <!-- validation-status:end -->
 
 Built on [TensorFold](https://github.com/bertholomus/TensorFold), with four additions:

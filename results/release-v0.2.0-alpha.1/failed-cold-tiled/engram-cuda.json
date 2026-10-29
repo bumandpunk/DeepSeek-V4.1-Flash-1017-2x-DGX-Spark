@@ -1,0 +1,43 @@
+{
+  "image_id": "sha256:a809d87bd2c1213dcd6bc22400a4795c5ffb3659a6fbb24ca7935a8069cc9120",
+  "nodes": {
+    "head": {
+      "passed": true,
+      "torch": "2.13.0a0+9186a08b2c.nv26.07",
+      "gpu": "NVIDIA GB10",
+      "exact_cases": 9,
+      "measurements": {
+        "reference": {
+          "peak_extra_bytes": 629145600,
+          "gather_calls": 1,
+          "max_gather_bytes": 419430400
+        },
+        "sum_cast": {
+          "peak_extra_bytes": 138412032,
+          "gather_calls": 13,
+          "max_gather_bytes": 33382400
+        }
+      },
+      "peak_saved_bytes": 490733568
+    },
+    "worker": {
+      "passed": true,
+      "torch": "2.13.0a0+9186a08b2c.nv26.07",
+      "gpu": "NVIDIA GB10",
+      "exact_cases": 9,
+      "measurements": {
+        "reference": {
+          "peak_extra_bytes": 629145600,
+          "gather_calls": 1,
+          "max_gather_bytes": 419430400
+        },
+        "sum_cast": {
+          "peak_extra_bytes": 138412032,
+          "gather_calls": 13,
+          "max_gather_bytes": 33382400
+        }
+      },
+      "peak_saved_bytes": 490733568
+    }
+  }
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T02:27:24.140230+00:00",
+    "role": "head",
+    "name": "codex-alpha11-build",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "final_build_record_verified",
+    "utc": "2026-10-29T02:27:24.652682+00:00",
+    "result": {
+      "image_id": "sha256:a809d87bd2c1213dcd6bc22400a4795c5ffb3659a6fbb24ca7935a8069cc9120",
+      "source_sha256": "0c33ef518500a75f079fbe66495b03e58d774838b1c417abda0cf123490a51b5"
+    }
+  },
+  {
+    "event": "final_image_engram_cuda_checks_passed",
+    "utc": "2026-10-29T02:27:31.109349+00:00",
+    "result": {
+      "head": {
+        "passed": true,
+        "torch": "2.13.0a0+9186a08b2c.nv26.07",
+        "gpu": "NVIDIA GB10",
+        "exact_cases": 9,
+        "measurements": {
+          "reference": {
+            "peak_extra_bytes": 629145600,
+            "gather_calls": 1,
+            "max_gather_bytes": 419430400
+          },
+          "sum_cast": {
+            "peak_extra_bytes": 138412032,
+            "gather_calls": 13,
+            "max_gather_bytes": 33382400
+          }
+        },
+        "peak_saved_bytes": 490733568
+      },
+      "worker": {
+        "passed": true,
+        "torch": "2.13.0a0+9186a08b2c.nv26.07",
+        "gpu": "NVIDIA GB10",
+        "exact_cases": 9,
+        "measurements": {
+          "reference": {
+            "peak_extra_bytes": 629145600,
+            "gather_calls": 1,
+            "max_gather_bytes": 419430400
+          },
+          "sum_cast": {
+            "peak_extra_bytes": 138412032,
+            "gather_calls": 13,
+            "max_gather_bytes": 33382400
+          }
+        },
+        "peak_saved_bytes": 490733568
+      }
+    }
+  },
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T02:33:41.645310+00:00",
+    "role": "head",
+    "name": "codex-alpha11-prebuild",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "restore_before_public_takeover",
+    "utc": "2026-10-29T02:33:41.646874+00:00"
+  },
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T02:35:05.314640+00:00",
+    "role": "head",
+    "name": "codex-alpha11-initial-restore",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "start_baseline_empty_rank_cache",
+    "utc": "2026-10-29T02:35:05.315299+00:00"
+  },
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T02:41:57.622780+00:00",
+    "role": "head",
+    "name": "codex-alpha11-start-baseline",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "baseline_validation_running",
+    "utc": "2026-10-29T02:41:57.624064+00:00"
+  },
+  {
+    "event": "validation_interrupted",
+    "utc": "2026-10-29T02:48:00.409837+00:00",
+    "error": "client codex-alpha11-baseline unexpected state: {'ExecMainStatus': '1', 'ActiveState': 'failed', 'SubState': 'failed'}"
+  },
+  {
+    "event": "capture",
+    "utc": "2026-10-29T02:48:01.891110+00:00",
+    "data": {
+      "captured": "failure-before-recovery"
+    }
+  },
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T02:49:27.983458+00:00",
+    "role": "head",
+    "name": "codex-alpha11-emergency-restore-1793242084",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "emergency_restore_finished",
+    "utc": "2026-10-29T02:49:27.985686+00:00"
+  }
+]

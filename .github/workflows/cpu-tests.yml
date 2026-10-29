@@ -1,4 +1,4 @@
-name: CPU and release checks
+name: CPU and source checks
 on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
@@ -21,7 +21,7 @@ jobs:
       - name: Recompute clean deployment release evidence
         if: ${{ hashFiles('results/release-v0.2.0-alpha.1/summary.json') != '' }}
         run: python3 results/release-v0.2.0-alpha.1/check.py
-      - name: Report pending hardware regression
+      - name: Verify source-alpha records and report hardware status
         if: ${{ hashFiles('results/release-v0.2.0-alpha.1/summary.json') == '' }}
         run: |
-          python3 -c "import json; s=json.load(open('results/release-v0.2.0-alpha.1/validation-status.json')); assert s['state']=='full_regression_running'; print('CPU checks completed. Full clean-image GPU regression is still running and is not certified by this job.')"
+          python3 results/release-v0.2.0-alpha.1/check_alpha.py

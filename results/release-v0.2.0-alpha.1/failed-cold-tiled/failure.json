@@ -1,0 +1,12 @@
+{
+  "status": "failed",
+  "planned_fixed_requests": 58,
+  "recorded_requests": 56,
+  "completed_requests": 55,
+  "complete_prefix_matches_pre_tiling_baseline": true,
+  "failed_request": "Second repeated 131072-token prefill",
+  "failure": "64 MiB allocation in upstream fp4_qd / _to_e2m1 / torch.where exceeded the CUDA allocator cap",
+  "host_memory_guard_triggered": false,
+  "full_programming_regression_reached": false,
+  "scope": "Final no-cache application image and empty native/rank caches; incomplete baseline excluded from passing comparison counts"
+}

@@ -1,0 +1,8 @@
+{
+  "diagnostic_image": "sha256:899344a99782cc4ad22e93f73cb78060761c854b2d42525fc2d94c56055dd879",
+  "clean_image": "sha256:a809d87bd2c1213dcd6bc22400a4795c5ffb3659a6fbb24ca7935a8069cc9120",
+  "runtime_source_hashes_equal": true,
+  "installed_versions_equal": true,
+  "runtime_files": 510,
+  "scope": "Identical installed runtime source hashes and Python versions; cache state and image metadata differ."
+}
