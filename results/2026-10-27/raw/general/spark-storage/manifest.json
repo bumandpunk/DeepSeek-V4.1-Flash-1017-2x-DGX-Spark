@@ -1,0 +1,19 @@
+{
+  "label": "spark-storage",
+  "quick": false,
+  "profile_only": false,
+  "utc": "2026-10-27T07:37:09.867921+00:00",
+  "kit_sha256": "1f4866e03fb4e3328c4aafd378f1e984fe11a927274a19fa6f504e0ab77a2561",
+  "wrapper_sha256": "48cf50c39226302cddcf9e93eda47a2de87090a239447fb6022c4105892c0669",
+  "decode_set": "b",
+  "max_tokens": 384,
+  "repetitions": 9,
+  "context_capacity": 524288,
+  "engine_slots": 2,
+  "thinking": false,
+  "temperature": 0,
+  "driver": "RTX4090 host, BusinessAI WSL, CPU benchmark client",
+  "base": "http://LAB_HOST:19888",
+  "quality_boundary": "Speed prompts are not training data. Quality evaluated separately.",
+  "prefix_seed_scheme": "20261027 + (length << 4) + occurrence; wrapper v2"
+}

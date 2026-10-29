@@ -1,0 +1,8 @@
+{
+  "step": "10.6",
+  "status": "failed",
+  "returncode": 1,
+  "seconds": 0.388361171935685,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/work/run.py\", line 130, in <module>\n    assert are_equivalent(generate_gpoints(np.linalg.inv(EX1['latvec']).T, gmax=1), target)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

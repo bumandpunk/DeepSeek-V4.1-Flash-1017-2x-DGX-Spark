@@ -1,0 +1,56 @@
+{
+  "request": {
+    "model": "DeepSeek-V4.1-Flash-1017",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Return the date 2026-10-28."
+      }
+    ],
+    "temperature": 0,
+    "max_tokens": 128,
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    },
+    "guided_regex": "\\d{4}-\\d{2}-\\d{2}"
+  },
+  "response": {
+    "id": "chatcmpl-7bb0017c017d415384f6b55d",
+    "object": "chat.completion",
+    "created": 1793232104,
+    "model": "DeepSeek-V4.1-Flash-1017",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "2026-10-28"
+        },
+        "finish_reason": "stop"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 15,
+      "completion_tokens": 7,
+      "total_tokens": 22,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0
+      }
+    },
+    "tensorfold": {
+      "prefill_s": 0.0547,
+      "decode_s": 0.0451,
+      "rounds": 1,
+      "drafts": true,
+      "cached": 0,
+      "min_rows": 6,
+      "drafted": 5,
+      "accepted": 5,
+      "token_sha": "be9f5d95e68b"
+    }
+  },
+  "passed": true
+}

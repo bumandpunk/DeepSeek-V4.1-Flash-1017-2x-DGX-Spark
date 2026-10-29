@@ -1,0 +1,89 @@
+[tensorfold] loading DeepSeek-V4.1-Flash-1017: DeepSeek-V4.1-Flash (deepseek_v41) on CUDA, rank 1 of 2
+[tensorfold] TORCH_ALLOW_TF32_CUBLAS_OVERRIDE=1 (NVIDIA's PyTorch container default) set to 0: DeepSeek-V4.1-Flash's fp32 GEMMs stay fp32
+[tensorfold] rank 1: rank cache reading /cache/rank/rank1of2-527f63d09cf4e4cf568b.bin
+[tensorfold] rank 1: layers 0..4 loaded (7 s, 13.7 GiB)
+[tensorfold] rank 1: layers 0..9 loaded (13 s, 26.0 GiB)
+[tensorfold] rank 1: layers 0..14 loaded (18 s, 38.2 GiB)
+[tensorfold] rank 1: layers 0..19 loaded (22 s, 48.9 GiB)
+[tensorfold] rank 1: layers 0..24 loaded (27 s, 58.7 GiB)
+[tensorfold] rank 1: layers 0..29 loaded (33 s, 70.9 GiB)
+[tensorfold] rank 1: layers 0..34 loaded (39 s, 83.2 GiB)
+[tensorfold] rank 1: layers 0..39 loaded (45 s, 95.4 GiB)
+[tensorfold] rank 1: DSpark (3 stages) loaded, 99.0 GiB
+[tensorfold] rank 1: weights in 46 s (from the rank cache)
+[tensorfold] rank 1: allocator ceiling 102.8 GiB (holds 100.6, host available 5.3, total reserve 4.0, includes kernel 1.0, workspace 1.0, protected host floor 3.0)
+[tensorfold] rank 1 ready in 66.8s, following rank 0
+[spark1017] rank 1: allocator cap 102.812 -> 102.688 GiB; host available 5.145, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.688 -> 102.875 GiB; host available 5.223, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.406 -> 102.969 GiB; host available 5.298, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.719 -> 102.875 GiB; host available 4.327, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.875 -> 102.188 GiB; host available 3.660, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.219 -> 102.938 GiB; host available 4.391, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.938 -> 102.438 GiB; host available 3.914, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.500 -> 102.344 GiB; host available 3.773, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.344 -> 102.938 GiB; host available 4.406, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.938 -> 102.750 GiB; host available 4.214, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.750 -> 102.594 GiB; host available 4.054, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.594 -> 102.438 GiB; host available 3.829, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.500 -> 102.750 GiB; host available 4.145, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.812 -> 102.438 GiB; host available 3.914, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.469 -> 102.312 GiB; host available 3.774, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.281 -> 102.406 GiB; host available 3.869, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.438 -> 102.594 GiB; host available 4.054, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.688 -> 102.531 GiB; host available 3.992, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.719 -> 102.469 GiB; host available 3.938, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.469 -> 102.594 GiB; host available 4.050, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.844 -> 102.719 GiB; host available 5.189, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.500 -> 102.750 GiB; host available 4.120, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.719 -> 102.875 GiB; host available 4.243, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.844 -> 102.719 GiB; host available 4.106, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.656 -> 102.500 GiB; host available 3.875, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.656 -> 102.500 GiB; host available 3.888, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.875 -> 102.750 GiB; host available 4.139, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.844 -> 102.719 GiB; host available 4.112, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.750 -> 102.875 GiB; host available 5.321, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.625 -> 102.750 GiB; host available 4.123, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.844 -> 102.719 GiB; host available 3.974, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.844 -> 102.500 GiB; host available 3.890, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.969 -> 102.781 GiB; host available 4.163, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.719 -> 102.875 GiB; host available 4.253, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.969 -> 102.812 GiB; host available 4.199, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.906 -> 102.781 GiB; host available 4.169, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.750 -> 102.938 GiB; host available 4.388, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.844 -> 102.719 GiB; host available 4.171, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.812 -> 102.938 GiB; host available 5.384, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.938 -> 102.812 GiB; host available 4.203, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.812 -> 102.625 GiB; host available 4.017, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.656 -> 102.531 GiB; host available 3.924, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.531 -> 102.719 GiB; host available 4.087, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.688 -> 102.812 GiB; host available 4.187, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.781 -> 102.656 GiB; host available 4.042, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.812 -> 102.656 GiB; host available 4.036, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.656 -> 102.375 GiB; host available 3.763, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.531 -> 102.750 GiB; host available 4.133, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.750 -> 102.875 GiB; host available 5.323, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.781 -> 102.906 GiB; host available 5.359, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.938 -> 102.812 GiB; host available 4.088, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.812 -> 102.938 GiB; host available 5.387, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.875 -> 102.750 GiB; host available 4.127, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.750 -> 102.469 GiB; host available 3.840, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.875 -> 102.750 GiB; host available 4.123, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.812 -> 102.688 GiB; host available 4.083, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.875 -> 102.750 GiB; host available 4.191, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.750 -> 102.875 GiB; host available 4.304, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.875 -> 102.750 GiB; host available 4.192, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.750 -> 102.906 GiB; host available 4.342, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.906 -> 102.750 GiB; host available 4.208, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.844 -> 102.719 GiB; host available 4.155, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.562 -> 102.688 GiB; host available 5.131, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.688 -> 102.531 GiB; host available 3.927, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.750 -> 102.906 GiB; host available 4.288, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.750 -> 102.875 GiB; host available 5.321, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.594 -> 102.469 GiB; host available 3.730, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.625 -> 102.750 GiB; host available 5.195, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.625 -> 102.750 GiB; host available 5.198, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.750 -> 102.625 GiB; host available 4.018, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.656 -> 102.812 GiB; host available 4.186, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.812 -> 102.688 GiB; host available 4.082, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.844 -> 102.719 GiB; host available 4.102, protected floor 3.000
+[spark1017] rank 1: allocator cap 102.719 -> 102.562 GiB; host available 3.940, protected floor 3.000

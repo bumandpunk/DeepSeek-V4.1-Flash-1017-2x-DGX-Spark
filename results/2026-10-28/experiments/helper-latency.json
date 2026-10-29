@@ -1,0 +1,7 @@
+{
+  "calls": 40,
+  "rpc_median_ms": 61.152387876063585,
+  "rpc_p95_ms": 64.81907702982426,
+  "draft_server_median_ms": 2.311193005880341,
+  "delta_bytes": 9216
+}

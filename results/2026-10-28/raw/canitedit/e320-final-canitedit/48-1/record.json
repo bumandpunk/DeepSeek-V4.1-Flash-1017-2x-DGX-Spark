@@ -1,0 +1,34 @@
+{
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are PythonEditGPT. You will be provided the original code snippet and an instruction that specifies the changes you need to make. You will produce the changed code, based on the original code and the instruction given. Only produce the code, do not include any additional prose."
+      },
+      {
+        "role": "user",
+        "content": "## Code Before\n```py\nfrom typing import List\n\ndef max_sublstay_sum(lst: List[int]) -> int:\n    max_so_far = lst[0]\n    curr_max = lst[0]\n    for i in range(1, len(lst)):\n        curr_max = max(lst[i], curr_max + lst[i])\n        max_so_far = max(max_so_far, curr_max)\n    return max_so_far\n```\n\n## Instruction\nAdapt the function to return the indices of the subarray by returning a tuple of (sum, srt_idx, end_idx). The implementation should track the start index.\n\n## Code After"
+      }
+    ],
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 8192,
+    "seed": 1065,
+    "enable_thinking": false,
+    "reasoning_effort": "none",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "response": {
+    "start": 530591.274708228,
+    "end": 530593.216249361,
+    "ttft_s": 0.45719017705414444,
+    "decode_s": 1.4834008240140975,
+    "tokens": 169,
+    "prompt_tokens": 196,
+    "decode_tps": 113.25327401759851,
+    "chunks": 32,
+    "text": "```py\nfrom typing import List, Tuple\n\ndef max_sublstay_sum(lst: List[int]) -> Tuple[int, int, int]:\n    max_so_far = lst[0]\n    curr_max = lst[0]\n    start_idx = 0\n    end_idx = 0\n    curr_start = 0\n    for i in range(1, len(lst)):\n        if lst[i] > curr_max + lst[i]:\n            curr_max = lst[i]\n            curr_start = i\n        else:\n            curr_max = curr_max + lst[i]\n        if curr_max > max_so_far:\n            max_so_far = curr_max\n            start_idx = curr_start\n            end_idx = i\n    return (max_so_far, start_idx, end_idx)\n```"
+  }
+}

@@ -1,0 +1,45 @@
+{"event": "stage", "profile": "baseline", "index": 0, "harness": "health.py", "mode": ["--base"]}
+{"passed": 5, "checks": ["model_listing", "chat_generation", "completion_generation", "streaming_generation", "invalid_key_rejected"]}
+{"event": "stage", "profile": "baseline", "index": 1, "harness": "api_contract.py", "mode": ["--base"]}
+{"name": "json-schema", "passed": true, "seconds": 4.586544702062383}
+{"name": "tool-call", "passed": true, "seconds": 0.8888222840614617}
+{"name": "regex", "passed": true, "seconds": 5.8486464789602906}
+{"event": "stage", "profile": "baseline", "index": 2, "harness": "run_suite.py", "mode": ["--label"]}
+{"event": "ready", "ready_after_s": 0.07058334350585938, "probe_started_unix": 1793183730.7027302}
+{"event": "begin", "section": "decode"}
+{"prompt": "code", "decode_tps_median": 95.31474837297877, "decode_tps_all": [95.649, 95.387, 95.483, 95.673, 95.315, 95.087, 95.053, 95.045, 94.814], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"prompt": "prose", "decode_tps_median": 57.5880471062877, "decode_tps_all": [57.894, 57.593, 57.529, 57.588, 57.557, 57.753, 57.508, 57.615, 57.574], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"prompt": "structured", "decode_tps_median": 139.75588792574536, "decode_tps_all": [139.682, 140.178, 139.644, 139.756, 140.817, 139.082, 140.317, 140.025, 139.555], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"event": "end", "section": "decode"}
+{"event": "begin", "section": "concurrent"}
+{"streams": 2, "rep": 0, "aggregate_tps": 82.63803983975453, "per_stream_decode_tps": [73.269, 41.868]}
+{"streams": 2, "rep": 1, "aggregate_tps": 82.59527957873777, "per_stream_decode_tps": [71.685, 42.714]}
+{"streams": 2, "rep": 2, "aggregate_tps": 82.46696600079417, "per_stream_decode_tps": [73.374, 41.78]}
+{"streams": 4, "rep": 0, "aggregate_tps": 107.96319744738729, "per_stream_decode_tps": [81.695, 30.533, 106.801, 72.092]}
+{"streams": 4, "rep": 1, "aggregate_tps": 105.04635360298738, "per_stream_decode_tps": [73.253, 38.136, 92.755, 60.636]}
+{"streams": 4, "rep": 2, "aggregate_tps": 107.78159472118254, "per_stream_decode_tps": [81.117, 30.973, 106.875, 70.249]}
+{"event": "end", "section": "concurrent"}
+{"event": "begin", "section": "prefill"}
+{"length": 8192, "rep": 0, "prompt_tokens": 8192, "ttft_s": 4.4262695469660684, "prefill_tps": 1850.7684435113322}
+{"length": 8192, "rep": 1, "prompt_tokens": 8192, "ttft_s": 3.9330050699645653, "prefill_tps": 2082.8856953580807}
+{"length": 8192, "rep": 2, "prompt_tokens": 8192, "ttft_s": 3.7968051449861377, "prefill_tps": 2157.6034816582373}
+{"length": 32768, "rep": 0, "prompt_tokens": 32768, "ttft_s": 17.828226361074485, "prefill_tps": 1837.9842916704538}
+{"length": 32768, "rep": 1, "prompt_tokens": 32768, "ttft_s": 15.762936817016453, "prefill_tps": 2078.800440576923}
+Traceback (most recent call last):
+  File "/lab-root/release-20261028/project/benchmarks/run_suite.py", line 47, in <module>
+    run('prefill',dict(lengths='8192,32768' if a.quick else '8192,32768,131072',reps=1 if a.quick else 3))
+  File "/lab-root/release-20261028/project/benchmarks/run_suite.py", line 41, in run
+    result=getattr(kit,'cmd_'+name)(c,types.SimpleNamespace(**args));summary[name]=result
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lab-root/release-20261028/project/benchmarks/kit_bench.py", line 302, in cmd_prefill
+    r = c.stream({"prompt": ids, "max_tokens": 1, "temperature": 0}, "/v1/completions")
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/lab-root/release-20261028/project/benchmarks/run_suite.py", line 22, in stream
+    raise RuntimeError('Server returned no completed generation; raw request and partial response preserved. Check engine logs.')
+RuntimeError: Server returned no completed generation; raw request and partial response preserved. Check engine logs.
+Traceback (most recent call last):
+  File "/lab-root/release-20261028/validate_client.py", line 35, in <module>
+    subprocess.run(command,check=True)
+  File "/usr/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python3', '-u', '/lab-root/release-20261028/project/benchmarks/run_suite.py', '--label', 'baseline-speed', '--base', 'http://HEAD_MANAGEMENT_IP:19890', '--key-file', '/lab-root/release-20261028/api.key', '--output', '/lab-root/release-20261028/bench/baseline-speed']' returned non-zero exit status 1.

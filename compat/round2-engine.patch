@@ -1,0 +1,240 @@
+--- a/model.py
++++ b/model.py
+@@ -97,15 +97,37 @@
+     def __init__(self, nccl, world: int, rdma_bytes: int = 0):
+         self.nccl, self.world = nccl, world
+         self._buf: dict = {}
++        self.post_mode = os.environ.get("SPARK1017_RDMA_POST", "0")
++        if self.post_mode not in ("0", "prefill", "decode", "all"):
++            raise ValueError("Unsupported SPARK1017_RDMA_POST mode")
++        self.post_rdma = None
+         if world > 1 and rdma_bytes and os.environ.get("TF_DS_RDMA", "1") != "0":
+-            from tensorfold.cuda.rdma import Hybrid, RdmaGather
++            if os.environ.get("SPARK1017_SEGMENTED_RDMA") == "1" or self.post_mode != "0":
++                from spark1017.transport import Hybrid, RdmaGather
++            else:
++                from tensorfold.cuda.rdma import Hybrid, RdmaGather
+ 
+             try:
+                 self.nccl = Hybrid(nccl, RdmaGather(nccl.store, nccl.rank, world, max_bytes=rdma_bytes))
++                if self.post_mode != "0" and world == 2:
++                    self.post_rdma = self.nccl.rdma
++                    if nccl.rank == 0:
++                        print("[spark1017] pipelined RDMA + HC post: " + self.post_mode, flush=True)
+                 if nccl.rank == 0:
+                     print("[tensorfold] decode gathers over RDMA writes", flush=True)
+             except Exception as exc:          # noqa: BLE001  (every rank sees the same refusal)
+                 print(f"[tensorfold] gathers stay on NCCL: {exc}", flush=True)
++
++    def post(self, partial, residual, post, comb, *, phase):
++        """Post directly from the receive ring, with the reference rank order and BF16 boundary."""
++        rdma = self.post_rdma
++        if (rdma is None or self.post_mode not in (phase, "all")
++                or partial.numel() * 4 > rdma.segment_limit):
++            return False
++        # Model-produced partials and residuals have these fixed layouts. Native
++        # validation refuses unexpected inputs before enqueueing any collective.
++        rdma.ext.gather_post_pipeline(rdma.h, partial, residual, post, comb)
++        return True
+ 
+     def gather(self, x: torch.Tensor) -> torch.Tensor:
+         """[world, *x.shape] of every rank's x."""
+@@ -1255,6 +1277,19 @@
+         comb = torch.empty((n, c.hc, c.hc), dtype=F32, device=dev)
+         floor, kv_done = 0, False
+         h_alt = None                                             # (switch "hc_pf") the streams' second buffer
++        pf_sink = None
++        if os.environ.get("SPARK1017_PREFILL_SIDE") == "1" and K.hc_dots_on(c.dim):
++            pf_sink = self.__dict__.get("_spark1017_prefill_sink")
++            if pf_sink is None:
++                pf_sink = self._spark1017_prefill_sink = torch.cuda.Stream()
++        def prompt_pre(*args):
++            if pf_sink is None:
++                K.hc_pre(*args)
++            else:
++                from spark1017.postmix import after_post
++                # Collapse uses carried pre; the new post/comb are only needed
++                # after attention or MoE. Their mix/Sinkhorn runs beside it.
++                after_post(*args, sink=pf_sink)
+         self.taps_start = start
+         for lay in w.layers:
+             if replay is not None and lay.idx == c.n_layers // 2:
+@@ -1288,19 +1323,22 @@
+             if taps is not None and lay.idx in c.dspark_taps:
+                 taps.append(h.to(F32).mean(1).to(BF16))
+             fn, scale, base = lay.hc_attn
+-            hc_pf = K.on("hc_pf") and c.dim % 1024 == 0
++            hc_pf = K.on("hc_pf") and c.dim % 1024 == 0 and pf_sink is None
+             with _T("hc"):
+                 if hc_pf:
+                     K.hc_pre2(h, fn, scale, base, pre, lay.attn_norm, c.eps, c.hc_eps, c.hc_iters, x, pre_a, post,
+                               comb, part)
+                 else:
+-                    K.hc_pre(h, fn, scale, base, pre, lay.attn_norm, c.eps, c.hc_eps, c.hc_iters, x, pre_a, post,
++                    prompt_pre(h, fn, scale, base, pre, lay.attn_norm, c.eps, c.hc_eps, c.hc_iters, x, pre_a, post,
+                              comb, part)
+             with _T("attn_r%d" % (2 if lay.comp_wkv is not None else 1 if lay.idx_wq_b is not None else 0)):
+                 pa = self.attention_k(lay, x, sc, start, shared, pos, floor=floor,
+                                       kv_done=kv_done and lay.idx == c.n_layers // 2)
+             with _T("gather"):
+-                g = self.comm.gather(pa)
++                if pf_sink is not None:
++                    torch.cuda.current_stream().wait_stream(pf_sink)
++                posted = not hc_pf and self.comm.post(pa, h, post, comb, phase="prefill")
++                g = None if posted else self.comm.gather(pa)
+             with _T("hc"):
+                 fn, scale, base = lay.hc_ffn
+                 if hc_pf:
+@@ -1311,15 +1349,20 @@
+                     h, h_alt = K.hc_pre2(h, fn, scale, base, pre_a, lay.ffn_norm, c.eps, c.hc_eps, c.hc_iters, x,
+                                          pre_f, post, comb, part, gathered=g, h_out=h_alt), h
+                 else:
+-                    K.hc_post(g, h, post, comb, h)
+-                    K.hc_pre(h, fn, scale, base, pre_a, lay.ffn_norm, c.eps, c.hc_eps, c.hc_iters, x, pre_f, post,
++                    if not posted:
++                        K.hc_post(g, h, post, comb, h)
++                    prompt_pre(h, fn, scale, base, pre_a, lay.ffn_norm, c.eps, c.hc_eps, c.hc_iters, x, pre_f, post,
+                              comb, part)
+             with _T("moe"):
+                 pm = self.moe(lay, x, img=img)
+             with _T("gather"):
+-                g = self.comm.gather(pm)
++                if pf_sink is not None:
++                    torch.cuda.current_stream().wait_stream(pf_sink)
++                posted = self.comm.post(pm, h, post, comb, phase="prefill")
++                g = None if posted else self.comm.gather(pm)
+             with _T("hc"):
+-                K.hc_post(g, h, post, comb, h)
++                if not posted:
++                    K.hc_post(g, h, post, comb, h)
+             pre, pre_f = pre_f, pre
+         sc.length = start + n
+         if not all_logits:
+--- a/engine.py
++++ b/engine.py
+@@ -82,6 +82,10 @@
+         os.environ.setdefault("NCCL_MIN_NCHANNELS", "4")
+         nccl = NCCL(rank, world, master, port) if world > 1 else None
+         self.nccl = nccl
++        # Refuse a mismatched transport/overlay before loading weights or
++        # capturing any model collective, including warm-up graphs.
++        from spark1017.configuration import verify_peers
++        verify_peers(self, engine_source=Path(__file__).parent)
+         self.w = load(model_dir, rank, world, dspark=drafts > 0)
+         cfg = self.w.cfg
+         eng = None
+@@ -484,7 +488,12 @@
+                 if i1 > i0:
+                     block = (pos_dev[i0:i1] - s, rows[i0:i1])
+             tc = time.perf_counter()
++            if os.environ.get("SPARK1017_PREFILL_TRACE"):
++                from spark1017.profiling import prefill_begin, prefill_end
++                prefill_begin(self, s, e-s)
+             out = m.forward(sc, ids, s, taps=taps, host_ids=host[s:e], replay=replay, image=block)
++            if os.environ.get("SPARK1017_PREFILL_TRACE"):
++                prefill_end(self)
+             if ENGRAM_DONTNEED and m.engram is not None and _drop_busy.acquire(blocking=False):
+                 fds = sorted({f[0] for f in m.engram.files.values()})
+                 threading.Thread(target=_drop_pages, args=(fds,), daemon=True).start()
+--- a/multi.py
++++ b/multi.py
+@@ -561,6 +561,11 @@
+     def _drafts(self, tokens: list[int], q0: list[int], slots: list[int]) -> list[list[int]]:
+         """Every drafting stream's drafts from one batched drafter pass (a graph a stream count)."""
+ 
++        if os.environ.get("SPARK1017_DRAFT_HELPER") and self.streams:
++            from spark1017.remote_draft import propose as remote_propose
++            remote = remote_propose(self, tokens, q0, slots)
++            if remote is not None:
++                return remote
+         from .dspark import BatchDraftGraph
+ 
+         N = len(tokens)
+@@ -618,10 +623,13 @@
+         if self.watch is not None and self.watch.broken is not None:
+             raise RuntimeError(f"this lane lost a rank ({self.watch.broken}); restart it on every rank")
+ 
+-    def _agree(self, what: str, plan: list) -> None:
++    def _agree(self, what: str, plan: list, guard_bytes=None):
+         """One small all-gather checks the step on every rank before any of its model collectives."""
+ 
+         e = self.e
++        if guard_bytes is not None and os.environ.get("SPARK1017_CONTROL_FUSION") == "1":
++            from spark1017.control import agree_and_budget
++            return agree_and_budget(self, what, plan, guard_bytes, OutOfStep)
+         if e.world < 2:
+             return
+         dgst = int.from_bytes(hashlib.sha256(json.dumps(plan).encode()).digest()[:8], "big")
+@@ -1112,8 +1120,8 @@
+ 
+         self._step(True)
+         try:
+-            self._agree("fill", [self._shape(), s.sid])
+-            self._memory_guard(768 * 2**20)
++            if not self._agree("fill", [self._shape(), s.sid], guard_bytes=768 * 2**20):
++                self._memory_guard(768 * 2**20)
+             t0 = time.perf_counter()
+             try:
+                 s.filled = next(s.steps)
+@@ -1359,8 +1367,8 @@
+         try:
+             ta0 = time.perf_counter()
+             _ht("round start")
+-            self._agree("round", [self._shape(), k])
+-            self._memory_guard(384 * 2**20)
++            if not self._agree("round", [self._shape(), k], guard_bytes=384 * 2**20):
++                self._memory_guard(384 * 2**20)
+             _ht("agreed")
+             if ROUND_STATS:
+                 torch.cuda.synchronize()
+@@ -1672,6 +1680,8 @@
+     def follow(self, link: Link) -> None:
+         """A follower rank: rank 0's steps, in order, forever (or until the link or the lane breaks)."""
+ 
++        self._spark1017_follow_link = link
++
+         while True:
+             op = link.receive()
+             _ht("op received")
+--- a/rounds.py
++++ b/rounds.py
+@@ -483,6 +483,7 @@
+         view = self.table
+         spare = torch.empty_like(h)
+         pending = None                                   # the last sublayer's gathered partials, not yet posted
++        posted = False                                  # a network-fused post already wrote h
+         # (switch "hc_defer") each finish's Sinkhorn half on this side stream, joined before the sublayer's gather
+         # (the next posted mixes read post / comb, the next finish pre; the next mixes write part)
+         sink = None
+@@ -496,8 +497,13 @@
+                 torch.cuda.current_stream().wait_stream(sink)
+ 
+         def pre_mix(h, params, pre_in, norm, pre_out, rot=None):
+-            nonlocal spare, pending
++            nonlocal spare, pending, posted
+             fn, scale, base = params
++            if posted:
++                from spark1017.postmix import after_post
++                posted = False
++                return after_post(h, fn, scale, base, pre_in, norm, c.eps, c.hc_eps, c.hc_iters,
++                                  x, pre_out, post, comb, part, rot=rot, sink=sink)
+             if pending is None:
+                 K.hc_pre2(h, fn, scale, base, pre_in, norm, c.eps, c.hc_eps, c.hc_iters, x, pre_out, post, comb, part,
+                           rot=rot, sink=sink)
+@@ -538,12 +544,14 @@
+                     taps.append(h.to(F32).mean(1).to(BF16))
+             y = self._attention(lay, x, shared, cos, sin, xh=ar[0] if ar else None)
+             join()
+-            pending = m.comm.gather(y)
++            posted = m.comm.post(y, h, post, comb, phase="decode")
++            pending = None if posted else m.comm.gather(y)
+             h = pre_mix(h, lay.hc_ffn, pre_a, lay.ffn_norm, pre_f)
+             y = m.moe(lay, x, shared_side=moe_side())               # the gate is in L2 by then
+             self._l2_next(li, end)
+             join()
+-            pending = m.comm.gather(y)
++            posted = m.comm.post(y, h, post, comb, phase="decode")
++            pending = None if posted else m.comm.gather(y)
+             pre, pre_f = pre_f, pre
+         if pending is not None:
+             K.hc_post(pending, h, post, comb, h)

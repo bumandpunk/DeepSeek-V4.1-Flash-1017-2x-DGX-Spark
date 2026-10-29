@@ -1,0 +1,48 @@
+PROBLEM DESCRIPTION:
+You will be provided with problem steps along with background knowledge necessary for solving the problem. Your task will be to develop a Python solution focused on the next step of the problem-solving process.
+
+PROBLEM STEPS AND FUNCTION CODE:
+Here, you'll find the Python code for the initial steps of the problem-solving process. This code is integral to building the solution.
+
+
+
+NEXT STEP - PROBLEM STEP AND FUNCTION HEADER:
+This part will describe the next step in the problem-solving process. A function header will be provided, and your task is to develop the Python code for this next step based on the provided description and function header.
+
+Create a function to compute the incomplete Cholesky factorization of an input matrix.
+Background:
+An incomplete Cholesky factorization provides a sparse approximation of the Cholesky factorization for a symmetric positive definite matrix. This factorization is commonly employed as a preconditioner for iterative algorithms such as the conjugate gradient method.
+
+In the Cholesky factorization of a positive definite matrix $A$, we have $A = LL*$, where $L$ is a lower triangular matrix. The incomplete Cholesky factorization yields a sparse lower triangular matrix $K$ that closely approximates $L$. The corresponding preconditioner is $KK*$.
+
+A popular approach to find the matrix $K$ is to adapt the algorithm for the exact Cholesky decomposition, ensuring that $K$ retains the same sparsity pattern as $A$ (any zero entry in $A$ leads to a zero entry in $K$). This method produces an incomplete Cholesky factorization that is as sparse as matrix $A$.
+
+For $i$ from $1$ to $N$ :
+$$
+L_{i i}=\left(a_{i i}-\sum_{k=1}^{i-1} L_{i k}^2\right)^{\frac{1}{2}}
+$$
+
+For $j$ from $i+1$ to $N$ :
+$$
+L_{j i}=\frac{1}{L_{i i}}\left(a_{j i}-\sum_{k=1}^{i-1} L_{i k} L_{j k}\right)
+$$
+
+def ichol(A):
+    '''Inputs:
+    A : Matrix, 2d array M * M
+    Outputs:
+    A : Matrix, 2d array M * M
+    '''
+
+    return A
+
+DEPENDENCIES:
+Use only the following dependencies in your solution. Do not include these dependencies at the beginning of your code.
+
+import numpy as np
+
+RESPONSE GUIDELINES:
+Now, based on the instructions and information provided above, write the complete and executable Python program for the next step in a single block.
+Your response should focus exclusively on implementing the solution for the next step, adhering closely to the specified function header and the context provided by the initial steps.
+Your response should NOT include the dependencies and functions of all previous steps. If your next step function calls functions from previous steps, please make sure it uses the headers provided without modification.
+DO NOT generate EXAMPLE USAGE OR TEST CODE in your response. Please make sure your response python code in format of ```python```.

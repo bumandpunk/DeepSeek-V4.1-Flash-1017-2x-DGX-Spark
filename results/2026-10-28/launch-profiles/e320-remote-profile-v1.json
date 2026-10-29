@@ -1,0 +1,20 @@
+{
+  "label": "e320-remote-profile-v1",
+  "variant": "e320",
+  "depth_policy": "joint",
+  "drafts": 5,
+  "parallel": 2,
+  "context": 524288,
+  "prefill_chunk": 2048,
+  "dontneed": 1,
+  "helper": "CLIENT_MANAGEMENT_IP:19992",
+  "trace": true,
+  "engine": "spark",
+  "storage": 0,
+  "adaptive": false,
+  "calibration": false,
+  "costs": "",
+  "memory_floor": 4.0,
+  "kernel_trace": false,
+  "lookup": false
+}

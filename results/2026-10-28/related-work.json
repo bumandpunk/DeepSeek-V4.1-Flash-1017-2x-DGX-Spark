@@ -1,0 +1,34 @@
+{
+  "checked_utc": "2026-10-28",
+  "sources": [
+    {
+      "project": "MiaAI-Lab",
+      "url": "https://github.com/MiaAI-Lab/DeepSeek-v4.1-Flash-1017-2x-DGX-Sparks",
+      "commit": "27741e176a9e5b98c10c9c7d012fd3e4fcdc19b6",
+      "commit_date": "2026-10-24T14:43:46Z",
+      "role": "Fresh same-weight native comparison; repo HEAD checked via connected GitHub API."
+    },
+    {
+      "project": "TensorFold",
+      "url": "https://github.com/bertholomus/TensorFold",
+      "commit": "07aa02585f64cfb04c60a96de6554c0d4708ed46",
+      "role": "Pinned deployment base; not a claim to use latest upstream HEAD."
+    },
+    {
+      "project": "Elevatormusic",
+      "url": "https://github.com/Elevatormusic/DeepSeek-V4.1-Flash-1017-EXL3-TensorFold-2x-DGX-Spark",
+      "pushed_at": "2026-10-25T01:43:07Z",
+      "role": "Related public TensorFold recipe reviewed; its published speeds are contextual, not copied into our measured ranking."
+    },
+    {
+      "project": "lucataco",
+      "url": "https://github.com/lucataco/DeepSeek-V4.1-Flash-2x-DGX-Spark",
+      "role": "Prior-day source-built experiment retained with memory failure; not a new day-two full rerun."
+    },
+    {
+      "project": "sudoingX",
+      "url": "https://github.com/sudoingX/dgx-spark-deepseek-v41",
+      "role": "Not measured because current checkpoint adapter lacks a required dense drafter format; no substitute weights used."
+    }
+  ]
+}

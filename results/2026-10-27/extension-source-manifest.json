@@ -1,0 +1,12 @@
+{
+  "src/spark1017/__init__.py": "d24a6acacc36f0f551995a618b89863c05d5f7d9e90c4d435099cb228008bd1e",
+  "src/spark1017/configuration.py": "7c5ae22df20edf903dd63e11c1927687a3329509704b00c1aba732d1b790932c",
+  "src/spark1017/depth.py": "fd0bc8e24e9375a8dcda5665451354b25ac23860999418ba76eadbf6c5972fbe",
+  "src/spark1017/integration.py": "668186764e2e196537fab4fad718dcddf24055c1ddd1061eceec91228add0281",
+  "src/spark1017/lookup.py": "554431c31c7d4e6ebe6f5157c03e84cdd0c72196954ef5021e614b94850b4b6b",
+  "src/spark1017/planning.py": "5f7cab1d07e05a53c0f0f459021051c5c66a4ad761cfda71bd0157939842b2c8",
+  "src/spark1017/profiling.py": "3e7f3196ab570896927d18169c1db5e1049516b968423737f2dbcdfc197af151",
+  "src/spark1017/storage.py": "f6787e9bfd0dd48131667045671eaddc26f7decf33842064b4d58dcab8c92392",
+  "native/engram_io.cpp": "ef4edb47a0033f44fcc9d61ab32221fcd5ebf67b126877e73de9c991f6cda8c6",
+  "native/tiered_store.hpp": "b0b44132d1ea578e62968b00465f97915fb8ee69da1e813f44ff4515b410a2dc"
+}

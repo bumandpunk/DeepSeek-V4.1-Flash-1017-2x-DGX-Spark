@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-28",
+  "hardware": {
+    "inference": "2 × NVIDIA GB10 DGX Spark",
+    "memory_gib_per_node": 121.69,
+    "fabric": "2 × 200G CX7 RoCE rails",
+    "driver": "580.159.03",
+    "kernel": "6.17.0-1026-nvidia",
+    "client": "RTX4090 host, WSL, 1 Gbps management network; no inference contribution",
+    "verified_date": "2026-10-28"
+  },
+  "common_request_and_capacity": {
+    "tp": 2,
+    "context": 524288,
+    "slots": 2,
+    "short_output_tokens": 384,
+    "short_repetitions": 9,
+    "long_prefix_repetitions": 3,
+    "offered_concurrency": [
+      2,
+      4
+    ]
+  },
+  "python_matched_profile": {
+    "prefill_chunk": 2048,
+    "draft_tokens": 5,
+    "depth_policy": "joint",
+    "vision_capability": "E320: enabled; A0: disabled for text-only native comparison",
+    "memory_floor_gib": 4,
+    "workspace_gib": 1,
+    "host_min_gib": 2,
+    "engram_dontneed": 1,
+    "storage": false,
+    "adaptive_depth": false,
+    "rdma_post": "candidate all; baselines 0",
+    "prefill_side": false,
+    "lookup": false
+  },
+  "native_profile": "Mia compiles a 2048-row prompt chunk and uses its native planner/allocator. Graphs, side kernels, L2 prefetch and Engram AIO enabled; see benchmarks/competitors.md.",
+  "engines": {
+    "current": "bertholomus/TensorFold@07aa02585f64cfb04c60a96de6554c0d4708ed46 + disclosed deployment-safety.patch",
+    "lucataco": {
+      "deployment": "7b46f9d9d8b21357f8998ccce8bdfa857a9ef1ce",
+      "engine": "8e0966e2b09250abe2f6d9cc51edc20630e6eb1a"
+    },
+    "mia": {
+      "deployment": "27741e176a9e5b98c10c9c7d012fd3e4fcdc19b6",
+      "engine": "629c524a0ea57512a5342abb498d1b7c25353343",
+      "public_patches": 26,
+      "kit": "abe07c7d509a0199cc7fec15263be2aa52ac652f",
+      "kit_files_verified": 222
+    },
+    "sudoingx": {
+      "deployment": "f8f20b370e41a3a220bc7d1ab96a61e4daa84964",
+      "status": "Not measured: current EXL3 dense drafter tensor formats require an adapter. No different weight pack substituted."
+    }
+  },
+  "weights": {
+    "A0": "identity copy of the existing EXL3 2.9 bpw deployment; not native full-precision weights",
+    "A0_tensor_manifest_sha256": "dc7576db8f99d38d5f511b197ba0e8d9ec71a89cc87627e699adc7e675bde060",
+    "E320_tensor_manifest_sha256": "e0bff3a902787d67c391410afb81ac56e2fc33f18500e77261dd434baaead088",
+    "E320": "320 of 384 routed experts, unchanged retained bytes/top-6; pruning changes the model function",
+    "tensor_gib": {
+      "A0": 196.25,
+      "E320": 165.8
+    },
+    "engram": "Unchanged, approximately 203 GB",
+    "manifest_provenance": "Frozen round-one tensor manifest hashes; every current same-weight arm mounts the identical model view and rank cache read-only. Whole weight tensors were not rehashed during speed measurements."
+  },
+  "images": {
+    "inference": "sha256:0f1d0e890bb27bf38c590e11a5d1880603539b52228be140104bb9d8ebf295ab",
+    "scicode_executor": "sha256:5e494289897f2efe0308f4c4c3ef26f3e26aeef0a6231d00c6e733ff7e93fa9c",
+    "canitedit_executor": "sha256:b4d637b6f7dbff4d51789417d9c19891785c09f619dc945001115db7257cf144"
+  },
+  "timing": "decode=(completion_tokens-1)/(last_content_chunk-first_content_chunk); whole request=end-start; prefill=input_tokens/TTFT. Multi-token chunks can bias short decode rates. Raw records preserve all timings.",
+  "sanitization": "Private endpoint addresses/home directories replaced only in metadata/errors; request bodies and model outputs retained. Headers and credentials excluded.",
+  "scope": "Exploratory same-hardware sequential arms. Short prompts: 9 repetitions; cold prefix: 3; 128K continuation: 1. E320 early and return baselines bracket the candidate. No cross-day statistical or broad quality guarantee.",
+  "external_host_guard_gib": 2.5,
+  "quality": "SciCode 50 validation subproblems, 15 parents, fixed seeds/high thinking; CanItEdit 12 tasks twice; same frozen protocol as previous round. Not AA official scores."
+}

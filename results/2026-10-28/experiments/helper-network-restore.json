@@ -1,0 +1,7 @@
+{
+  "task_firewall_rule_removed": true,
+  "remaining_ipv4_entries": 3,
+  "other_ipv4_entries_match_snapshot": true,
+  "temporary_proxy_removed": true,
+  "helper_stopped": true
+}

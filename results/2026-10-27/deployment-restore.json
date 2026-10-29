@@ -1,0 +1,55 @@
+{
+  "utc": "2026-10-27T10:22:08.158590+00:00",
+  "summary": "原始服务已恢复；双 rank 容器的镜像、命令、环境和挂载与备份一致；部署文件哈希未变；原有 5 项 API 验证通过，另从 Mac 经局域网完成真实生成，网页返回 200。",
+  "head": {
+    "deployment_files_checked": 44,
+    "changed_files": [],
+    "containers": {
+      "tfv41-r0": {
+        "image_equal": true,
+        "command_equal": true,
+        "entrypoint_equal": true,
+        "environment_equal": true,
+        "mounts_equal": true,
+        "running": true
+      },
+      "dsv4-profile-gateway": {
+        "image_equal": true,
+        "command_equal": true,
+        "entrypoint_equal": true,
+        "environment_equal": true,
+        "mounts_equal": true,
+        "running": true
+      },
+      "dsv4-router": {
+        "image_equal": true,
+        "command_equal": true,
+        "entrypoint_equal": true,
+        "environment_equal": true,
+        "mounts_equal": true,
+        "running": true
+      }
+    },
+    "selected_service": "active",
+    "selected_enabled": "enabled"
+  },
+  "worker": {
+    "containers": {
+      "tfv41-r1": {
+        "image_equal": true,
+        "command_equal": true,
+        "entrypoint_equal": true,
+        "environment_equal": true,
+        "mounts_equal": true,
+        "running": true
+      }
+    }
+  },
+  "api_contract_checks": 5,
+  "api_contract_passed": 5,
+  "lan_model_listing_status": 200,
+  "lan_generation_status": 200,
+  "lan_generation_completion_tokens": 3,
+  "web_status": 200,
+  "secrets_included": false
+}

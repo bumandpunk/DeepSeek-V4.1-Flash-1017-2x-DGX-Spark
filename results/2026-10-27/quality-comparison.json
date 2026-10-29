@@ -1,0 +1,1267 @@
+{
+  "protocol": "same frozen prompts/template, per-step seed, sampler, model bytes, reasoning, max output, evaluator and numeric test data; sequential later prompts include each arm's own previous generated code",
+  "runs": {
+    "historical_e320_512": {
+      "passed": 37,
+      "total": 50,
+      "parent_all_passed": 9,
+      "parent_total": 15,
+      "statuses": {
+        "passed": 37,
+        "failed": 13
+      },
+      "truncated_steps": [],
+      "api_retries": 0,
+      "steps": {
+        "1.1": {
+          "status": "passed",
+          "request_sha256": "67a6514c070e94e05efa7949a28b5df475c761e6a7f5f099ae31345fd437e11f",
+          "step_code_sha256": "cf7edaa7683dac3b0b4893ae75013f274121201c2a1c4301fe046cc18654ca23",
+          "prompt_tokens": 890,
+          "completion_tokens": 996,
+          "finish_reason": "stop"
+        },
+        "3.1": {
+          "status": "passed",
+          "request_sha256": "a9f2503b55a47bd2aa8424f0d2d450e80e6bd39dede34a28944b246f308b2e50",
+          "step_code_sha256": "8834dd276dd504e402ddf702c595dbcb53a1aa6946ebd077eb8c5318744317fa",
+          "prompt_tokens": 706,
+          "completion_tokens": 1560,
+          "finish_reason": "stop"
+        },
+        "4.1": {
+          "status": "passed",
+          "request_sha256": "7d07d66b5daa4b95e21d76d549aa41a243e779bf57a7c621d5213e84b96ff112",
+          "step_code_sha256": "8fa078213b063f030de8cd917fc2a560f41d47abae378be8ab430b1ea753ac39",
+          "prompt_tokens": 674,
+          "completion_tokens": 1217,
+          "finish_reason": "stop"
+        },
+        "6.1": {
+          "status": "passed",
+          "request_sha256": "2e40aad92d20bd388810a6e50664fc9983e60f76c865e2090ebb136624831baa",
+          "step_code_sha256": "9f0adb6777aeb602c280ba372ba3699275e57943ebe389e118f93fc63910ff7d",
+          "prompt_tokens": 670,
+          "completion_tokens": 1418,
+          "finish_reason": "stop"
+        },
+        "7.1": {
+          "status": "passed",
+          "request_sha256": "0d290f9c466673f4cad9776d7b8fa4a756c7c9436cfc79df80215e5105bc70f1",
+          "step_code_sha256": "95c4713e4faa3d2e6bb75728b79d56e58b06c83367694147704c014eebf2f3bf",
+          "prompt_tokens": 689,
+          "completion_tokens": 3238,
+          "finish_reason": "stop"
+        },
+        "10.1": {
+          "status": "passed",
+          "request_sha256": "e2953bfc6ee61ea955901b7ad8af3cf3e674de2826395db7b70817695604d061",
+          "step_code_sha256": "9c4da6bae994a3e44981a474f15f38e01390eeb194721acde924eab808f1ad85",
+          "prompt_tokens": 498,
+          "completion_tokens": 10296,
+          "finish_reason": "stop"
+        },
+        "10.2": {
+          "status": "passed",
+          "request_sha256": "d6cacfc14254f695f61a428df16b80573dc48295a4699418cd0ecd0045328bec",
+          "step_code_sha256": "d4d8772cd4694552cb3e5fa49a1ba07c7c8c46686f757ca70bf633315f91eaae",
+          "prompt_tokens": 702,
+          "completion_tokens": 630,
+          "finish_reason": "stop"
+        },
+        "10.3": {
+          "status": "passed",
+          "request_sha256": "5810e6e8bb04db6386c3197f0b41f96fd1d73af92d81bbead42505af44b7c17b",
+          "step_code_sha256": "ad777dfc943d4fd7378d30a6f170a222b6ca85138d9de7cf23c9211a363195d7",
+          "prompt_tokens": 943,
+          "completion_tokens": 1504,
+          "finish_reason": "stop"
+        },
+        "10.4": {
+          "status": "failed",
+          "request_sha256": "571d3da70d608915eb15cfe3df2d1949de2a1c5efe47efbd2c65dd03c8f00f4c",
+          "step_code_sha256": "80911d235d77b3df848eedf88d635d6633f59e77f5f95f7393c1e08607c4c827",
+          "prompt_tokens": 1346,
+          "completion_tokens": 9841,
+          "finish_reason": "stop"
+        },
+        "10.5": {
+          "status": "passed",
+          "request_sha256": "34f3ec149d57bf23f91ca47efdb8ba7f6c84cf1de767b856d888b6142ba32eda",
+          "step_code_sha256": "973741c906b9014d97f4f94aa22b8ea4bd49aaf723e3d63eb05e96104eb9719d",
+          "prompt_tokens": 1679,
+          "completion_tokens": 4466,
+          "finish_reason": "stop"
+        },
+        "10.6": {
+          "status": "failed",
+          "request_sha256": "7c1c0c8862a07295865640ec038076b1dd6f0e81fa444b5c5f3e7c97a510af27",
+          "step_code_sha256": "d24b31ac9c1a0f4e1821147f7e4056e2d9fdc233de1510692954a4a779e05e67",
+          "prompt_tokens": 2156,
+          "completion_tokens": 3034,
+          "finish_reason": "stop"
+        },
+        "10.7": {
+          "status": "failed",
+          "request_sha256": "3f8289453e57675b10ddbc0938db5c8f826023e42a33689c05146589a3b26b37",
+          "step_code_sha256": "d27fcdd6a63789b55b5ee4a0a943fac1cf61ff3f6b3f42bb1b9bdb407f30a807",
+          "prompt_tokens": 2632,
+          "completion_tokens": 1223,
+          "finish_reason": "stop"
+        },
+        "10.8": {
+          "status": "failed",
+          "request_sha256": "5125c94573de1693420aad62b6e84e886b44fc148c4b37a14e6d431c4bea3f2f",
+          "step_code_sha256": "e125cd3a5627ec0d5ff027bf5bccadd660f812d57cd7e6f9965941a01098ed6d",
+          "prompt_tokens": 2946,
+          "completion_tokens": 1985,
+          "finish_reason": "stop"
+        },
+        "10.9": {
+          "status": "passed",
+          "request_sha256": "8381e9b641aeece247649d8cdc9d1b05e4deff1600a38ff0f03dab28cec1769a",
+          "step_code_sha256": "ff091452194e7dd8c350b42254a3d7aa6c2d31ee91262eb0524bcf1c477514a6",
+          "prompt_tokens": 3417,
+          "completion_tokens": 502,
+          "finish_reason": "stop"
+        },
+        "10.10": {
+          "status": "passed",
+          "request_sha256": "d59b1d0a1a6eccf6103a0b82136f79ad2eed1d5a48e3dfb96a9599bf131a60eb",
+          "step_code_sha256": "15a797373161a59abd4fd182a746876cbc16cd691ec7b16d364d2154957f93cc",
+          "prompt_tokens": 3650,
+          "completion_tokens": 672,
+          "finish_reason": "stop"
+        },
+        "10.11": {
+          "status": "failed",
+          "request_sha256": "57de898ad0e4bd1a46a41836ce0457fe5a3d1f841d6c31a814a1280e8fd22887",
+          "step_code_sha256": "0bd5f2ffac2ab02a2622581e7ca45a03a934572d9f3658d70d9a35ae3bf5e963",
+          "prompt_tokens": 4030,
+          "completion_tokens": 3076,
+          "finish_reason": "stop"
+        },
+        "19.1": {
+          "status": "passed",
+          "request_sha256": "69dd2e2c43b80dd7b0a8f66bf9d942e073401d99174ee8cadf791de5515a599e",
+          "step_code_sha256": "cf6d9d9529dd4df745aa777bde13b12b66734120f864199a3dbb747d8449feb2",
+          "prompt_tokens": 415,
+          "completion_tokens": 645,
+          "finish_reason": "stop"
+        },
+        "19.2": {
+          "status": "passed",
+          "request_sha256": "080950e97c15ed56349e7dad6d25c3fe456d69754d2f5a8036e9541a1800c716",
+          "step_code_sha256": "8f4ffcc428ebccc216d2419213b820636dcf18b74f05067ec3db15f85b2b4e0e",
+          "prompt_tokens": 669,
+          "completion_tokens": 1907,
+          "finish_reason": "stop"
+        },
+        "29.1": {
+          "status": "passed",
+          "request_sha256": "61a70b438ae664e17528386ad45fefcd4b20ba9f05eaef82595c24512e26aca6",
+          "step_code_sha256": "858d12d68158ceea58dd7a0350856f68c9b48c653f3f7ea6f9ef5bac71724067",
+          "prompt_tokens": 472,
+          "completion_tokens": 604,
+          "finish_reason": "stop"
+        },
+        "29.2": {
+          "status": "passed",
+          "request_sha256": "dd048e0e8af2b4e01a58d45f812045b70cda9d2bae63fd6de2d203f0eef05dc4",
+          "step_code_sha256": "daf1f7be862cfc7755ccc656a3677d8c04b50c1a486c4c5aadedfac0a1adcbeb",
+          "prompt_tokens": 637,
+          "completion_tokens": 647,
+          "finish_reason": "stop"
+        },
+        "29.3": {
+          "status": "passed",
+          "request_sha256": "15d22648e88e859e7995a9b07dcd186ba7626430043177129f9cf76ab5f0f8b0",
+          "step_code_sha256": "5e248db58d5f6422168bd22eb64532995eec4f15729a7a08351c674ce50c2cac",
+          "prompt_tokens": 1112,
+          "completion_tokens": 2047,
+          "finish_reason": "stop"
+        },
+        "38.1": {
+          "status": "passed",
+          "request_sha256": "b8fcc360e9ddabe2b7ec652770bbad72eb7713a5840cb0816e09a5ec84b929c1",
+          "step_code_sha256": "b078eaf0ca08316faa85dc2ed5d77f25bdac1075c8c09253300d426285b16f1d",
+          "prompt_tokens": 991,
+          "completion_tokens": 373,
+          "finish_reason": "stop"
+        },
+        "38.2": {
+          "status": "passed",
+          "request_sha256": "a83d6264bd9115ed58cfe707a97bf70baf57a2fad34fbe6c2087a681f7129caf",
+          "step_code_sha256": "afd217f5c15390efc1a89d8792eb4465a2bcbf09e3394dc21145d4cb3376e774",
+          "prompt_tokens": 1380,
+          "completion_tokens": 433,
+          "finish_reason": "stop"
+        },
+        "38.3": {
+          "status": "passed",
+          "request_sha256": "a0b8b7f536f97f121c444c4ed9968f99ca743b4078a62d9b88a780d698624ae7",
+          "step_code_sha256": "b7b331b88422b2be7874e4662bc515d78f60835d9e657789a52e423c7e558cdb",
+          "prompt_tokens": 1737,
+          "completion_tokens": 14760,
+          "finish_reason": "stop"
+        },
+        "44.1": {
+          "status": "passed",
+          "request_sha256": "eec1fa3348f9acd3b918451692540ea8ba6897250cf9f4ffa40a74cf049f0b24",
+          "step_code_sha256": "3176f191969a93db72fd1727be458f47d5fd06fea2551295252e3415b0c4db74",
+          "prompt_tokens": 608,
+          "completion_tokens": 1424,
+          "finish_reason": "stop"
+        },
+        "44.2": {
+          "status": "passed",
+          "request_sha256": "af24354625c416bd7224a6257a9e8aabbc0bb2df80cfaca03acb0cf62803a0aa",
+          "step_code_sha256": "43db927d24193bc191b36b1af0390636e27392b0728f0be7ff74274b780ba0fd",
+          "prompt_tokens": 1153,
+          "completion_tokens": 1517,
+          "finish_reason": "stop"
+        },
+        "44.3": {
+          "status": "failed",
+          "request_sha256": "8b2f76f7e93a50ffc8ca0ba207f78fd84e1c53fc9a8c4398422e0ae6d1ec2bab",
+          "step_code_sha256": "0fdf1d8b4bc8d1f312c362c80cd8713cc7639123e31a417128b8c1cf7378e110",
+          "prompt_tokens": 1614,
+          "completion_tokens": 1871,
+          "finish_reason": "stop"
+        },
+        "47.1": {
+          "status": "passed",
+          "request_sha256": "0a322d1de364b3da2368fb00239cf87b4ab69083a0c06252e1110cb2dee9e182",
+          "step_code_sha256": "b59800b5ac31d220fd66b83eb98e6db8ac6d4bb9cca2cfa482ecaa2ec60e067b",
+          "prompt_tokens": 616,
+          "completion_tokens": 408,
+          "finish_reason": "stop"
+        },
+        "47.2": {
+          "status": "passed",
+          "request_sha256": "73dffe9b3aa95f139a5b89b9ae7b59187255f786c099887b7485b2d35b3d8443",
+          "step_code_sha256": "d76f816c89a72401669542a59560a230ea6bf195c20e3181d2ef23276c284a45",
+          "prompt_tokens": 890,
+          "completion_tokens": 1052,
+          "finish_reason": "stop"
+        },
+        "47.3": {
+          "status": "failed",
+          "request_sha256": "27eaef886473790dadce97e46927bd8a04ff834025ca64c7c74bed4e7ea6cfbc",
+          "step_code_sha256": "0143924d015a9c23c4c6aba7b3d0b70eb0dfe165ec52eaa532b822a8b9c4bc23",
+          "prompt_tokens": 1202,
+          "completion_tokens": 7895,
+          "finish_reason": "stop"
+        },
+        "47.4": {
+          "status": "failed",
+          "request_sha256": "c9fd9f9d268b0581eab2c541c76db230f50a61e42b6ddc15d916147560e97ef6",
+          "step_code_sha256": "0485ed67ce426c203d95101afb4cec29b8518a07f85fd51e67a5ac4c496e8d70",
+          "prompt_tokens": 1771,
+          "completion_tokens": 5786,
+          "finish_reason": "stop"
+        },
+        "49.1": {
+          "status": "failed",
+          "request_sha256": "d64ab867ecef57810bd7afad85c0c0d0e7cb01812e8423ad48b49f4ef4ecdd7d",
+          "step_code_sha256": "f1ced265873d05dec80f63cbdd7aab5b385855399026c8c2f5887496b53308f2",
+          "prompt_tokens": 762,
+          "completion_tokens": 5577,
+          "finish_reason": "stop"
+        },
+        "49.2": {
+          "status": "passed",
+          "request_sha256": "c9dc4c858cb2b5a8fd88d32057108b4455e75380b53e22459f7e52a4a19c32a1",
+          "step_code_sha256": "02b7043eb1ddc9a849398233504b47dda0d1ce7116cac3c370e7f3f3c1035224",
+          "prompt_tokens": 1369,
+          "completion_tokens": 1266,
+          "finish_reason": "stop"
+        },
+        "49.3": {
+          "status": "passed",
+          "request_sha256": "1a77facc42af474a1f8395ccbe40dc91bb20959ab9f2330a4599f0e4656c980b",
+          "step_code_sha256": "96e60e2b0978e67e172fc90d3af0075e718b8ef74cc3eeec360a9ae83e0f5835",
+          "prompt_tokens": 2167,
+          "completion_tokens": 800,
+          "finish_reason": "stop"
+        },
+        "49.4": {
+          "status": "failed",
+          "request_sha256": "6aee9a94b5060c9e98bfdd4a11a08df05bf9db72311ea3646ae83d1240b7dc27",
+          "step_code_sha256": "9e96297b7f30b3d9d63672065bdae03dbcb13668363f450e19d48eba449e2236",
+          "prompt_tokens": 2661,
+          "completion_tokens": 4840,
+          "finish_reason": "stop"
+        },
+        "51.1": {
+          "status": "passed",
+          "request_sha256": "813aa18db80e2313b13b5317ed580e9ba7374998505140372efe2c567a6c393a",
+          "step_code_sha256": "7cc379b96b2863b6ae67e5d6c097d922cd3b22d22a7b57414a3a53b7fb9f03ee",
+          "prompt_tokens": 723,
+          "completion_tokens": 12080,
+          "finish_reason": "stop"
+        },
+        "51.2": {
+          "status": "passed",
+          "request_sha256": "73fabbe405dde2b531a45a7d33da8560541ffe670712752171483a4d894a5b95",
+          "step_code_sha256": "254fa1549bf8f9defeaac9c8d75d06099b671f9a32a38d51a8184237094d1f71",
+          "prompt_tokens": 1047,
+          "completion_tokens": 1958,
+          "finish_reason": "stop"
+        },
+        "51.3": {
+          "status": "passed",
+          "request_sha256": "cf709ff21023e90ba23466162829ac594672243aec4ec034c1ddfcfa84357b0f",
+          "step_code_sha256": "d6a7f7da14f99f2a52d3b09832657b5d62ecd3b46f32f035685a6d8d36bfcab1",
+          "prompt_tokens": 1940,
+          "completion_tokens": 772,
+          "finish_reason": "stop"
+        },
+        "51.4": {
+          "status": "passed",
+          "request_sha256": "bb1fdffb9fc4c87bede17d651b455f3210484f4176ce0300896aa11ff16ecd38",
+          "step_code_sha256": "3b121a63258c9b72b19248839eb7777fb0f1c2863fc4c3dd2cb05dfe4da097c1",
+          "prompt_tokens": 2476,
+          "completion_tokens": 848,
+          "finish_reason": "stop"
+        },
+        "70.1": {
+          "status": "passed",
+          "request_sha256": "1a707729523a8773da2cdde08740b0a6657ce1f1be9c309abf4907a1ada97b50",
+          "step_code_sha256": "218f44831500f04ad06b34493a553d7350e2a5209e6899e3310628c66e280c77",
+          "prompt_tokens": 851,
+          "completion_tokens": 1113,
+          "finish_reason": "stop"
+        },
+        "70.2": {
+          "status": "passed",
+          "request_sha256": "f41c8de2a68996dcad5c5c3125491c93ea2a6af73b96d954546b87d4f97eae94",
+          "step_code_sha256": "9f40fa7854202b51645a72e5811bf6474208f679f6de245e7cac6a384b2f5cca",
+          "prompt_tokens": 1348,
+          "completion_tokens": 1017,
+          "finish_reason": "stop"
+        },
+        "70.3": {
+          "status": "passed",
+          "request_sha256": "09e5852b8702701ce55713ad4ad8c2528a462420b6326421a3c4c17fc1029fe6",
+          "step_code_sha256": "09e1f3863fbfc2ab3f434e13c74d74def4d989c3bc646bfd493f07ed6f72fd50",
+          "prompt_tokens": 2185,
+          "completion_tokens": 2076,
+          "finish_reason": "stop"
+        },
+        "70.4": {
+          "status": "passed",
+          "request_sha256": "334f4a45a9fa84c35736559c98136ad2d96f17b23722fc987e94209319e57c5f",
+          "step_code_sha256": "baa3b3650058b3dc76466968b1a88438a18501036edb4626abeaf64a366f3e32",
+          "prompt_tokens": 2468,
+          "completion_tokens": 1372,
+          "finish_reason": "stop"
+        },
+        "70.5": {
+          "status": "passed",
+          "request_sha256": "973607a93ca52be32ed4654a057a1231d0327fa01d9d5e8a89351c14690c6536",
+          "step_code_sha256": "cb7ab0caf6b957e75cbe1d427d642e3ea5fa8f7557b1158e411c1a9e4c6ad4aa",
+          "prompt_tokens": 3074,
+          "completion_tokens": 521,
+          "finish_reason": "stop"
+        },
+        "70.6": {
+          "status": "passed",
+          "request_sha256": "ea33a06a9ebac808f4318394e0472273093f874b25bf8dd19531002065a621c9",
+          "step_code_sha256": "9a2efff1f5cf32c606e8def15b669fedc907e2f7ad8c7fdebdc48993db0026a9",
+          "prompt_tokens": 3417,
+          "completion_tokens": 7490,
+          "finish_reason": "stop"
+        },
+        "70.7": {
+          "status": "failed",
+          "request_sha256": "331d23c3b0a53cd273ad16243c46656802ad11b3aa81748b68fd0ec0ccc0a8b7",
+          "step_code_sha256": "fa6fd917c9dcc086dd066093d733e90a5aacfe662deead7ac3ff2cdc2ce4328f",
+          "prompt_tokens": 4461,
+          "completion_tokens": 2512,
+          "finish_reason": "stop"
+        },
+        "70.8": {
+          "status": "failed",
+          "request_sha256": "8b0f8d4492c01b9d50755ede7e93213628924e2d886471a6347fb58cd82183f7",
+          "step_code_sha256": "23f00df8523de11e5818b9e39b79d056411d43546fbe2dc7e5f7df8c5cd50f61",
+          "prompt_tokens": 5062,
+          "completion_tokens": 2526,
+          "finish_reason": "stop"
+        },
+        "78.1": {
+          "status": "passed",
+          "request_sha256": "8322ad7688cca4e8b4611459471231b35a926c3df7cfc668bc75f1f37659a18d",
+          "step_code_sha256": "3666a716e121a022f599db6e8a0e155f4ce2777e176cbfa6f444604e73837c36",
+          "prompt_tokens": 1214,
+          "completion_tokens": 1553,
+          "finish_reason": "stop"
+        },
+        "78.2": {
+          "status": "passed",
+          "request_sha256": "ebff92abe8fca10be88cdaccc8155f5c9b7e4d09386ca6c038c56b0ddbc615ab",
+          "step_code_sha256": "9f034eaf3cc3cd8332ec5f13044b38c53fee6bdb7db25a7abe265bbf233cfe55",
+          "prompt_tokens": 1875,
+          "completion_tokens": 1260,
+          "finish_reason": "stop"
+        },
+        "78.3": {
+          "status": "failed",
+          "request_sha256": "da79996f6b20f3378b8839ef9a59dc79b97e637457f03bcc89826a465828704c",
+          "step_code_sha256": "7f9f06efb574ea7b6b6cc35a14d3584168c1ff49bff32a0363d0425da88321af",
+          "prompt_tokens": 2961,
+          "completion_tokens": 10496,
+          "finish_reason": "stop"
+        }
+      }
+    },
+    "baseline_e320_2048": {
+      "passed": 37,
+      "total": 50,
+      "parent_all_passed": 8,
+      "parent_total": 15,
+      "statuses": {
+        "passed": 37,
+        "failed": 13
+      },
+      "truncated_steps": [],
+      "api_retries": 0,
+      "steps": {
+        "1.1": {
+          "status": "passed",
+          "request_sha256": "67a6514c070e94e05efa7949a28b5df475c761e6a7f5f099ae31345fd437e11f",
+          "step_code_sha256": "b9e9642786d82f5a788b4e9439fefbc5ea54ad29d16f99e25bdedaf4e07bab1c",
+          "prompt_tokens": 890,
+          "completion_tokens": 1146,
+          "finish_reason": "stop"
+        },
+        "3.1": {
+          "status": "passed",
+          "request_sha256": "a9f2503b55a47bd2aa8424f0d2d450e80e6bd39dede34a28944b246f308b2e50",
+          "step_code_sha256": "bc7e4eb10fb86e568631e5241a2c368955cf624803b738930706a7734df96ebc",
+          "prompt_tokens": 706,
+          "completion_tokens": 1415,
+          "finish_reason": "stop"
+        },
+        "4.1": {
+          "status": "passed",
+          "request_sha256": "7d07d66b5daa4b95e21d76d549aa41a243e779bf57a7c621d5213e84b96ff112",
+          "step_code_sha256": "73cd6a9def1541965eb1b91fe136fd60080a2bc926640cac4ff65a8cb767ecc6",
+          "prompt_tokens": 674,
+          "completion_tokens": 2335,
+          "finish_reason": "stop"
+        },
+        "6.1": {
+          "status": "passed",
+          "request_sha256": "2e40aad92d20bd388810a6e50664fc9983e60f76c865e2090ebb136624831baa",
+          "step_code_sha256": "5fd434bd95ccbb27a5c32944fd343de1658242462712b620cfcbd6cef9b96352",
+          "prompt_tokens": 670,
+          "completion_tokens": 1544,
+          "finish_reason": "stop"
+        },
+        "7.1": {
+          "status": "passed",
+          "request_sha256": "0d290f9c466673f4cad9776d7b8fa4a756c7c9436cfc79df80215e5105bc70f1",
+          "step_code_sha256": "89281ac624716646b829b05f2827f597b67262f8c0b867a41986bc84b8379e3e",
+          "prompt_tokens": 689,
+          "completion_tokens": 2030,
+          "finish_reason": "stop"
+        },
+        "10.1": {
+          "status": "passed",
+          "request_sha256": "e2953bfc6ee61ea955901b7ad8af3cf3e674de2826395db7b70817695604d061",
+          "step_code_sha256": "9c4da6bae994a3e44981a474f15f38e01390eeb194721acde924eab808f1ad85",
+          "prompt_tokens": 498,
+          "completion_tokens": 10296,
+          "finish_reason": "stop"
+        },
+        "10.2": {
+          "status": "passed",
+          "request_sha256": "d6cacfc14254f695f61a428df16b80573dc48295a4699418cd0ecd0045328bec",
+          "step_code_sha256": "22269f6e24aa0ef9d2dc8316434e07036d0613524133024e4f5224d52c82b590",
+          "prompt_tokens": 702,
+          "completion_tokens": 897,
+          "finish_reason": "stop"
+        },
+        "10.3": {
+          "status": "passed",
+          "request_sha256": "42fc90926809a462f45f94a3b5a674f3f1eafbf5a8d2cf80049f2375380c605c",
+          "step_code_sha256": "a3a63aae48faa66c34a70bee1871bc7da7ac2dbfa443131b3a13c60cff3a4cd9",
+          "prompt_tokens": 948,
+          "completion_tokens": 640,
+          "finish_reason": "stop"
+        },
+        "10.4": {
+          "status": "passed",
+          "request_sha256": "4a665efe761c5a8e8fa74273b9dc35daff77e6f7d620464ce8b3211d0bba3ded",
+          "step_code_sha256": "d4794322b2ff4642b8b97a8ce5cf13b25c70b986ae43b85e8a218d3bc803ad68",
+          "prompt_tokens": 1374,
+          "completion_tokens": 14878,
+          "finish_reason": "stop"
+        },
+        "10.5": {
+          "status": "passed",
+          "request_sha256": "e6a59cefb8db342abda99035e4f4d63e4a890d0590a1dc0dd976330e159f3160",
+          "step_code_sha256": "1cdfe45dfacc8544fd21324ba7d88c29024b87c79aa5bbc3fc3f1da665e76033",
+          "prompt_tokens": 1697,
+          "completion_tokens": 5011,
+          "finish_reason": "stop"
+        },
+        "10.6": {
+          "status": "failed",
+          "request_sha256": "168072800aae7b817e691851afe375ae6df8417fa9dac7961639055070098ba5",
+          "step_code_sha256": "caf053b4a2558d420976a2f7fbca7e3378dc6f2bb57b61657a0daa7dc58c66c8",
+          "prompt_tokens": 2323,
+          "completion_tokens": 3137,
+          "finish_reason": "stop"
+        },
+        "10.7": {
+          "status": "failed",
+          "request_sha256": "9313b04518b050dccb437d14fc5dfd6d93ccda468f9ee4386ffc23519b1c2559",
+          "step_code_sha256": "379c5906d84384d7a2aeb54ea08f63be36ac0d5c29a4911d55ad0040a762cf3e",
+          "prompt_tokens": 2764,
+          "completion_tokens": 800,
+          "finish_reason": "stop"
+        },
+        "10.8": {
+          "status": "failed",
+          "request_sha256": "661e70bc7d1aff184f70541cc27d9e1a88ebdb095762f903c933d10da0fedede",
+          "step_code_sha256": "fe050112507e3d9319b75259c10ebae613baa7c7dcb62c128d461006ed054a77",
+          "prompt_tokens": 3209,
+          "completion_tokens": 2548,
+          "finish_reason": "stop"
+        },
+        "10.9": {
+          "status": "passed",
+          "request_sha256": "71920f957ef608b98cfbe3b230002c2e08efc631984ed925088853ae41838704",
+          "step_code_sha256": "bd94365159beffa8e69a2670a0a61a53d537f0986e93a170ca1a9fb3d44a1538",
+          "prompt_tokens": 3613,
+          "completion_tokens": 592,
+          "finish_reason": "stop"
+        },
+        "10.10": {
+          "status": "passed",
+          "request_sha256": "a0c02351f75c38879810e2214e5dffefe455c7dd6822f249a73c8e6dd5ff2ddb",
+          "step_code_sha256": "5e9e1e1ac3c7af96e9ad42a4078c13ce3e51ff58c9eb3128dc392fe84d342cf5",
+          "prompt_tokens": 3850,
+          "completion_tokens": 749,
+          "finish_reason": "stop"
+        },
+        "10.11": {
+          "status": "failed",
+          "request_sha256": "afe315e38046c77134b9c9d81debe5cab306778b6f1188a418e6b05ad4425c2a",
+          "step_code_sha256": "a7bae4e4e2d47cbaab020f38c89e0c07d5f9390673f51e4649a67cbb7fb09bd1",
+          "prompt_tokens": 4230,
+          "completion_tokens": 3844,
+          "finish_reason": "stop"
+        },
+        "19.1": {
+          "status": "passed",
+          "request_sha256": "69dd2e2c43b80dd7b0a8f66bf9d942e073401d99174ee8cadf791de5515a599e",
+          "step_code_sha256": "cf6d9d9529dd4df745aa777bde13b12b66734120f864199a3dbb747d8449feb2",
+          "prompt_tokens": 415,
+          "completion_tokens": 645,
+          "finish_reason": "stop"
+        },
+        "19.2": {
+          "status": "passed",
+          "request_sha256": "080950e97c15ed56349e7dad6d25c3fe456d69754d2f5a8036e9541a1800c716",
+          "step_code_sha256": "0e2595d0cdbb96b39467d180878cf207c1a3450936e174e151b1638e27c2daba",
+          "prompt_tokens": 669,
+          "completion_tokens": 3248,
+          "finish_reason": "stop"
+        },
+        "29.1": {
+          "status": "passed",
+          "request_sha256": "61a70b438ae664e17528386ad45fefcd4b20ba9f05eaef82595c24512e26aca6",
+          "step_code_sha256": "858d12d68158ceea58dd7a0350856f68c9b48c653f3f7ea6f9ef5bac71724067",
+          "prompt_tokens": 472,
+          "completion_tokens": 604,
+          "finish_reason": "stop"
+        },
+        "29.2": {
+          "status": "passed",
+          "request_sha256": "dd048e0e8af2b4e01a58d45f812045b70cda9d2bae63fd6de2d203f0eef05dc4",
+          "step_code_sha256": "ee15c34e50bc8f9dd109b1f9077468157b2dd1ac888efcc1a1e267c277b3bb12",
+          "prompt_tokens": 637,
+          "completion_tokens": 194,
+          "finish_reason": "stop"
+        },
+        "29.3": {
+          "status": "passed",
+          "request_sha256": "c2f0d489c2c91f47a1c7b1a2c3a3cf0cdb29ba73ca50282f34e18f2da827829f",
+          "step_code_sha256": "53592542fef1483b030e09d4147981c9d280965093413e884a3ab78982d41b36",
+          "prompt_tokens": 1111,
+          "completion_tokens": 3520,
+          "finish_reason": "stop"
+        },
+        "38.1": {
+          "status": "passed",
+          "request_sha256": "b8fcc360e9ddabe2b7ec652770bbad72eb7713a5840cb0816e09a5ec84b929c1",
+          "step_code_sha256": "12d4dbf1696e5c136d0916f59a48251abed97c6e1fac22c90de54108c0600db4",
+          "prompt_tokens": 991,
+          "completion_tokens": 622,
+          "finish_reason": "stop"
+        },
+        "38.2": {
+          "status": "passed",
+          "request_sha256": "c70023710e8fb17c93872af53027aedb4983a2701586bc970fa77b111eb87f6d",
+          "step_code_sha256": "16ff353cc7fedf36e7a03d26a354ab7b41413b05b55248b245dc586d6ca93c4f",
+          "prompt_tokens": 1322,
+          "completion_tokens": 414,
+          "finish_reason": "stop"
+        },
+        "38.3": {
+          "status": "failed",
+          "request_sha256": "386905bc724bb529844aa3855606a0c3a2a8c109737a3b66f8499199b1becbb4",
+          "step_code_sha256": "3b2346201b508fb3db61abfab5c69960680c2e54427d01f3afd9e436654642e5",
+          "prompt_tokens": 1759,
+          "completion_tokens": 10464,
+          "finish_reason": "stop"
+        },
+        "44.1": {
+          "status": "passed",
+          "request_sha256": "eec1fa3348f9acd3b918451692540ea8ba6897250cf9f4ffa40a74cf049f0b24",
+          "step_code_sha256": "8810dc73d68a38dad4b5cf3519b8606b6fc4b8a96523ac6558ff969181bd91ab",
+          "prompt_tokens": 608,
+          "completion_tokens": 1428,
+          "finish_reason": "stop"
+        },
+        "44.2": {
+          "status": "passed",
+          "request_sha256": "0b16283a7b4e4eaa5fd45135497e43e9555c322aec2221a6c4ea5ac78ab9b2c2",
+          "step_code_sha256": "5791c62e7bbd0b253f34a136785f46e23f70282c87c733d48a600e0b0ef2c25e",
+          "prompt_tokens": 1151,
+          "completion_tokens": 1906,
+          "finish_reason": "stop"
+        },
+        "44.3": {
+          "status": "failed",
+          "request_sha256": "dfe6361ae7e828d192bad4393a5cdab5652c0250c580db0963aad8089d244368",
+          "step_code_sha256": "29e1cd90313fb6cca98312e7d665583fe14d133f40dc337d6536251c56398e30",
+          "prompt_tokens": 1604,
+          "completion_tokens": 1383,
+          "finish_reason": "stop"
+        },
+        "47.1": {
+          "status": "passed",
+          "request_sha256": "0a322d1de364b3da2368fb00239cf87b4ab69083a0c06252e1110cb2dee9e182",
+          "step_code_sha256": "e30a0e04618914a6f4a2f446a8a1efeb97fa458fbf90e8936c0d839c8228c4af",
+          "prompt_tokens": 616,
+          "completion_tokens": 558,
+          "finish_reason": "stop"
+        },
+        "47.2": {
+          "status": "passed",
+          "request_sha256": "6649e57945a706db443b54d3d666921fcc3a12fe6492cb0a665f43fcd9f74ba9",
+          "step_code_sha256": "d17cd6e1ee34b5b727c97e449bb4b1abdc4bd1495362cd901b1924e09370e4dc",
+          "prompt_tokens": 903,
+          "completion_tokens": 634,
+          "finish_reason": "stop"
+        },
+        "47.3": {
+          "status": "failed",
+          "request_sha256": "9cc6f8dc7a886b1c99d9c91baf1dc5791ab1b2c7d31aaecd858839b8f5e55a0a",
+          "step_code_sha256": "b5f8a26fb3c052115d08eeafb430405ed00765f93244fbb989934ddebd2d376d",
+          "prompt_tokens": 1170,
+          "completion_tokens": 1861,
+          "finish_reason": "stop"
+        },
+        "47.4": {
+          "status": "failed",
+          "request_sha256": "a5b0033e41f7dfa65c73ce7482ccfc51053510ba736aa8e5f99ff58bc1f644d3",
+          "step_code_sha256": "d1a07bb079b7bdc32032d6125f4344d2c29cf94fb9be083cc8e67893dc2d32b3",
+          "prompt_tokens": 1738,
+          "completion_tokens": 4720,
+          "finish_reason": "stop"
+        },
+        "49.1": {
+          "status": "failed",
+          "request_sha256": "d64ab867ecef57810bd7afad85c0c0d0e7cb01812e8423ad48b49f4ef4ecdd7d",
+          "step_code_sha256": "f21104b44e7bfa715f41bf26422e62d1d096a4196ba063c7794ef8e818c77f93",
+          "prompt_tokens": 762,
+          "completion_tokens": 2728,
+          "finish_reason": "stop"
+        },
+        "49.2": {
+          "status": "passed",
+          "request_sha256": "d28de38b641d075cc14c83a7d762d4fee8fd56f23dcc45b55caca83742881b7e",
+          "step_code_sha256": "97e66f94591c7095e83a232854f4164f5697bdb4fa31e7a0e58091965cef0a5d",
+          "prompt_tokens": 1387,
+          "completion_tokens": 468,
+          "finish_reason": "stop"
+        },
+        "49.3": {
+          "status": "passed",
+          "request_sha256": "e9d2f23dfd4aa550a30d18fb5d36d613b604dfd71ba37af0b03816cef3e56a4d",
+          "step_code_sha256": "ab30b16f7aae15ac024b81c2eea29aecb24b478409a7924d6bf6a2ce662411be",
+          "prompt_tokens": 1871,
+          "completion_tokens": 1573,
+          "finish_reason": "stop"
+        },
+        "49.4": {
+          "status": "failed",
+          "request_sha256": "6acd8decd3d809bbeff5022d801df1dfd5e7bb9dccf56d93ab3fe0e463397b8d",
+          "step_code_sha256": "c0cf6719181481dac0c806e8872aa6b2a624ec233ef336efb6292979e26efd5e",
+          "prompt_tokens": 2351,
+          "completion_tokens": 1533,
+          "finish_reason": "stop"
+        },
+        "51.1": {
+          "status": "passed",
+          "request_sha256": "813aa18db80e2313b13b5317ed580e9ba7374998505140372efe2c567a6c393a",
+          "step_code_sha256": "8c29cd77f847944d56c25cd87059d1f359c17bd080c828a6e1890af46d736faa",
+          "prompt_tokens": 723,
+          "completion_tokens": 4791,
+          "finish_reason": "stop"
+        },
+        "51.2": {
+          "status": "passed",
+          "request_sha256": "3967521a412f5e8f0f885a168ea69fd7e79d62f4bbab2a4667341ad8dd95226d",
+          "step_code_sha256": "ad79c7965076d480108ba4472eb386558b7259f5859dd485613a1f6ca9e02914",
+          "prompt_tokens": 1096,
+          "completion_tokens": 3131,
+          "finish_reason": "stop"
+        },
+        "51.3": {
+          "status": "passed",
+          "request_sha256": "daf6b088f4a15d0120148b6e13ff6e8a0653a3437f270d0cfa4dbf61e548901c",
+          "step_code_sha256": "9adde8bd9e466eb369825bf0384848a6274e94f02445e0e367d82167a12f3aab",
+          "prompt_tokens": 2017,
+          "completion_tokens": 1452,
+          "finish_reason": "stop"
+        },
+        "51.4": {
+          "status": "passed",
+          "request_sha256": "029dd3586a7c86be5a2d6847d08ed134750715328245193bbd8d5b0aeff4dbd2",
+          "step_code_sha256": "03ff50b696be45e4020b601374cd243b9f2ebfa04fbd4258f34b140cb93daaba",
+          "prompt_tokens": 2573,
+          "completion_tokens": 896,
+          "finish_reason": "stop"
+        },
+        "70.1": {
+          "status": "passed",
+          "request_sha256": "1a707729523a8773da2cdde08740b0a6657ce1f1be9c309abf4907a1ada97b50",
+          "step_code_sha256": "e4cd31e723cf6c14eedcffcbb0bee8e31e0eb3577791639fc36de85c46963e82",
+          "prompt_tokens": 851,
+          "completion_tokens": 902,
+          "finish_reason": "stop"
+        },
+        "70.2": {
+          "status": "passed",
+          "request_sha256": "e51ce4e7299c14e9b5730c2a4440a052e471177a901a7344a7bac0a3bb36b2cf",
+          "step_code_sha256": "3b1d33eb40ab70a83cbc9eab10d37909d3f34f39ac6424c52510ff84bb0439d7",
+          "prompt_tokens": 1219,
+          "completion_tokens": 2696,
+          "finish_reason": "stop"
+        },
+        "70.3": {
+          "status": "passed",
+          "request_sha256": "6cce890657296327c1590804ee256a07507af4f5206593c3ceabeea9c6b224cf",
+          "step_code_sha256": "f682d704e053e928671470dea5509a7973b58220035508de31b7e39135acc2be",
+          "prompt_tokens": 2395,
+          "completion_tokens": 1134,
+          "finish_reason": "stop"
+        },
+        "70.4": {
+          "status": "passed",
+          "request_sha256": "b2aa7f6de03e69943cd2e8b09bf67d23ce02343b8514cce8feb2d9579777b084",
+          "step_code_sha256": "668ea98545124ab40f87658deb513111b53ddc574d2ebf1eae09fb9b894f0641",
+          "prompt_tokens": 2794,
+          "completion_tokens": 2355,
+          "finish_reason": "stop"
+        },
+        "70.5": {
+          "status": "passed",
+          "request_sha256": "bebdd0c91e0aadc7ea83f38944de67ecd7af9a3bbb0da9b3add75342f5c62e78",
+          "step_code_sha256": "770c7a2e1c20b65ab7867d67a1251297aa5a52060d8edaec07503bdd04fac1b5",
+          "prompt_tokens": 3410,
+          "completion_tokens": 491,
+          "finish_reason": "stop"
+        },
+        "70.6": {
+          "status": "passed",
+          "request_sha256": "09b97f850ceb591033cdf2342b8229d1d19846c1e178069ece2bb9fa09a487ac",
+          "step_code_sha256": "bcfbc8bb87b11aa01e70a4c89a077c8311bc8621ad3d3065241d7f8dc324f64d",
+          "prompt_tokens": 3746,
+          "completion_tokens": 6283,
+          "finish_reason": "stop"
+        },
+        "70.7": {
+          "status": "failed",
+          "request_sha256": "139c529962a3a32e84d35441444b5c4c3c0f7d7318446ec73be5c10b53140848",
+          "step_code_sha256": "df13d4f8275ade6ab2253a74ec0e7c298089d806c1492314ec6ccbe7f250def9",
+          "prompt_tokens": 4863,
+          "completion_tokens": 2920,
+          "finish_reason": "stop"
+        },
+        "70.8": {
+          "status": "failed",
+          "request_sha256": "6d404b1512e7617cefe78b16014bcb420c17d4abff18f7aee09f71c94cc7f62e",
+          "step_code_sha256": "db8ac09b16920f660e6ddeca5b2fc5f3830127140a75c2652c382f893ab371a2",
+          "prompt_tokens": 5467,
+          "completion_tokens": 2502,
+          "finish_reason": "stop"
+        },
+        "78.1": {
+          "status": "passed",
+          "request_sha256": "8322ad7688cca4e8b4611459471231b35a926c3df7cfc668bc75f1f37659a18d",
+          "step_code_sha256": "46bf922fa868ee6e0c3a296b47ff6ce9d6d6ab566c98cf99b3f2d52a9c85b2f9",
+          "prompt_tokens": 1214,
+          "completion_tokens": 1956,
+          "finish_reason": "stop"
+        },
+        "78.2": {
+          "status": "passed",
+          "request_sha256": "6496ffcbd81cf5c25d5f81acd7173b4902b9202dd746c0331a6ab33e5ea4785e",
+          "step_code_sha256": "4e82d9ae41a2d32d9c9219cedf87db2495a5b9c179ff3560c73604fbd1bf7e4c",
+          "prompt_tokens": 1857,
+          "completion_tokens": 775,
+          "finish_reason": "stop"
+        },
+        "78.3": {
+          "status": "failed",
+          "request_sha256": "0a4015c149ee87a4b4f90133f05f598d2703c5f07dbf71fa5415c4c670b52450",
+          "step_code_sha256": "66851da8856104229c8021c8767cbb7406d491306bf66f0707617ed47dd4b478",
+          "prompt_tokens": 2917,
+          "completion_tokens": 13792,
+          "finish_reason": "stop"
+        }
+      }
+    },
+    "lookup_e320_2048": {
+      "passed": 37,
+      "total": 50,
+      "parent_all_passed": 8,
+      "parent_total": 15,
+      "statuses": {
+        "passed": 37,
+        "failed": 13
+      },
+      "truncated_steps": [],
+      "api_retries": 0,
+      "steps": {
+        "1.1": {
+          "status": "passed",
+          "request_sha256": "67a6514c070e94e05efa7949a28b5df475c761e6a7f5f099ae31345fd437e11f",
+          "step_code_sha256": "b9e9642786d82f5a788b4e9439fefbc5ea54ad29d16f99e25bdedaf4e07bab1c",
+          "prompt_tokens": 890,
+          "completion_tokens": 1146,
+          "finish_reason": "stop"
+        },
+        "3.1": {
+          "status": "passed",
+          "request_sha256": "a9f2503b55a47bd2aa8424f0d2d450e80e6bd39dede34a28944b246f308b2e50",
+          "step_code_sha256": "bc7e4eb10fb86e568631e5241a2c368955cf624803b738930706a7734df96ebc",
+          "prompt_tokens": 706,
+          "completion_tokens": 1415,
+          "finish_reason": "stop"
+        },
+        "4.1": {
+          "status": "passed",
+          "request_sha256": "7d07d66b5daa4b95e21d76d549aa41a243e779bf57a7c621d5213e84b96ff112",
+          "step_code_sha256": "73cd6a9def1541965eb1b91fe136fd60080a2bc926640cac4ff65a8cb767ecc6",
+          "prompt_tokens": 674,
+          "completion_tokens": 2335,
+          "finish_reason": "stop"
+        },
+        "6.1": {
+          "status": "passed",
+          "request_sha256": "2e40aad92d20bd388810a6e50664fc9983e60f76c865e2090ebb136624831baa",
+          "step_code_sha256": "5fd434bd95ccbb27a5c32944fd343de1658242462712b620cfcbd6cef9b96352",
+          "prompt_tokens": 670,
+          "completion_tokens": 1544,
+          "finish_reason": "stop"
+        },
+        "7.1": {
+          "status": "passed",
+          "request_sha256": "0d290f9c466673f4cad9776d7b8fa4a756c7c9436cfc79df80215e5105bc70f1",
+          "step_code_sha256": "89281ac624716646b829b05f2827f597b67262f8c0b867a41986bc84b8379e3e",
+          "prompt_tokens": 689,
+          "completion_tokens": 2030,
+          "finish_reason": "stop"
+        },
+        "10.1": {
+          "status": "passed",
+          "request_sha256": "e2953bfc6ee61ea955901b7ad8af3cf3e674de2826395db7b70817695604d061",
+          "step_code_sha256": "9c4da6bae994a3e44981a474f15f38e01390eeb194721acde924eab808f1ad85",
+          "prompt_tokens": 498,
+          "completion_tokens": 10296,
+          "finish_reason": "stop"
+        },
+        "10.2": {
+          "status": "passed",
+          "request_sha256": "d6cacfc14254f695f61a428df16b80573dc48295a4699418cd0ecd0045328bec",
+          "step_code_sha256": "22269f6e24aa0ef9d2dc8316434e07036d0613524133024e4f5224d52c82b590",
+          "prompt_tokens": 702,
+          "completion_tokens": 897,
+          "finish_reason": "stop"
+        },
+        "10.3": {
+          "status": "passed",
+          "request_sha256": "42fc90926809a462f45f94a3b5a674f3f1eafbf5a8d2cf80049f2375380c605c",
+          "step_code_sha256": "a3a63aae48faa66c34a70bee1871bc7da7ac2dbfa443131b3a13c60cff3a4cd9",
+          "prompt_tokens": 948,
+          "completion_tokens": 640,
+          "finish_reason": "stop"
+        },
+        "10.4": {
+          "status": "passed",
+          "request_sha256": "4a665efe761c5a8e8fa74273b9dc35daff77e6f7d620464ce8b3211d0bba3ded",
+          "step_code_sha256": "d4794322b2ff4642b8b97a8ce5cf13b25c70b986ae43b85e8a218d3bc803ad68",
+          "prompt_tokens": 1374,
+          "completion_tokens": 14878,
+          "finish_reason": "stop"
+        },
+        "10.5": {
+          "status": "passed",
+          "request_sha256": "e6a59cefb8db342abda99035e4f4d63e4a890d0590a1dc0dd976330e159f3160",
+          "step_code_sha256": "1cdfe45dfacc8544fd21324ba7d88c29024b87c79aa5bbc3fc3f1da665e76033",
+          "prompt_tokens": 1697,
+          "completion_tokens": 5011,
+          "finish_reason": "stop"
+        },
+        "10.6": {
+          "status": "failed",
+          "request_sha256": "168072800aae7b817e691851afe375ae6df8417fa9dac7961639055070098ba5",
+          "step_code_sha256": "caf053b4a2558d420976a2f7fbca7e3378dc6f2bb57b61657a0daa7dc58c66c8",
+          "prompt_tokens": 2323,
+          "completion_tokens": 3137,
+          "finish_reason": "stop"
+        },
+        "10.7": {
+          "status": "failed",
+          "request_sha256": "9313b04518b050dccb437d14fc5dfd6d93ccda468f9ee4386ffc23519b1c2559",
+          "step_code_sha256": "379c5906d84384d7a2aeb54ea08f63be36ac0d5c29a4911d55ad0040a762cf3e",
+          "prompt_tokens": 2764,
+          "completion_tokens": 800,
+          "finish_reason": "stop"
+        },
+        "10.8": {
+          "status": "failed",
+          "request_sha256": "661e70bc7d1aff184f70541cc27d9e1a88ebdb095762f903c933d10da0fedede",
+          "step_code_sha256": "fe050112507e3d9319b75259c10ebae613baa7c7dcb62c128d461006ed054a77",
+          "prompt_tokens": 3209,
+          "completion_tokens": 2548,
+          "finish_reason": "stop"
+        },
+        "10.9": {
+          "status": "passed",
+          "request_sha256": "71920f957ef608b98cfbe3b230002c2e08efc631984ed925088853ae41838704",
+          "step_code_sha256": "bd94365159beffa8e69a2670a0a61a53d537f0986e93a170ca1a9fb3d44a1538",
+          "prompt_tokens": 3613,
+          "completion_tokens": 592,
+          "finish_reason": "stop"
+        },
+        "10.10": {
+          "status": "passed",
+          "request_sha256": "a0c02351f75c38879810e2214e5dffefe455c7dd6822f249a73c8e6dd5ff2ddb",
+          "step_code_sha256": "5e9e1e1ac3c7af96e9ad42a4078c13ce3e51ff58c9eb3128dc392fe84d342cf5",
+          "prompt_tokens": 3850,
+          "completion_tokens": 749,
+          "finish_reason": "stop"
+        },
+        "10.11": {
+          "status": "failed",
+          "request_sha256": "afe315e38046c77134b9c9d81debe5cab306778b6f1188a418e6b05ad4425c2a",
+          "step_code_sha256": "a7bae4e4e2d47cbaab020f38c89e0c07d5f9390673f51e4649a67cbb7fb09bd1",
+          "prompt_tokens": 4230,
+          "completion_tokens": 3844,
+          "finish_reason": "stop"
+        },
+        "19.1": {
+          "status": "passed",
+          "request_sha256": "69dd2e2c43b80dd7b0a8f66bf9d942e073401d99174ee8cadf791de5515a599e",
+          "step_code_sha256": "cf6d9d9529dd4df745aa777bde13b12b66734120f864199a3dbb747d8449feb2",
+          "prompt_tokens": 415,
+          "completion_tokens": 645,
+          "finish_reason": "stop"
+        },
+        "19.2": {
+          "status": "passed",
+          "request_sha256": "080950e97c15ed56349e7dad6d25c3fe456d69754d2f5a8036e9541a1800c716",
+          "step_code_sha256": "0e2595d0cdbb96b39467d180878cf207c1a3450936e174e151b1638e27c2daba",
+          "prompt_tokens": 669,
+          "completion_tokens": 3248,
+          "finish_reason": "stop"
+        },
+        "29.1": {
+          "status": "passed",
+          "request_sha256": "61a70b438ae664e17528386ad45fefcd4b20ba9f05eaef82595c24512e26aca6",
+          "step_code_sha256": "858d12d68158ceea58dd7a0350856f68c9b48c653f3f7ea6f9ef5bac71724067",
+          "prompt_tokens": 472,
+          "completion_tokens": 604,
+          "finish_reason": "stop"
+        },
+        "29.2": {
+          "status": "passed",
+          "request_sha256": "dd048e0e8af2b4e01a58d45f812045b70cda9d2bae63fd6de2d203f0eef05dc4",
+          "step_code_sha256": "ee15c34e50bc8f9dd109b1f9077468157b2dd1ac888efcc1a1e267c277b3bb12",
+          "prompt_tokens": 637,
+          "completion_tokens": 194,
+          "finish_reason": "stop"
+        },
+        "29.3": {
+          "status": "passed",
+          "request_sha256": "c2f0d489c2c91f47a1c7b1a2c3a3cf0cdb29ba73ca50282f34e18f2da827829f",
+          "step_code_sha256": "53592542fef1483b030e09d4147981c9d280965093413e884a3ab78982d41b36",
+          "prompt_tokens": 1111,
+          "completion_tokens": 3520,
+          "finish_reason": "stop"
+        },
+        "38.1": {
+          "status": "passed",
+          "request_sha256": "b8fcc360e9ddabe2b7ec652770bbad72eb7713a5840cb0816e09a5ec84b929c1",
+          "step_code_sha256": "12d4dbf1696e5c136d0916f59a48251abed97c6e1fac22c90de54108c0600db4",
+          "prompt_tokens": 991,
+          "completion_tokens": 622,
+          "finish_reason": "stop"
+        },
+        "38.2": {
+          "status": "passed",
+          "request_sha256": "c70023710e8fb17c93872af53027aedb4983a2701586bc970fa77b111eb87f6d",
+          "step_code_sha256": "16ff353cc7fedf36e7a03d26a354ab7b41413b05b55248b245dc586d6ca93c4f",
+          "prompt_tokens": 1322,
+          "completion_tokens": 414,
+          "finish_reason": "stop"
+        },
+        "38.3": {
+          "status": "failed",
+          "request_sha256": "386905bc724bb529844aa3855606a0c3a2a8c109737a3b66f8499199b1becbb4",
+          "step_code_sha256": "3b2346201b508fb3db61abfab5c69960680c2e54427d01f3afd9e436654642e5",
+          "prompt_tokens": 1759,
+          "completion_tokens": 10464,
+          "finish_reason": "stop"
+        },
+        "44.1": {
+          "status": "passed",
+          "request_sha256": "eec1fa3348f9acd3b918451692540ea8ba6897250cf9f4ffa40a74cf049f0b24",
+          "step_code_sha256": "8810dc73d68a38dad4b5cf3519b8606b6fc4b8a96523ac6558ff969181bd91ab",
+          "prompt_tokens": 608,
+          "completion_tokens": 1428,
+          "finish_reason": "stop"
+        },
+        "44.2": {
+          "status": "passed",
+          "request_sha256": "0b16283a7b4e4eaa5fd45135497e43e9555c322aec2221a6c4ea5ac78ab9b2c2",
+          "step_code_sha256": "5791c62e7bbd0b253f34a136785f46e23f70282c87c733d48a600e0b0ef2c25e",
+          "prompt_tokens": 1151,
+          "completion_tokens": 1906,
+          "finish_reason": "stop"
+        },
+        "44.3": {
+          "status": "failed",
+          "request_sha256": "dfe6361ae7e828d192bad4393a5cdab5652c0250c580db0963aad8089d244368",
+          "step_code_sha256": "29e1cd90313fb6cca98312e7d665583fe14d133f40dc337d6536251c56398e30",
+          "prompt_tokens": 1604,
+          "completion_tokens": 1383,
+          "finish_reason": "stop"
+        },
+        "47.1": {
+          "status": "passed",
+          "request_sha256": "0a322d1de364b3da2368fb00239cf87b4ab69083a0c06252e1110cb2dee9e182",
+          "step_code_sha256": "e30a0e04618914a6f4a2f446a8a1efeb97fa458fbf90e8936c0d839c8228c4af",
+          "prompt_tokens": 616,
+          "completion_tokens": 558,
+          "finish_reason": "stop"
+        },
+        "47.2": {
+          "status": "passed",
+          "request_sha256": "6649e57945a706db443b54d3d666921fcc3a12fe6492cb0a665f43fcd9f74ba9",
+          "step_code_sha256": "d17cd6e1ee34b5b727c97e449bb4b1abdc4bd1495362cd901b1924e09370e4dc",
+          "prompt_tokens": 903,
+          "completion_tokens": 634,
+          "finish_reason": "stop"
+        },
+        "47.3": {
+          "status": "failed",
+          "request_sha256": "9cc6f8dc7a886b1c99d9c91baf1dc5791ab1b2c7d31aaecd858839b8f5e55a0a",
+          "step_code_sha256": "b5f8a26fb3c052115d08eeafb430405ed00765f93244fbb989934ddebd2d376d",
+          "prompt_tokens": 1170,
+          "completion_tokens": 1861,
+          "finish_reason": "stop"
+        },
+        "47.4": {
+          "status": "failed",
+          "request_sha256": "a5b0033e41f7dfa65c73ce7482ccfc51053510ba736aa8e5f99ff58bc1f644d3",
+          "step_code_sha256": "d1a07bb079b7bdc32032d6125f4344d2c29cf94fb9be083cc8e67893dc2d32b3",
+          "prompt_tokens": 1738,
+          "completion_tokens": 4720,
+          "finish_reason": "stop"
+        },
+        "49.1": {
+          "status": "failed",
+          "request_sha256": "d64ab867ecef57810bd7afad85c0c0d0e7cb01812e8423ad48b49f4ef4ecdd7d",
+          "step_code_sha256": "f21104b44e7bfa715f41bf26422e62d1d096a4196ba063c7794ef8e818c77f93",
+          "prompt_tokens": 762,
+          "completion_tokens": 2728,
+          "finish_reason": "stop"
+        },
+        "49.2": {
+          "status": "passed",
+          "request_sha256": "d28de38b641d075cc14c83a7d762d4fee8fd56f23dcc45b55caca83742881b7e",
+          "step_code_sha256": "97e66f94591c7095e83a232854f4164f5697bdb4fa31e7a0e58091965cef0a5d",
+          "prompt_tokens": 1387,
+          "completion_tokens": 468,
+          "finish_reason": "stop"
+        },
+        "49.3": {
+          "status": "passed",
+          "request_sha256": "e9d2f23dfd4aa550a30d18fb5d36d613b604dfd71ba37af0b03816cef3e56a4d",
+          "step_code_sha256": "ab30b16f7aae15ac024b81c2eea29aecb24b478409a7924d6bf6a2ce662411be",
+          "prompt_tokens": 1871,
+          "completion_tokens": 1573,
+          "finish_reason": "stop"
+        },
+        "49.4": {
+          "status": "failed",
+          "request_sha256": "6acd8decd3d809bbeff5022d801df1dfd5e7bb9dccf56d93ab3fe0e463397b8d",
+          "step_code_sha256": "c0cf6719181481dac0c806e8872aa6b2a624ec233ef336efb6292979e26efd5e",
+          "prompt_tokens": 2351,
+          "completion_tokens": 1533,
+          "finish_reason": "stop"
+        },
+        "51.1": {
+          "status": "passed",
+          "request_sha256": "813aa18db80e2313b13b5317ed580e9ba7374998505140372efe2c567a6c393a",
+          "step_code_sha256": "8c29cd77f847944d56c25cd87059d1f359c17bd080c828a6e1890af46d736faa",
+          "prompt_tokens": 723,
+          "completion_tokens": 4791,
+          "finish_reason": "stop"
+        },
+        "51.2": {
+          "status": "passed",
+          "request_sha256": "3967521a412f5e8f0f885a168ea69fd7e79d62f4bbab2a4667341ad8dd95226d",
+          "step_code_sha256": "ad79c7965076d480108ba4472eb386558b7259f5859dd485613a1f6ca9e02914",
+          "prompt_tokens": 1096,
+          "completion_tokens": 3131,
+          "finish_reason": "stop"
+        },
+        "51.3": {
+          "status": "passed",
+          "request_sha256": "daf6b088f4a15d0120148b6e13ff6e8a0653a3437f270d0cfa4dbf61e548901c",
+          "step_code_sha256": "9adde8bd9e466eb369825bf0384848a6274e94f02445e0e367d82167a12f3aab",
+          "prompt_tokens": 2017,
+          "completion_tokens": 1452,
+          "finish_reason": "stop"
+        },
+        "51.4": {
+          "status": "passed",
+          "request_sha256": "029dd3586a7c86be5a2d6847d08ed134750715328245193bbd8d5b0aeff4dbd2",
+          "step_code_sha256": "03ff50b696be45e4020b601374cd243b9f2ebfa04fbd4258f34b140cb93daaba",
+          "prompt_tokens": 2573,
+          "completion_tokens": 896,
+          "finish_reason": "stop"
+        },
+        "70.1": {
+          "status": "passed",
+          "request_sha256": "1a707729523a8773da2cdde08740b0a6657ce1f1be9c309abf4907a1ada97b50",
+          "step_code_sha256": "e4cd31e723cf6c14eedcffcbb0bee8e31e0eb3577791639fc36de85c46963e82",
+          "prompt_tokens": 851,
+          "completion_tokens": 902,
+          "finish_reason": "stop"
+        },
+        "70.2": {
+          "status": "passed",
+          "request_sha256": "e51ce4e7299c14e9b5730c2a4440a052e471177a901a7344a7bac0a3bb36b2cf",
+          "step_code_sha256": "3b1d33eb40ab70a83cbc9eab10d37909d3f34f39ac6424c52510ff84bb0439d7",
+          "prompt_tokens": 1219,
+          "completion_tokens": 2696,
+          "finish_reason": "stop"
+        },
+        "70.3": {
+          "status": "passed",
+          "request_sha256": "6cce890657296327c1590804ee256a07507af4f5206593c3ceabeea9c6b224cf",
+          "step_code_sha256": "f682d704e053e928671470dea5509a7973b58220035508de31b7e39135acc2be",
+          "prompt_tokens": 2395,
+          "completion_tokens": 1134,
+          "finish_reason": "stop"
+        },
+        "70.4": {
+          "status": "passed",
+          "request_sha256": "b2aa7f6de03e69943cd2e8b09bf67d23ce02343b8514cce8feb2d9579777b084",
+          "step_code_sha256": "668ea98545124ab40f87658deb513111b53ddc574d2ebf1eae09fb9b894f0641",
+          "prompt_tokens": 2794,
+          "completion_tokens": 2355,
+          "finish_reason": "stop"
+        },
+        "70.5": {
+          "status": "passed",
+          "request_sha256": "bebdd0c91e0aadc7ea83f38944de67ecd7af9a3bbb0da9b3add75342f5c62e78",
+          "step_code_sha256": "770c7a2e1c20b65ab7867d67a1251297aa5a52060d8edaec07503bdd04fac1b5",
+          "prompt_tokens": 3410,
+          "completion_tokens": 491,
+          "finish_reason": "stop"
+        },
+        "70.6": {
+          "status": "passed",
+          "request_sha256": "09b97f850ceb591033cdf2342b8229d1d19846c1e178069ece2bb9fa09a487ac",
+          "step_code_sha256": "bcfbc8bb87b11aa01e70a4c89a077c8311bc8621ad3d3065241d7f8dc324f64d",
+          "prompt_tokens": 3746,
+          "completion_tokens": 6283,
+          "finish_reason": "stop"
+        },
+        "70.7": {
+          "status": "failed",
+          "request_sha256": "139c529962a3a32e84d35441444b5c4c3c0f7d7318446ec73be5c10b53140848",
+          "step_code_sha256": "df13d4f8275ade6ab2253a74ec0e7c298089d806c1492314ec6ccbe7f250def9",
+          "prompt_tokens": 4863,
+          "completion_tokens": 2920,
+          "finish_reason": "stop"
+        },
+        "70.8": {
+          "status": "failed",
+          "request_sha256": "6d404b1512e7617cefe78b16014bcb420c17d4abff18f7aee09f71c94cc7f62e",
+          "step_code_sha256": "db8ac09b16920f660e6ddeca5b2fc5f3830127140a75c2652c382f893ab371a2",
+          "prompt_tokens": 5467,
+          "completion_tokens": 2502,
+          "finish_reason": "stop"
+        },
+        "78.1": {
+          "status": "passed",
+          "request_sha256": "8322ad7688cca4e8b4611459471231b35a926c3df7cfc668bc75f1f37659a18d",
+          "step_code_sha256": "46bf922fa868ee6e0c3a296b47ff6ce9d6d6ab566c98cf99b3f2d52a9c85b2f9",
+          "prompt_tokens": 1214,
+          "completion_tokens": 1956,
+          "finish_reason": "stop"
+        },
+        "78.2": {
+          "status": "passed",
+          "request_sha256": "6496ffcbd81cf5c25d5f81acd7173b4902b9202dd746c0331a6ab33e5ea4785e",
+          "step_code_sha256": "4e82d9ae41a2d32d9c9219cedf87db2495a5b9c179ff3560c73604fbd1bf7e4c",
+          "prompt_tokens": 1857,
+          "completion_tokens": 775,
+          "finish_reason": "stop"
+        },
+        "78.3": {
+          "status": "failed",
+          "request_sha256": "0a4015c149ee87a4b4f90133f05f598d2703c5f07dbf71fa5415c4c670b52450",
+          "step_code_sha256": "66851da8856104229c8021c8767cbb7406d491306bf66f0707617ed47dd4b478",
+          "prompt_tokens": 2917,
+          "completion_tokens": 13792,
+          "finish_reason": "stop"
+        }
+      }
+    }
+  },
+  "gained_steps": [],
+  "lost_steps": [],
+  "identical_requests": 50,
+  "identical_step_code": 50,
+  "exact_mcnemar_two_sided_p": 1.0,
+  "gold_control": {
+    "passed": 48,
+    "total": 50,
+    "problematic_steps": [
+      "78.3",
+      "70.8"
+    ]
+  },
+  "interpretation": "同为 E320 / 2048-token 预填充的冻结 SciCode 开发回归：关闭 lookup 37/50，开启 lookup 37/50；完整通过的父题分别为 8/15 和 8/15。逐题有 0 道由失败变为通过，0 道由通过变为失败。50 个请求中 50 个请求哈希相同，50 个抽取代码哈希相同。温度为 1，推测验证窗口变化可能改变采样和数值路径，不能把单次分数变化当作编程能力提升。参考代码控制仅 48/50；78.3、70.8 保留在原始分母中。这只是一次小规模开发集回归，不构成普遍质量无损或统计非劣效证明。",
+  "lookup_telemetry": {
+    "minimum_recorded_rounds": 900,
+    "accepted_candidates_at_last_periodic_log": 8729,
+    "proposed_candidates_at_last_periodic_log": 12277,
+    "note": "Final periodic rank-0 log, emitted every 20 rounds. This proves lookup was exercised; counters may not include the final partial interval."
+  }
+}

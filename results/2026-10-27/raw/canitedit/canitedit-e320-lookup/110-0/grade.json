@@ -1,0 +1,6 @@
+{
+  "passed": false,
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/work/program.py\", line 82, in <module>\n    num_steps = integrator_one.determine_num_steps_middle(test_function, 0.0001)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'integrator' object has no attribute 'determine_num_steps_middle'. Did you mean: 'determine_stepsize_middle'?\n"
+}

@@ -1,0 +1,9 @@
+{
+  "utc": "2026-10-28T05:03:16.790137+00:00",
+  "scanned_files": 787,
+  "live_credentials_checked": 1,
+  "exact_credential_matches": 0,
+  "files_with_matches": [],
+  "private_path_and_address_pattern_matches": 0,
+  "notes": "Only public project tree scanned; credentials were kept in process memory and are not recorded."
+}

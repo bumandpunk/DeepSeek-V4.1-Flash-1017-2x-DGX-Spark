@@ -1,0 +1,7 @@
+{
+  "requests_per_profile": 58,
+  "profiles": 3,
+  "complete_outputs_and_token_counts_equal_to_pre_tiling_baseline": true,
+  "edit_fullfile_assertions": 836,
+  "scope": "Layered diagnostic; not final clean-deployment counts"
+}

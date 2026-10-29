@@ -1,0 +1,86 @@
+[
+  {
+    "id": 86,
+    "name": "pyast",
+    "rep": 0,
+    "passed": false,
+    "solution_sha256": "a2d0dc59f4b97b638334a37cc220fcc6a9624d39648869cc044097cd1d6070c1"
+  },
+  {
+    "id": 30,
+    "name": "cross_correlation",
+    "rep": 0,
+    "passed": false,
+    "solution_sha256": "26c81925a3941323c75481e582f9db2733edcc224ec29a3f23aa2bc9b2eda4ee"
+  },
+  {
+    "id": 66,
+    "name": "product_analysis",
+    "rep": 0,
+    "passed": false,
+    "solution_sha256": "d82f773a823228393d57cb22f139b03442d698c343bfab2d20e3d5db66de758d"
+  },
+  {
+    "id": 32,
+    "name": "markov_transition",
+    "rep": 0,
+    "passed": false,
+    "solution_sha256": "fdfb4ac97d6b7288f60d8e6ba08d03ef786688e3dfeea7d6c0d2f0fe2e665ae8"
+  },
+  {
+    "id": 107,
+    "name": "multiindex_sort",
+    "rep": 0,
+    "passed": false,
+    "solution_sha256": "fc5e57d7cd4ccd886b4054ac946b151149638e9b441f4eee98bf770d210f61f5"
+  },
+  {
+    "id": 48,
+    "name": "max_sum_subarray",
+    "rep": 0,
+    "passed": false,
+    "solution_sha256": "43ee45e0d35cad60b49b781f74e9c00df00de88b5aafce3a50a1e93c854c934b"
+  },
+  {
+    "id": 76,
+    "name": "memory_alloc",
+    "rep": 0,
+    "passed": false,
+    "solution_sha256": "c0a328f1ecdea888276329cef500b4f1e45a4cc4c686b425b0c842ee398d9460"
+  },
+  {
+    "id": 110,
+    "name": "integration",
+    "rep": 0,
+    "passed": false,
+    "solution_sha256": "89dc8ea7fcc1575ff341d9c6391c98afea98d265332bcd5f697807e67f52c0a6"
+  },
+  {
+    "id": 94,
+    "name": "knn",
+    "rep": 0,
+    "passed": false,
+    "solution_sha256": "d043457398eba8a5b4233b08a109834cf3ab4a670c188ed757bf479d25f1f17f"
+  },
+  {
+    "id": 38,
+    "name": "high_order",
+    "rep": 0,
+    "passed": false,
+    "solution_sha256": "17322dbb90ea7d93a26927cfb6049d05a94db499d3e4f7093f474b3f884d4370"
+  },
+  {
+    "id": 119,
+    "name": "pollards_rho_factorization",
+    "rep": 0,
+    "passed": false,
+    "solution_sha256": "92dae3f2380faea9c58fdcd32da7861a162d63f2527e6963de5e23721509527c"
+  },
+  {
+    "id": 111,
+    "name": "coprime_euler",
+    "rep": 0,
+    "passed": false,
+    "solution_sha256": "9e02a9aa50c87bd8102b5f1cc1a1c2236189aa71f34365d7c2a204f6d76f9d33"
+  }
+]

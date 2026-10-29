@@ -1,0 +1,11 @@
+{
+  "start": 2358992.226784072,
+  "end": 2359056.747553889,
+  "ttft_s": 0.18864397518336773,
+  "decode_s": 64.33136452781036,
+  "tokens": 128,
+  "prompt_tokens": 43,
+  "decode_tps": 1.9741536796580472,
+  "chunks": 33,
+  "text": "# LRU Cache Implementation\n\n```python\nclass _Node:\n    \"\"\"Doubly linked list node.\"\"\"\n    __slots__ = (\"key\", \"value\", \"prev\", \"next\")\n\n    def __init__(self, key=None, value=None):\n        self.key = key\n        self.value = value\n        self.prev = None\n        self.next = None\n\n\nclass LRUCache:\n    \"\"\"\n    Least Recently Used (LRU) cache.\n\n    Both `get` and `put` run in O(1) time by combining:\n      - a dict mapping key -> node for O(1) lookup\n     "
+}

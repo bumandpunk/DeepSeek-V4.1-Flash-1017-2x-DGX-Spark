@@ -1,0 +1,11 @@
+{
+  "label": "e320-stock",
+  "variant": "e320",
+  "depth_policy": "joint",
+  "drafts": 5,
+  "parallel": 2,
+  "context": 524288,
+  "prefill_chunk": 512,
+  "dontneed": 1,
+  "trace": false
+}

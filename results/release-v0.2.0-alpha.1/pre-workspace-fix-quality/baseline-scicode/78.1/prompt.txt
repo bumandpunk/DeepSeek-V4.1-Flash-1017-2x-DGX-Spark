@@ -1,0 +1,112 @@
+PROBLEM DESCRIPTION:
+You will be provided with problem steps along with background knowledge necessary for solving the problem. Your task will be to develop a Python solution focused on the next step of the problem-solving process.
+
+PROBLEM STEPS AND FUNCTION CODE:
+Here, you'll find the Python code for the initial steps of the problem-solving process. This code is integral to building the solution.
+
+
+
+NEXT STEP - PROBLEM STEP AND FUNCTION HEADER:
+This part will describe the next step in the problem-solving process. A function header will be provided, and your task is to develop the Python code for this next step based on the provided description and function header.
+
+The motion of a forced, damped single pendulum can be described by the second-order differential equation. Assuming the damping force is proportional to the angular velocity with coefficient $\beta$ and the external driving force *$A \cos(\alpha t)$* oscillates with time ($A$: drive amplitude, $\alpha$:drive frequency). Define the differential equations in python for this forced, damped Pendulum. The solution of this differential equation, $ y=[\theta, \omega]^T$, represents the state vector of the system, which includes the angle *$\theta$* and the angular velocity *$\omega$*. $\theta$ is measured in radians and $\omega$ in radians per second.
+Background
+
+A single pendulum consists of:
+- A mass $m$ attached to the end of a string or rod of length $L$.
+- The pivot point is frictionless.
+- There is a damping force proportional to the angular velocity with a damping coefficient $\beta$.
+- An external driving force $A \cos(\alpha t)$ oscillates with time.
+
+(a) Identify the Forces and Torques
+
+The forces acting on the pendulum bob are:
+- Gravitational force $mg$ acting downward.
+- Tension in the string (which does not do work as it acts along the string).
+- Damping force proportional to the angular velocity $-\beta \frac{d\theta}{dt}$.
+- External driving force $A \cos(\alpha t)$.
+
+The torque $\tau$ around the pivot due to the gravitational force, damping force, and driving force is given by:
+
+$$
+\tau = -mgL \sin(\theta) - \beta L \frac{d\theta}{dt} + A \cos(\alpha t)
+$$
+
+The moment of inertia $I$ for a point mass $m$ at a distance $L$ from the pivot is:
+
+$$
+I = mL^2
+$$
+
+(b) Apply Newton's Second Law for Rotation
+
+Using Newton's second law for rotation $\tau = I \alpha$:
+
+$$
+-mgL \sin(\theta) - \beta L \frac{d\theta}{dt} + A \cos(\alpha t) = mL^2 \frac{d^2\theta}{dt^2}
+$$
+
+(c) Simplify the Equation
+
+Dividing both sides by $mL^2$:
+
+$$
+-\frac{g}{L} \sin(\theta) - \frac{\beta}{mL} \frac{d\theta}{dt} + \frac{A}{mL^2} \cos(\alpha t) = \frac{d^2\theta}{dt^2}
+$$
+
+Rearranging the terms:
+
+$$
+\frac{d^2\theta}{dt^2} + \frac{\beta}{mL} \frac{d\theta}{dt} + \frac{g}{L} \sin(\theta) = \frac{A}{mL^2} \cos(\alpha t)
+$$
+
+(d) Converting to First-Order ODEs
+
+To use numerical methods like RK4, we need to convert this second-order ODE into a system of first-order ODEs by defining:
+
+$$
+\frac{d\theta}{dt}= \omega
+$$
+
+
+Then, the first-order ODEs for this damped, forced single pendulum system becomes:
+
+$$
+\frac{d\omega}{dt} = -\frac{g}{L} \sin(\theta) - \frac{\beta}{mL} \omega+ \frac{A}{mL^2} \cos(\alpha t)
+$$
+
+(e) Define The State Vector
+
+The state vector of this forced, damped pendulum is:
+
+$$
+\mathbf{y} = \begin{pmatrix} \theta \\ \omega \end{pmatrix}
+$$
+
+def pendulum_derivs(state, t, g, L, beta, A, alpha):
+    '''Calculate the derivatives for the pendulum motion.
+    Inputs:
+    state: Current state vector [theta, omega], 1D numpy array of length 2.
+    t: Current time, float.
+    g: Acceleration due to gravity, float.
+    L: Length of the pendulum, float.
+    beta: Damping coefficient, float.
+    A: Amplitude of driving force, float.
+    alpha: Frequency of driving force, float.
+    Outputs:
+    state_matrix: Derivatives [dtheta_dt, domega_dt], 1D numpy array of length 2.
+    '''
+
+    return state_matrix
+
+DEPENDENCIES:
+Use only the following dependencies in your solution. Do not include these dependencies at the beginning of your code.
+
+import numpy as np
+import time
+
+RESPONSE GUIDELINES:
+Now, based on the instructions and information provided above, write the complete and executable Python program for the next step in a single block.
+Your response should focus exclusively on implementing the solution for the next step, adhering closely to the specified function header and the context provided by the initial steps.
+Your response should NOT include the dependencies and functions of all previous steps. If your next step function calls functions from previous steps, please make sure it uses the headers provided without modification.
+DO NOT generate EXAMPLE USAGE OR TEST CODE in your response. Please make sure your response python code in format of ```python```.

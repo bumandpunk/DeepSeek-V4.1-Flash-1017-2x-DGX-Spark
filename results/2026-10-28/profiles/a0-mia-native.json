@@ -1,0 +1,58 @@
+{
+  "utc": "2026-10-28T04:30:28.145044+00:00",
+  "profile": {
+    "label": "a0-mia-native",
+    "variant": "a0",
+    "depth_policy": "joint",
+    "drafts": 5,
+    "parallel": 2,
+    "context": 524288,
+    "vision": 0,
+    "prefill_chunk": 2048,
+    "dontneed": 1,
+    "helper": "",
+    "post_mode": "0",
+    "prefill_side": false,
+    "control": false,
+    "section_trace": false,
+    "trace": false,
+    "engine": "mia",
+    "storage": 0,
+    "adaptive": false,
+    "calibration": false,
+    "costs": "",
+    "memory_floor": null,
+    "kernel_trace": false,
+    "lookup": false
+  },
+  "image": "sha256:0f1d0e890bb27bf38c590e11a5d1880603539b52228be140104bb9d8ebf295ab",
+  "started_at": "2026-10-28T04:29:56.786491101Z",
+  "sources": {},
+  "environment": {
+    "TF_DS_PREFILL_INTERLEAVE_MS": "250",
+    "TF_DS_REPLAY_FLOOR": "1",
+    "NCCL_IB_HCA": "rocep1s0f0,roceP2p1s0f0",
+    "TF_DS_RDMA_IDLE_S": "2",
+    "TF_RDMA_GID_INDEX": "3",
+    "NCCL_IB_GID_INDEX": "3",
+    "TF_RDMA_DEVICES": "rocep1s0f0,roceP2p1s0f0",
+    "TF_DS_STREAMS": "2",
+    "TF_DS_GRAPHS": "1",
+    "TF_DS_RDMA_NAP_US": "500",
+    "NCCL_SOCKET_IFNAME": "enp1s0f0np0",
+    "TF_DS_HC_SIDE": "1",
+    "TF_DS_L2_PREFETCH": "1",
+    "NCCL_NET_PLUGIN": "spcx",
+    "NCCL_VERSION": "2.30.7"
+  },
+  "native_binaries": {
+    "tensorfold-native": {
+      "sha256": "d80c36ec4558e8c9fca6120fb0c6569919890abe4964344a4785b662ca084c2a",
+      "bytes": 27132784
+    },
+    "tf-dsv41-lanes": {
+      "sha256": "ebeed730cea9ca1cd063f0d3b509917ebf33c43ed6e32085f4d3ad23e0846888",
+      "bytes": 16567040
+    }
+  }
+}

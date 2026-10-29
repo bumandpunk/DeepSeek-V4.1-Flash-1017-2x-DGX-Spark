@@ -1,0 +1,8 @@
+{
+  "generated_files": {
+    "native/transport/rdma_gather.cu": "83eebb723f378589cf2230293be1917d23c73b5201c032c2595e0e80bfd63e78",
+    "src/spark1017/transport.py": "752c7e593d7d61d5954afd405990ae306a976d96b51b96cc5bb3072d8b76a22f"
+  },
+  "equal_to_release_before_regeneration": true,
+  "upstream_commit": "07aa02585f64cfb04c60a96de6554c0d4708ed46"
+}

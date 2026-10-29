@@ -1,0 +1,85 @@
+import numpy as np
+from typing import Dict, List
+
+class MarkovChain:
+
+    def create_transition_matrix(self, matrix):
+        
+        matrix = np.array(matrix)
+        column_sums = np.sum(matrix, axis=0)
+        normalized_matrix = matrix / column_sums
+        return normalized_matrix.tolist()
+
+    def translate_from_list(self, adj_list: Dict[int, List[int]]) -> List[List[float]]:
+        nodes = sorted(adj_list.keys())
+        node_index = {node: i for i, node in enumerate(nodes)}
+        n = len(nodes)
+        matrix = np.zeros((n, n))
+        for node, neighbors in adj_list.items():
+            i = node_index[node]
+            for neighbor in neighbors:
+                j = node_index[neighbor]
+                matrix[i, j] = 1
+                matrix[j, i] = 1
+        column_sums = np.sum(matrix, axis=0)
+        column_sums[column_sums == 0] = 1
+        normalized_matrix = matrix / column_sums
+        return normalized_matrix.tolist()
+
+### START TESTS ###
+if True:  # pragma: no cover
+    chain = MarkovChain()
+
+    l1 = {
+        0: [1, 3],
+        1: [0, 2],
+        2: [1, 3],
+        3: [0, 2, 4],
+        4: [3]
+    }
+
+    l2 = {
+        0: [4],
+        1: [2, 3, 4],
+        2: [1, 5, 6],
+        3: [1, 7, 8, 2],
+        4: [1, 9, 0, 3],
+        5: [2],
+        6: [2, 7],
+        7: [3],
+        8: [3, 2, 1],
+        9: [4, 8, 0],
+    }
+
+    m1 = [[1, 4, 5, 2],
+        [2, 5, 0, 0],
+        [7, 0, 3, 5],
+        [0, 1, 2, 3]]
+
+    m2 = [
+        [45, 12, 73, 88, 32],
+        [19, 64, 51, 97, 26],
+        [57, 68, 9,  34, 72],
+        [14, 82, 41, 63, 55],
+        [29, 90, 77, 38, 22]
+    ]
+
+    assert chain.create_transition_matrix(m1) == [[0.1, 0.4, 0.5, 0.2], [0.2, 0.5, 0.0, 0.0], [0.7, 0.0, 0.3, 0.5], [0.0, 0.1, 0.2, 0.3]]
+    assert np.round(chain.create_transition_matrix(m2), 2).tolist() == [[0.27, 0.04, 0.29, 0.28, 0.15], [0.12, 0.2, 0.2, 0.3, 0.13], [0.35, 0.22, 0.04, 0.11, 0.35], [0.09, 0.26, 0.16, 0.2, 0.27], [0.18, 0.28, 0.31, 0.12, 0.11]]
+
+    assert chain.translate_from_list(l1) == [[0.0, 0.5, 0.0, 0.333, 0.0], 
+                                             [0.5, 0.0, 0.5, 0.0, 0.0], 
+                                             [0.0, 0.5, 0.0, 0.333, 0.0], 
+                                             [0.5, 0.0, 0.5, 0.0, 1.0], 
+                                             [0.0, 0.0, 0.0, 0.333, 0.0]]
+    assert chain.translate_from_list(l2) == [[0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.333], 
+                                             [0.0, 0.0, 0.333, 0.25, 0.25, 0.0, 0.0, 0.0, 0.333, 0.0], 
+                                             [0.0, 0.333, 0.0, 0.25, 0.0, 1.0, 0.5, 0.0, 0.333, 0.0], 
+                                             [0.0, 0.333, 0.0, 0.0, 0.25, 0.0, 0.0, 1.0, 0.333, 0.0], 
+                                             [1.0, 0.333, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.333], 
+                                             [0.0, 0.0, 0.333, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+                                             [0.0, 0.0, 0.333, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+                                             [0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.5, 0.0, 0.0, 0.0], 
+                                             [0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.333], 
+                                             [0.0, 0.0, 0.0, 0.0, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0]]
+print('SPARK1017_TESTS_PASSED_SENTINEL')

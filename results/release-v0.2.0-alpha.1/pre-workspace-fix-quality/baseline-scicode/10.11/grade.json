@@ -1,0 +1,8 @@
+{
+  "step": "10.11",
+  "status": "failed",
+  "returncode": 1,
+  "seconds": 2.577975891996175,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/work/run.py\", line 228, in <module>\n    assert np.allclose(np.abs(total_energy(**EX1, gmax=200) - ref1), target)\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/run.py\", line 203, in total_energy\n    energy += sum_real_cross(atom_charges, atom_coords, configs, lattice_coords, alpha)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/run.py\", line 64, in sum_real_cross\n    cij = real_cij(d, lc, alpha)\n          ^^^^^^^^\nNameError: name 'real_cij' is not defined\n"
+}

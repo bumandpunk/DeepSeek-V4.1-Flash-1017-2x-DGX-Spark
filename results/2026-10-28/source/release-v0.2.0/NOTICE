@@ -1,0 +1,48 @@
+Spark1017 experimental inference extensions, 2026.
+Licensed under Apache License 2.0. No model weights are distributed.
+
+Round-two additions:
+native/transport/rdma_gather.cu and src/spark1017/transport.py are generated
+from TensorFold's Apache-2.0 transport at the pinned commit below. Registration,
+dual-rail proxy, completion notification, abort handling and the original
+small-message gather remain upstream. The segmented destination, GPU sequence
+tickets, two-segment pipeline and fused HC receive kernel are Spark1017 changes.
+native/transport/fused_post.inc preserves the upstream HC arithmetic order.
+src/spark1017/postmix.py adapts the Apache-2.0 hc_pre2 side-stream schedule; it reuses
+upstream numerical kernels. The prompt dependency split and network integration
+are extensions, not a claim to invent HC, speculative decoding or RDMA fusion.
+native/persistent and native/chain include generated portions of upstream
+experts_grouped.cuh; upstream Apache-2.0 and historical MIT notices are retained in LICENSES/.
+compat/ada-drafter.patch guards unsupported programmatic-dependent-launch
+instructions on the optional RTX4090 helper. These experiments default off.
+
+native/engram_io.cpp derives from TensorFold engram_io.cpp at
+https://github.com/bertholomus/TensorFold/commit/07aa02585f64cfb04c60a96de6554c0d4708ed46
+Base file SHA256: e2b0e2833c44c4c108413806bda2abd00342034b1db557e4df37a38082b8a83e
+Changes: exact partition residency, bounded row cache, duplicate-read fanout,
+configuration interfaces and read counters. Existing Linux AIO and thread-pool
+implementation, CUDA kernels, tensor parallel transport, model execution and
+DSpark drafting are upstream work, not new work by this project.
+
+native/tiered_store.hpp and src/spark1017 contain the new cache and controller
+implementations. prepare_overlay.py introduces hooks into upstream files.
+compat/deployment-safety.patch captures pre-existing deployment safety changes;
+these are included for reproducing measurements, not claimed as this project's
+speed innovation. Preserve the notices in LICENSES/ when redistributing.
+
+Benchmark prompts/clients and the SciCode dataset retain their source licenses.
+benchmarks/scicode includes the Apache-2.0 SciCode development JSONL, prompt
+template, comparison package and standalone extraction of HDF5 helper functions.
+Its README documents the source revisions and adaptations. The numeric HDF5
+file is not distributed. CPython edit fixtures preserve the PSF license.
+Do not redistribute model weights, credentials, private service configuration
+or generated rank caches as part of this project.
+
+benchmarks/canitedit retains a deterministically selected subset of the MIT-licensed
+nuprl/CanItEdit dataset and its license. Prompt attribution and protocol changes
+are documented alongside its independent HTTP and sandbox harness.
+
+The pinned TensorFold fork and current MiaAI recipe are Apache-2.0. Their
+original NOTICE files are included. Historical MIT notices referenced by the
+upstream third-party notices are retained for those components; they do not
+relicense the newly added DeepSeek family or RDMA transport as MIT.

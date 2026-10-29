@@ -1,0 +1,34 @@
+{
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are PythonEditGPT. You will be provided the original code snippet and an instruction that specifies the changes you need to make. You will produce the changed code, based on the original code and the instruction given. Only produce the code, do not include any additional prose."
+      },
+      {
+        "role": "user",
+        "content": "## Code Before\n```py\nfrom typing import List\nfrom math import sqrt\n\n\nclass Label:\n    def __init__(self, name: str) -> None:\n        self.name = name\n\n    def __hash__(self) -> int:\n        return 1\n\n    def __eq__(self, __value: object) -> bool:\n        return True\n\n\nclass Point:\n    def __init__(self, x: int, y: int, label: Label | None) -> None:\n        self.x = x\n        self.y = y\n        self.label = label\n\n    def distance(self, other: \"Point\") -> float:\n        return sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2)\n\n    def knn(self, others: List[\"Point\"], k: int) -> Label:\n        assert k > 0\n        assert others\n        assert not self.label\n        assert len(others) >= k\n        distances = map(lambda point: (\n            point.label, self.distance(point)), others)\n        votes = {}\n        for label, _ in sorted(distances, key=lambda tup: tup[1])[:k]:\n            if label not in votes.keys():\n                votes[label] = 1\n            else:\n                votes[label] += 1\n        return max(votes.items(), key=lambda item: item[1])[0]\n```\n\n## Instruction\nfix the k-nearest neighbors method on the Point class so that `point.knn(others: List[Point], k: int)` which takes the k closest neighbors and returns the label of the largest subset of neighbors with the same label.\n\n## Code After"
+      }
+    ],
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 8192,
+    "seed": 1111,
+    "enable_thinking": false,
+    "reasoning_effort": "none",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "response": {
+    "start": 466668.932874574,
+    "end": 466671.474428253,
+    "ttft_s": 0.6456717280088924,
+    "decode_s": 1.8492846270091832,
+    "tokens": 304,
+    "prompt_tokens": 409,
+    "decode_tps": 163.84714152414537,
+    "chunks": 30,
+    "text": "```py\nfrom typing import List\nfrom math import sqrt\n\n\nclass Label:\n    def __init__(self, name: str) -> None:\n        self.name = name\n\n    def __hash__(self) -> int:\n        return hash(self.name)\n\n    def __eq__(self, __value: object) -> bool:\n        return isinstance(__value, Label) and self.name == __value.name\n\n\nclass Point:\n    def __init__(self, x: int, y: int, label: Label | None) -> None:\n        self.x = x\n        self.y = y\n        self.label = label\n\n    def distance(self, other: \"Point\") -> float:\n        return sqrt((self.x - other.x) ** 2 + (self.y - other.y) ** 2)\n\n    def knn(self, others: List[\"Point\"], k: int) -> Label:\n        assert k > 0\n        assert others\n        assert not self.label\n        assert len(others) >= k\n        distances = map(lambda point: (\n            point.label, self.distance(point)), others)\n        votes = {}\n        for label, _ in sorted(distances, key=lambda tup: tup[1])[:k]:\n            if label not in votes.keys():\n                votes[label] = 1\n            else:\n                votes[label] += 1\n        return max(votes.items(), key=lambda item: item[1])[0]\n```"
+  }
+}

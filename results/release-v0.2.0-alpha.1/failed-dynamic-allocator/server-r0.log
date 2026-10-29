@@ -1,0 +1,261 @@
+[tensorfold] loading DeepSeek-V4.1-Flash-1017: DeepSeek-V4.1-Flash (deepseek_v41) on CUDA, rank 0 of 2
+[tensorfold] TORCH_ALLOW_TF32_CUBLAS_OVERRIDE=1 (NVIDIA's PyTorch container default) set to 0: DeepSeek-V4.1-Flash's fp32 GEMMs stay fp32
+[spark1017] peer configuration verified 8432d3a0a8dd4eaded2761cf9f3d341fa959d57898b7643cda02ed88419ce326
+[tensorfold] rank 0: rank cache reading /cache/rank/rank0of2-be2419b74147335dd94e.bin
+[tensorfold] rank 0: layers 0..4 loaded (8 s, 13.7 GiB)
+[tensorfold] rank 0: layers 0..9 loaded (13 s, 26.0 GiB)
+[tensorfold] rank 0: layers 0..14 loaded (18 s, 38.2 GiB)
+[tensorfold] rank 0: layers 0..19 loaded (22 s, 48.9 GiB)
+[tensorfold] rank 0: layers 0..24 loaded (26 s, 58.7 GiB)
+[tensorfold] rank 0: layers 0..29 loaded (32 s, 70.9 GiB)
+[tensorfold] rank 0: layers 0..34 loaded (38 s, 83.2 GiB)
+[tensorfold] rank 0: layers 0..39 loaded (44 s, 95.4 GiB)
+[tensorfold] rank 0: DSpark (3 stages) loaded, 99.0 GiB
+[tensorfold] rank 0: weights in 45 s (from the rank cache)
+[tensorfold] decode gathers over RDMA writes
+[tensorfold] spilled kept prompts: /cache/spill/20261028T131548760771Z/dsv41-spill/v1-ee5fcaa07d92a09d (0 on disk, 0.00 of 16 GiB)
+[tensorfold] warm-up: 22 prompt lengths 9.4s, decode graphs {}, reserved 100.54 GiB
+[tensorfold] --parallel warm-up: 64 round graphs, 2 drafter graphs, 5.7s
+[tensorfold] --parallel 2: 2 streams share one window of 262144 tokens (an extent each)
+[tensorfold] rank 0: allocator ceiling 102.4 GiB (holds 100.7, host available 4.7, total reserve 4.0, includes kernel 1.0, workspace 1.0, protected host floor 3.0)
+[tensorfold] DeepSeek-V4.1 engine ready: 2 rank(s), context 262144, DSpark 5 drafts
+[tensorfold] serving DeepSeek-V4.1-Flash-1017 at http://0.0.0.0:19890/v1 on CUDA, rank 0 of 2 (sampling: temperature 1.0, top_p 1.0; drafts: on; prompts: bf16 activations; context: 262144; loaded in 68.9s)
+[tensorfold] 127.0.0.1 "GET /v1/models HTTP/1.1" 200 - key=file-1
+[tensorfold] 127.0.0.1 "GET /v1/models HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] done req-387f41ff42f1 prompt=10 cached=0 thinking=False tokens=3 sha=a6239b5f67be finish=stop tok/s=41.4 ttft=0.11s prefill=0.05s rounds=1 accepted=1/5
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=8 ram=0 disk=0 selected=fresh
+[tensorfold] done req-3bd4a86ec0bb prompt=8 cached=0 thinking=False tokens=5 sha=ce738617af36 finish=stop tok/s=82.5 ttft=0.08s prefill=0.05s rounds=1 accepted=3/5
+[tensorfold] 127.0.0.1 "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] done req-645292c5d380 prompt=10 cached=0 thinking=False tokens=3 sha=a6239b5f67be finish=stop tok/s=42.5 ttft=0.07s prefill=0.04s rounds=1 accepted=1/5
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 401 - key=unauthenticated
+[tensorfold] CLIENT_MANAGEMENT_IP "GET /v1/models HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] done req-e383af32c609 prompt=10 cached=0 thinking=False tokens=3 sha=a6239b5f67be finish=stop tok/s=42.1 ttft=0.08s prefill=0.05s rounds=1 accepted=1/5
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=8 ram=0 disk=0 selected=fresh
+[tensorfold] done req-d3323881b567 prompt=8 cached=0 thinking=False tokens=5 sha=ce738617af36 finish=stop tok/s=79.6 ttft=0.06s prefill=0.03s rounds=1 accepted=3/5
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] done req-3b2239a39ce8 prompt=10 cached=0 thinking=False tokens=3 sha=a6239b5f67be finish=stop tok/s=41.9 ttft=0.07s prefill=0.04s rounds=1 accepted=1/5
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 401 - key=unauthenticated
+[tensorfold] prefix cache: prompt=99 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 102.406 -> 102.281 GiB; host available 4.605, protected floor 3.000
+[tensorfold] done req-47fe10d76b10 prompt=99 cached=0 thinking=False tokens=12 sha=8f48e2b4fc65 finish=stop tok/s=87.5 ttft=1.83s prefill=0.28s rounds=3 accepted=8/10
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=293 ram=0 disk=0 selected=fresh
+[tensorfold] done req-51f1f0ddac41 prompt=293 cached=0 thinking=False tokens=54 sha=baaf6ad16e64 finish=tool_calls tok/s=121.2 ttft=0.45s prefill=0.43s rounds=9 accepted=44/45
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=15 ram=0 disk=0 selected=fresh
+[tensorfold] done req-e0d6909657d4 prompt=15 cached=0 thinking=False tokens=7 sha=be9f5d95e68b finish=stop tok/s=133.6 ttft=0.10s prefill=0.05s rounds=1 accepted=5/5
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "GET /v1/models HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=1 ram=0 disk=0 selected=fresh
+[tensorfold] done req-c2f47e8f9bc7 prompt=1 cached=0 thinking=False tokens=1 sha=56f4da26ed95 finish=length tok/s=0.0 ttft=0.03s prefill=0.03s rounds=0 accepted=0/0
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-4a831f48f64c prompt=43 cached=0 thinking=False tokens=32 sha=c70611cf424f finish=length tok/s=80.0 ttft=0.16s prefill=0.16s rounds=9 accepted=22/38
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-c2a8ab64636e prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=95.2 ttft=0.17s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-99999070bd6c prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=95.2 ttft=0.17s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-cdde5a5cb9df prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=95.1 ttft=0.17s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-3eef2307736f prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=95.0 ttft=0.17s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-875e7af80e37 prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=95.3 ttft=0.17s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-ba38ce8ee2b9 prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=94.8 ttft=0.16s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-ecb3fd1c996f prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=95.2 ttft=0.17s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-b8273147cb8b prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=95.1 ttft=0.17s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-963abce68ed6 prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=94.4 ttft=0.17s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-f70a9b6777a7 prompt=23 cached=0 thinking=False tokens=32 sha=42953761acbd finish=length tok/s=56.1 ttft=0.12s prefill=0.11s rounds=15 accepted=16/33
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-59a4682edd9f prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.2 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-7731152c3632 prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.2 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-23c816d1d724 prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.3 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-411e27baa127 prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.1 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-40f6d8309091 prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.3 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-5e4ebf8e2f5e prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.2 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-6207a2d9ed66 prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.0 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-45d86def30ad prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.1 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-749087b33ffb prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.0 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-12f579ec4d9d prompt=23 cached=0 thinking=False tokens=32 sha=ea2bfd40cf04 finish=length tok/s=125.4 ttft=0.11s prefill=0.11s rounds=6 accepted=25/26
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-7a70259c3ac6 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=139.9 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-48504ad0b918 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=140.7 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-6fd28a5b2a69 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=140.5 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-071772e4ecf5 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=139.0 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-78b73926b78e prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=139.1 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-f72fb1f6bf51 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=138.8 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-72b76915ae8f prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=139.1 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-43a4d2359278 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=138.9 ttft=0.12s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-3eba5d1211a7 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=138.5 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] done req-1d2014fa2006 prompt=48 cached=0 thinking=False tokens=384 sha=dcfa850a039b finish=length tok/s=70.2 ttft=0.18s prefill=0.17s rounds=91 accepted=292/364
+[tensorfold] done req-573e119fcf35 prompt=28 cached=0 thinking=False tokens=384 sha=c500b2d50c01 finish=length tok/s=41.9 ttft=0.32s prefill=0.13s rounds=202 accepted=181/319
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] done req-9ac34cbcb468 prompt=48 cached=0 thinking=False tokens=384 sha=dcfa850a039b finish=length tok/s=72.1 ttft=0.32s prefill=0.17s rounds=91 accepted=292/364
+[tensorfold] done req-989479f9ea9f prompt=28 cached=0 thinking=False tokens=384 sha=c500b2d50c01 finish=length tok/s=41.1 ttft=0.14s prefill=0.13s rounds=202 accepted=181/319
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] done req-1e12c1adf9d7 prompt=48 cached=0 thinking=False tokens=384 sha=dcfa850a039b finish=length tok/s=72.1 ttft=0.31s prefill=0.18s rounds=91 accepted=292/364
+[tensorfold] done req-d6e6cad63683 prompt=28 cached=0 thinking=False tokens=384 sha=c500b2d50c01 finish=length tok/s=41.1 ttft=0.13s prefill=0.12s rounds=202 accepted=181/319
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] done req-dfc77c44e56a prompt=28 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=87.7 ttft=0.13s prefill=0.12s rounds=64 accepted=319/320
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] done req-46e57eb1981b prompt=48 cached=0 thinking=False tokens=384 sha=dcfa850a039b finish=length tok/s=62.6 ttft=0.31s prefill=0.18s rounds=93 accepted=290/343
+[tensorfold] done req-0fe50323ac21 prompt=48 cached=0 thinking=False tokens=384 sha=42298ae5b6a8 finish=length tok/s=71.6 ttft=6.60s prefill=0.17s rounds=92 accepted=291/379
+[tensorfold] done req-2a3685721af1 prompt=28 cached=0 thinking=False tokens=384 sha=c500b2d50c01 finish=length tok/s=37.7 ttft=4.63s prefill=0.13s rounds=204 accepted=179/300
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] done req-469e5118c517 prompt=28 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=87.3 ttft=0.13s prefill=0.12s rounds=64 accepted=319/320
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] done req-39008368ccd3 prompt=48 cached=0 thinking=False tokens=384 sha=42298ae5b6a8 finish=length tok/s=59.0 ttft=0.31s prefill=0.17s rounds=97 accepted=286/348
+[tensorfold] done req-6575cc24e063 prompt=48 cached=0 thinking=False tokens=384 sha=dcfa850a039b finish=length tok/s=66.6 ttft=4.69s prefill=0.17s rounds=92 accepted=291/365
+[tensorfold] done req-f997adec008f prompt=28 cached=0 thinking=False tokens=384 sha=c500b2d50c01 finish=length tok/s=45.6 ttft=6.92s prefill=0.12s rounds=201 accepted=182/328
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] done req-4f3669ccdbc1 prompt=28 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=87.4 ttft=0.13s prefill=0.12s rounds=64 accepted=319/320
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] done req-f64e4e71f026 prompt=48 cached=0 thinking=False tokens=384 sha=dcfa850a039b finish=length tok/s=60.3 ttft=0.31s prefill=0.18s rounds=94 accepted=289/343
+[tensorfold] done req-cfbb68f6f61d prompt=48 cached=0 thinking=False tokens=384 sha=42298ae5b6a8 finish=length tok/s=64.8 ttft=4.69s prefill=0.17s rounds=94 accepted=289/366
+[tensorfold] done req-46f7da34e40c prompt=28 cached=0 thinking=False tokens=384 sha=c500b2d50c01 finish=length tok/s=45.5 ttft=6.79s prefill=0.12s rounds=198 accepted=185/331
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=8192 ram=0 disk=0 selected=fresh
+[tensorfold] rank 0: the lane is broken (a step failed on rank 0 (OutOfMemoryError: CUDA out of memory. Tried to allocate 200.00 MiB. GPU 0 has a total capacity of 121.69 GiB of which 4.12 GiB is free. Including non-PyTorch memory, this process)); every step fails from now on
+[tensorfold] request error: OutOfMemoryError: CUDA out of memory. Tried to allocate 200.00 MiB. GPU 0 has a total capacity of 121.69 GiB of which 4.12 GiB is free. Including non-PyTorch memory, this process has 103.28 GiB memory in use. 101.72 GiB allowed; Of the allocated memory 101.24 GiB is allocated by PyTorch, with 52.00 MiB allocated in private pools (e.g., CUDA Graphs), and 344.49 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+Traceback (most recent call last):
+  File "/opt/tensorfold/src/tensorfold/cuda/http.py", line 244, in do_POST
+    result = app.run(body, chat, emit, prepared=prepared, cancelled=cancelled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/app.py", line 60, in run
+    return super().run(body, chat, emit, prepared=prepared, cancelled=cancelled)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/cuda/server.py", line 559, in run
+    stats = request.stats = generate_gated(generate, prompt, max_tokens, gates, on_tokens)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/engine/call_gate.py", line 258, in generate_gated
+    runs = [generate(list(prompt), max_tokens, take)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/cuda/server.py", line 545, in generate
+    stats = self.engine.generate(ids, count, sampling, feed, **extra)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/engine.py", line 376, in generate
+    return self.scheduler.submit(list(prompt), max_tokens, sampling, bool(draft), on_tokens,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/cuda/scheduler.py", line 112, in submit
+    raise failed or value
+  File "/opt/tensorfold/src/tensorfold/cuda/scheduler.py", line 231, in _loop
+    done += self.decoder.round()
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/multi.py", line 1332, in round
+    return self._fill(s)
+           ^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/multi.py", line 1129, in _fill
+    s.filled = next(s.steps)
+               ^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/engine.py", line 494, in prefill_steps
+    out = m.forward(sc, ids, s, taps=taps, host_ids=host[s:e], replay=replay, image=block)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/model.py", line 1239, in forward
+    return self._forward_k(sc, ids, start, all_logits, taps, h, pre, hashes, shared, replay, img)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/model.py", line 1322, in _forward_k
+    h = self.engram_apply(lay, h, rows[-n:] if rows.shape[0] != n else rows, img)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/model.py", line 854, in engram_apply
+    kv = self.comm.sum(mm(lay.engram_wkv, e, F32)).to(BF16)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/model.py", line 146, in sum
+    acc = g[0].clone()
+          ^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 200.00 MiB. GPU 0 has a total capacity of 121.69 GiB of which 4.12 GiB is free. Including non-PyTorch memory, this process has 103.28 GiB memory in use. 101.72 GiB allowed; Of the allocated memory 101.24 GiB is allocated by PyTorch, with 52.00 MiB allocated in private pools (e.g., CUDA Graphs), and 344.49 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)

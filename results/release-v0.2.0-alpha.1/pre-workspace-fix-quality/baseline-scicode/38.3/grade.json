@@ -1,0 +1,8 @@
+{
+  "step": "38.3",
+  "status": "failed",
+  "returncode": 1,
+  "seconds": 0.3920429080026224,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/work/run.py\", line 74, in <module>\n    assert np.allclose(reciprocal(a1,a2), target)\n                       ^^^^^^^^^^^^^^^^^\n  File \"/work/run.py\", line 51, in reciprocal\n    rec3d = reciprocal_3D(a1_3d, a2_3d, a3)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/work/run.py\", line 25, in reciprocal_3D\n    denom = np.dot(a1, cross(a2, a3))\n            ^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: shapes (4,) and (3,) not aligned: 4 (dim 0) != 3 (dim 0)\n"
+}

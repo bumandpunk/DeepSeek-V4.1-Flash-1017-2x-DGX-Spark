@@ -1,0 +1,77 @@
+[tensorfold] loading DeepSeek-V4.1-Flash-1017: DeepSeek-V4.1-Flash (deepseek_v41) on CUDA, rank 1 of 2
+[tensorfold] TORCH_ALLOW_TF32_CUBLAS_OVERRIDE=1 (NVIDIA's PyTorch container default) set to 0: DeepSeek-V4.1-Flash's fp32 GEMMs stay fp32
+[tensorfold] rank 1: rank cache writing /cache/rank/rank1of2-527f63d09cf4e4cf568b.bin
+[tensorfold] rank 1: layers 0..4 loaded (41 s, 13.7 GiB)
+[tensorfold] rank 1: layers 0..9 loaded (78 s, 26.0 GiB)
+[tensorfold] rank 1: layers 0..14 loaded (114 s, 38.2 GiB)
+[tensorfold] rank 1: layers 0..19 loaded (151 s, 48.9 GiB)
+[tensorfold] rank 1: layers 0..24 loaded (186 s, 58.7 GiB)
+[tensorfold] rank 1: layers 0..29 loaded (223 s, 70.9 GiB)
+[tensorfold] rank 1: layers 0..34 loaded (262 s, 83.2 GiB)
+[tensorfold] rank 1: layers 0..39 loaded (300 s, 95.4 GiB)
+[tensorfold] rank 1: DSpark (3 stages) loaded, 99.0 GiB
+[tensorfold] rank 1: weights in 309 s (written to the rank cache)
+[tensorfold] rank 1: allocator ceiling 102.4 GiB (holds 101.0, host available 4.8, total reserve 4.0, includes kernel 1.0, workspace 1.0, protected host floor 3.5)
+[tensorfold] rank 1 ready in 391.2s, following rank 0
+[tensorfold] rank 1: memory guard GiB {'available': 4.799, 'allocated': 100.616, 'reserved': 101.029, 'needed': 0.75, 'ceiling': 102.374, 'host_floor': 3.5}; admission=True
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory guard GiB {'available': 4.77, 'allocated': 100.616, 'reserved': 101.029, 'needed': 0.75, 'ceiling': 102.374, 'host_floor': 3.5}; admission=True
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory guard GiB {'available': 4.746, 'allocated': 100.616, 'reserved': 101.029, 'needed': 0.75, 'ceiling': 102.374, 'host_floor': 3.5}; admission=True
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory guard GiB {'available': 4.743, 'allocated': 100.616, 'reserved': 101.029, 'needed': 0.75, 'ceiling': 102.374, 'host_floor': 3.5}; admission=True
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory guard GiB {'available': 4.737, 'allocated': 100.616, 'reserved': 101.029, 'needed': 0.75, 'ceiling': 102.374, 'host_floor': 3.5}; admission=True
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory guard GiB {'available': 4.719, 'allocated': 100.616, 'reserved': 101.029, 'needed': 0.75, 'ceiling': 102.374, 'host_floor': 3.5}; admission=True
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] rank 1: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded

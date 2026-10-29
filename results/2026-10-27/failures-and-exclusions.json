@@ -1,0 +1,26 @@
+[
+  {
+    "run": "a0-baseline",
+    "result": "Stopped at 32K prefill by internal memory protection; no CUDA OOM. Prior deployment profile uses 512-token prefill chunks."
+  },
+  {
+    "run": "public-lucataco-a0",
+    "result": "Inherited 4 GiB memory-floor profile hit the CUDA allocator ceiling (102.05 GiB) at the initial request; retained as failed setup, not a speed score."
+  },
+  {
+    "run": "public-lucataco-a0-floor2",
+    "result": "Retried at public default 2 GiB floor: short and 8K tests passed. At 32K the independent host guard observed MemAvailable 1876 MiB for >4 seconds and killed only the lab rank. No completed 32K/128K score."
+  },
+  {
+    "run": "spark-depth-quick",
+    "result": "8K/32K prefill invalidated: shared spill cache reused 6144/8192 and 30720/32768 tokens. These numbers are excluded."
+  },
+  {
+    "run": "historical-long-prefix-comparisons",
+    "result": "Original public harness salted random inputs with wall time. Historical 128K decode rates must not be compared as identical-input results. Final baseline/candidate use the same fixed seed scheme and separate spill namespaces."
+  },
+  {
+    "run": "sudoingx-vllm",
+    "result": "Not measured. Model format adapter missing; no ranking or victory claim."
+  }
+]

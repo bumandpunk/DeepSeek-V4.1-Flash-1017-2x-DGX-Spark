@@ -1,0 +1,127 @@
+{
+  "request_types": 20,
+  "requests_per_arm": 58,
+  "all_outputs_equal": true,
+  "checks": [
+    {
+      "request_sha256": "21a30aabe415efba92182fa41d194e832bf457b9bca540069e119e9a0e69e84d",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "d4b13bbada53603caecd8f675846f344f42ba918762cf6c8c4adbcc2bf793dd2",
+      "baseline_count": 9,
+      "candidate_count": 9,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "81a666b3d63d9ae289adf29134cfd720d4bdd3d52036a8c017e5785778f402c3",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "545205048efcbdd63f10c676fbb2ab5e3f7c249288687a8629c2f96bf0407fed",
+      "baseline_count": 9,
+      "candidate_count": 9,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "7ffe91e0d466ee6b4b674f607df183b41f1cc4d1c3fa70d7645ea86190a6a996",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "14955a73f49dda941810030091e4d424dd6f3c1e5c6efeb2f55b11910b3ec9ce",
+      "baseline_count": 9,
+      "candidate_count": 9,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "1f2ad710dc5a70461c6936cd2647eac0eb4e1bdb87a08679739747c1743878c4",
+      "baseline_count": 6,
+      "candidate_count": 6,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "9bd45e07671449ac10cf578ce3654c88c6c0eb918b7bd08e155a9136683624e5",
+      "baseline_count": 6,
+      "candidate_count": 6,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "4763a4ed258d3a86b369a4b2aba15cd6550be7ee3f068a45d5de1bf368360c0a",
+      "baseline_count": 3,
+      "candidate_count": 3,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "d4a344374f69ad303b92be20294205afc03d1a7ba2538ccec55233b32905ddb0",
+      "baseline_count": 3,
+      "candidate_count": 3,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "eeff330e9844082a5c83b33b5f980c8d7a0914bf419047eff3fb4319f026f170",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "4b083ad2ecd8c639dec1c07dca78a79fd0877697269524c2f2ff654fc11ece2b",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "184a65062ac65dd28d73611b6665f43042774a32427a09bca36eade12cd61d9b",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "541ce654f6c58bf1c8b284cad03fde0d651d488f1385f683c80958a32dc3b955",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "5707d9ce3073ae61a63d94ced412b2070e36202d9f3f88c8630aefbb63c04ee5",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "b40c1559d5418d29a3d817695110a3c3b840f75632a43c4bc96d6dfc350ce453",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "e4565fa4cc8bf93b807db03e7c2bad5a2a7e194a70f337762724fe738b4a9a58",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "a88753fc8818db2a4b0357104869297772ed4fcafe3d33e5e27ff8c24171ea79",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "e46ee68171e3365dd129c8dfa9a295a0702cb030c332451dbe8dc04626089a2c",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    },
+    {
+      "request_sha256": "559270479301341b6ffb7e33e823bcdbdcdf3eba945b88549302abad6ed3d6ce",
+      "baseline_count": 1,
+      "candidate_count": 1,
+      "text_and_token_multiset_equal": true
+    }
+  ]
+}

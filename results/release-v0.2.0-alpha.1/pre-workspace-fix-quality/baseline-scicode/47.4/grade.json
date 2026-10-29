@@ -1,0 +1,8 @@
+{
+  "step": "47.4",
+  "status": "failed",
+  "returncode": 1,
+  "seconds": 0.5835049209417775,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/work/run.py\", line 118, in <module>\n    assert np.allclose(E_trace, target)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

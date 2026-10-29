@@ -1,0 +1,19 @@
+{
+  "label": "a0-text-baseline",
+  "quick": false,
+  "profile_only": false,
+  "utc": "2026-10-28T04:08:42.080170+00:00",
+  "kit_sha256": "1f4866e03fb4e3328c4aafd378f1e984fe11a927274a19fa6f504e0ab77a2561",
+  "wrapper_sha256": "b59c17c3368b4db9ad8804671cf69be2c8ae2811bf5417091fb7e8a2618c0098",
+  "decode_set": "b",
+  "max_tokens": 384,
+  "repetitions": 9,
+  "context_capacity": 524288,
+  "engine_slots": 2,
+  "thinking": false,
+  "temperature": 0,
+  "driver": "standard-library HTTP streaming client",
+  "base": "http://HEAD_MANAGEMENT_IP:19888",
+  "quality_boundary": "Speed prompts are not training data. Quality evaluated separately.",
+  "prefix_seed_scheme": "20261027 + (length << 4) + occurrence; wrapper v2"
+}

@@ -1,0 +1,8 @@
+{
+  "step": "10.3",
+  "status": "failed",
+  "returncode": 1,
+  "seconds": 0.3814489879878238,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/work/run.py\", line 82, in <module>\n    assert np.allclose(distance_matrix(EX2['configs'])[0], target[0]) and np.allclose(distance_matrix(EX2['configs'])[1], target[1])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

@@ -1,0 +1,33 @@
+{"passed": 5, "checks": ["model_listing", "chat_generation", "completion_generation", "streaming_generation", "invalid_key_rejected"]}
+{"name": "json-schema", "passed": true, "seconds": 5.138377267983742}
+{"name": "tool-call", "passed": true, "seconds": 0.9239265280775726}
+{"name": "regex", "passed": true, "seconds": 0.1515802820213139}
+{"event": "ready", "ready_after_s": 0.06163167953491211, "probe_started_unix": 1793238549.6797612}
+{"event": "begin", "section": "decode"}
+{"prompt": "code", "decode_tps_median": 94.73095226710736, "decode_tps_all": [94.902, 95.115, 94.43, 94.968, 94.731, 94.608, 94.378, 94.6, 94.974], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"prompt": "prose", "decode_tps_median": 57.26770376196331, "decode_tps_all": [57.097, 57.328, 57.327, 57.237, 57.307, 57.411, 57.114, 57.201, 57.268], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"prompt": "structured", "decode_tps_median": 139.7937819035463, "decode_tps_all": [138.972, 138.019, 139.794, 139.036, 140.299, 141.543, 140.427, 140.055, 138.803], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"event": "end", "section": "decode"}
+{"event": "begin", "section": "concurrent"}
+{"streams": 2, "rep": 0, "aggregate_tps": 81.80878352867312, "per_stream_decode_tps": [72.822, 41.445]}
+{"streams": 2, "rep": 1, "aggregate_tps": 81.66107301648044, "per_stream_decode_tps": [70.758, 42.209]}
+{"streams": 2, "rep": 2, "aggregate_tps": 81.76543430439315, "per_stream_decode_tps": [70.819, 42.25]}
+{"streams": 4, "rep": 0, "aggregate_tps": 106.95568795718145, "per_stream_decode_tps": [72.791, 29.942, 120.345, 72.378]}
+{"streams": 4, "rep": 1, "aggregate_tps": 100.98282925795637, "per_stream_decode_tps": [66.845, 46.082, 87.495, 59.309]}
+{"streams": 4, "rep": 2, "aggregate_tps": 106.75839759691299, "per_stream_decode_tps": [73.29, 30.083, 120.137, 69.585]}
+{"event": "end", "section": "concurrent"}
+{"event": "begin", "section": "prefill"}
+{"length": 8192, "rep": 0, "prompt_tokens": 8192, "ttft_s": 4.460545587004162, "prefill_tps": 1836.5466376730824}
+{"length": 8192, "rep": 1, "prompt_tokens": 8192, "ttft_s": 3.9674829959403723, "prefill_tps": 2064.785156831739}
+{"length": 8192, "rep": 2, "prompt_tokens": 8192, "ttft_s": 3.78171799890697, "prefill_tps": 2166.211230548585}
+{"length": 32768, "rep": 0, "prompt_tokens": 32768, "ttft_s": 15.401889369008131, "prefill_tps": 2127.5311888641513}
+{"length": 32768, "rep": 1, "prompt_tokens": 32768, "ttft_s": 15.247716450016014, "prefill_tps": 2149.0431113024524}
+{"length": 32768, "rep": 2, "prompt_tokens": 32768, "ttft_s": 14.952247002976947, "prefill_tps": 2191.510078282949}
+{"length": 131072, "rep": 0, "prompt_tokens": 131072, "ttft_s": 67.2695411889581, "prefill_tps": 1948.4598479990034}
+{"length": 131072, "rep": 1, "prompt_tokens": 131072, "ttft_s": 67.4414455400547, "prefill_tps": 1943.4933363365403}
+{"length": 131072, "rep": 2, "prompt_tokens": 131072, "ttft_s": 65.41071464808192, "prefill_tps": 2003.8307287297541}
+{"event": "end", "section": "prefill"}
+{"event": "begin", "section": "depth"}
+{"length": 131072, "prompt_tokens": 131072, "ttft_s": 65.27451616700273, "tokens": 512, "decode_tps": 111.64068416804689}
+{"event": "end", "section": "depth"}
+{"event": "complete", "label": "tiled-baseline-speed"}

@@ -1,0 +1,11 @@
+{
+  "image_id": "sha256:a0521fd507abc8315076c5f09b94efa142728aca01feab276fcfe4df2362dbd7",
+  "worker_image_id": "sha256:a0521fd507abc8315076c5f09b94efa142728aca01feab276fcfe4df2362dbd7",
+  "base_image_id": "sha256:80f3e96a6236023cc9af346fef03376af4096c9ff6b5dde8d702e5f7c9335080",
+  "patch_files": {
+    "prepare_memory_budget.py": "b3897567d41643e0c781e3f202bc693abb598dcce95618965d8cb051ea80d0f9",
+    "control.py": "87d613ea7c1f0045eda3debf420b0d66a8d1dc240adfcda8d284490152077980",
+    "memory_budget.py": "d87073cfb77f40add9530871c962d354af656b117f990651fa87367c533536fc"
+  },
+  "scope": "Layered diagnostic only; not final clean-build evidence"
+}

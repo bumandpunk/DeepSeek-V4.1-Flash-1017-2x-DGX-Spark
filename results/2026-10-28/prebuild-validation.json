@@ -1,0 +1,17 @@
+{
+  "weights_loaded_during_compile": false,
+  "memory_limit_gib": 8,
+  "max_jobs": 1,
+  "ranks": [
+    {
+      "rank": 0,
+      "success": true,
+      "output": "[tensorfold] building CUDA extension spark1017_rdma_segmented_v3 (first start after an install or update; later starts reuse it)\nRequired runtime extensions built; model weights were not loaded.\n"
+    },
+    {
+      "rank": 1,
+      "success": true,
+      "output": "[tensorfold] building CUDA extension spark1017_rdma_segmented_v3 (first start after an install or update; later starts reuse it)\nRequired runtime extensions built; model weights were not loaded.\n"
+    }
+  ]
+}

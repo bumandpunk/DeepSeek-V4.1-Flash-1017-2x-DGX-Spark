@@ -1,0 +1,11 @@
+{
+  "original_lab_script_sha256": "31d415ef3f7309282edcfa65955d986a713f5d73272ab014f51421773aba73d2",
+  "portable_script_sha256": "35ede9e15bb6e60cd3ece4a5df761b065e2cc2efa56ecf35ccfade40e53f3a05",
+  "prompt_and_code_extraction_ast_equal": true,
+  "changes": [
+    "endpoint/key/output/image/HDF5 are CLI arguments",
+    "Docker invocation uses caller docker access and explicit non-root user",
+    "validate dataset hashes before grading",
+    "no prompt, seed, sampler or test assertion changes"
+  ]
+}

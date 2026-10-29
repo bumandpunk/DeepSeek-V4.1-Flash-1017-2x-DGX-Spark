@@ -1,0 +1,41 @@
+{
+  "id": "chatcmpl-8127d177ac034566adb0c93f",
+  "object": "chat.completion",
+  "created": 1793173486,
+  "model": "DeepSeek-V4.1-Flash-1017",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "```python\ndef select_big_weights(gpoints_all, cell_volume, alpha, tol=1e-10):\n    '''Filter g-points based on weight in reciprocal space.\n    Parameters:\n        gpoints_all (np.ndarray): An array of shape (nk, 3) representing all g-points.\n        cell_volume (float): The volume of the unit cell.\n        alpha (float): The alpha value used for the Ewald summation.\n        tol (float, optional): The tolerance for filtering weights. Default is 1e-10.\n    Returns:\n        tuple: \n            gpoints (np.array): An array of shape (nk, 3) containing g-points with significant weights.\n            gweights (np.array): An array of shape (nk,) containing the weights of the selected g-points.       \n    '''\n    gpoints_all = np.asarray(gpoints_all)\n    k2 = np.sum(gpoints_all**2, axis=1)\n\n    with np.errstate(divide='ignore', invalid='ignore'):\n        gweights_all = (4.0 * np.pi / cell_volume) * np.exp(-k2 / (4.0 * alpha**2)) / k2\n\n    mask = (k2 > 0.0) & (gweights_all > tol)\n\n    gpoints = gpoints_all[mask]\n    gweights = gweights_all[mask]\n\n    return gpoints, gweights\n```",
+        "reasoning_content": "We need answer only code for next step function select_big_weights. Need compute weights W(k) = 4π/V * exp(-k^2/(4α^2))/k^2. Input gpoints_all shape (nk,3), possibly physical reciprocal vectors after applying recvec. Need filter weight > tol. Must avoid division by zero; origin excluded, but perhaps there could be zero if recvec singular? assume not. Return gpoints and gweights selected.\n\nNeed careful formula: k^2 = sum(gpoints_all**2, axis=1). weights = (4*pi/cell_volume) * exp(-k2/(4*alpha**2)) / k2. Tolerance. For k2 zero, weight infinite; but origin excluded. Could handle with np.errstate, mask k2>0 and weights>tol. If k2==0 maybe should exclude? Input says gpoints_all from generate excludes origin and half. So safe.\n\nNeed return tuple gpoints, gweights. Filter weights > tol. Should be executable. Use numpy. Do not include imports? They say dependencies not include at beginning? Actually RESPONSE GUIDELINES: \"Do not include these dependencies at beginning of your code.\" But function uses np. Since they may have imported? They instruct not include dependencies at beginning. We'll output only function, no import. Need ensure np available per environment. Good.\n\nPotential numerical issue: exp underflows to 0. Fine.\n\nCode:\n\ndef select_big_weights(gpoints_all, cell_volume, alpha, tol=1e-10):\n    gpoints_all = np.asarray(gpoints_all)\n    k2 = np.sum(gpoints_all**2, axis=1)\n    with np.errstate(divide='ignore', invalid='ignore'):\n        gweights_all = (4.0 * np.pi / cell_volume) * np.exp(-k2 / (4.0 * alpha**2)) / k2\n    mask = np.isfinite(gweights_all) & (gweights_all > tol)\n    return gpoints_all[mask], gweights_all[mask]\n\nQuestion: For k2 zero, formula undefined. If origin somehow present, weight infinite; Should include? But generate excludes origin. \"Return only points and weights that are larger than tolerance\" If k2=0 would be infinite > tol, but not valid reciprocal. Better mask k2 > 0 to avoid inf. Since input excludes origin, doesn't matter. But if zero present, exclude? Let's set mask = (k2 > 0) & (gweights_all > tol). gweights_all for k2 zero could be inf, but k2>0 excludes. That may be safer.\n\nNeed consider alpha=0? No.\n\nThus final code block only function. \n"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 2335,
+    "completion_tokens": 885,
+    "total_tokens": 3220,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 580
+    }
+  },
+  "tensorfold": {
+    "prefill_s": 1.7775,
+    "decode_s": 11.7951,
+    "rounds": 283,
+    "drafts": true,
+    "cached": 0,
+    "min_rows": 2,
+    "drafted": 931,
+    "accepted": 601,
+    "token_sha": "6d70269dba04"
+  },
+  "_wall_seconds": 13.667228495934978,
+  "_api_retries": 0
+}

@@ -1,0 +1,20 @@
+{
+  "label": "tiled-edit-fullfile",
+  "source": "python/cpython v3.12.9",
+  "tasks": {
+    "bisect": "Add a public function bisect_bounds(a, x, lo=0, hi=None, *, key=None) returning (left_index, right_index) by calling the existing bisect_left and bisect_right with the same arguments. Preserve every existing function and all existing behavior.",
+    "graphlib": "Add TopologicalSorter.__len__(self), returning the total number of registered nodes, including predecessor-only nodes, independent of whether nodes are already marked done. Preserve every existing method and all existing behavior.",
+    "textwrap": "Add a public function wrap_lines(text, width=70, **kwargs). For each line from text.splitlines(), extend the result with wrap(line, width=width, **kwargs), or with one empty string when that line yields no wrapped lines. Return the flattened list. Add wrap_lines to __all__. Preserve every existing function and all existing behavior."
+  },
+  "repetitions": 2,
+  "temperature": 0,
+  "max_tokens": 16384,
+  "thinking": false,
+  "image": "sha256:5e494289897f2efe0308f4c4c3ef26f3e26aeef0a6231d00c6e733ff7e93fa9c",
+  "purpose": "Engineering fixtures for source-preserving edits, not a general coding benchmark or official score",
+  "sources": {
+    "bisect": "f1cf7b85fc36b5da249813fc5ab97d9464f8cc1bc817f7146206fa2713e35999",
+    "graphlib": "7bd338c5a475d1101064603d3baa5507446d3c5e73f741f6d6e77c6204c1eb65",
+    "textwrap": "62867e40cdea6669b361f72af4d7daf0359f207c92cbeddfc7c7506397c1f31c"
+  }
+}

@@ -1,0 +1,55 @@
+DeepSeek-V4.1-Flash-1017 EXL3 2.9 bpw on 2x DGX Spark with TensorFold
+Copyright 2026 MiaAI-Lab
+
+This project's own code, scripts and documentation are licensed under the Apache License, Version 2.0 (see
+LICENSE). If you redistribute this project or a modified version of it, keep this NOTICE file and state what you
+changed (Apache-2.0, section 4).
+
+This project builds on third-party work that keeps its own license:
+
+TensorFold
+  https://github.com/ashhart/TensorFold
+  Copyright 2026 TensorFold contributors. Apache License, Version 2.0. TensorFold's NOTICE reads: "TensorFold /
+  Copyright 2026 TensorFold contributors / https://github.com/ashhart/TensorFold".
+
+The DeepSeek-V4.1-Flash family on TensorFold's native engine (BertholomusAI's fork)
+  https://github.com/bertholomus/TensorFold (branch deepseek-v41-zig, commit
+  629c524a0ea57512a5342abb498d1b7c25353343; and, for the inputs' tools only, branch deepseek-v41-zig-tp4, commit
+  59402086381a42c74d53053443224eec2790b4c5)
+  Written by BertholomusAI (Albert Lee, @bertholomus), on TensorFold. Apache License, Version 2.0.
+  zig/Dockerfile builds those commits and applies the files in zig/patches (0001, 0002, 0004 and 0006 written for this project; 0005 by Coinupbtc, pull request #5 of this repository, Apache-2.0; the others as zig/patches/README.md lists them; 0011 to 0022 by Robert Wojciechowski (wojo, https://github.com/wojo; @rwojo, https://x.com/rwojo), his GLM-5.3-Flash recipe patches 0088/0110/0111/0118/0119 (MiaAI-Lab/GLM-5.3-Flash-EXL3-2x-DGX-Sparks-TensorFold pull requests #78, #124, #128, #152 and #149) ported by him to this engine, with spill v2's block layout after BadAd84's block-tier design (#118 there) and BadAd84's spill v2 CPU checks and fixes to 0110 (#124 there); 0023, a base-engine fix, by Robert Wojciechowski, also pull request #40 of this repository; 0024 to 0026 by Mykhailo Tamarin (MykhailoTamarin, https://github.com/MykhailoTamarin), the EAQ v1.1 mixed pack, pull request #57 of this repository; Apache-2.0) to the first, and the files in zig/patches-inputs (0001 and 0002, by Mykhailo Tamarin, the same pull request) to the second. Any change in
+  zig/patches is this project's work under Apache-2.0; the code it modifies, and quotes as diff context, stays under its
+  authors' license.
+
+The DeepSeek-V4.1 kernel kit (BertholomusAI's two-node recipe)
+  https://github.com/bertholomus/deepseek-v4.1-tensorfold-tp2-2xgb10 (kit/ at commit
+  abe07c7d509a0199cc7fec15263be2aa52ac652f)
+  Written by BertholomusAI. Apache License, Version 2.0; the parts it carries keep the licenses its
+  kit/KIT-LICENSES.md lists (Triton: MIT; PyTorch's attention kernel: BSD-3-Clause, on NVIDIA CUTLASS: BSD-3-Clause;
+  the EXL3 format of ExLlamaV3 by turboderp: MIT). scripts/prepare.sh fetches it; it is not part of this repository.
+
+DeepSeek-V4.1-Flash-1017
+  https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017
+  Copyright (c) 2023 DeepSeek. MIT License. Engram's tables (shards 47 and 48) are downloaded by scripts/prepare.sh,
+  not distributed here.
+
+DeepSeek-V4.1-Flash-1017-EXL3-EAQ-v1-2.9-bpw
+  https://huggingface.co/Mia-AiLab/DeepSeek-V4.1-Flash-1017-EXL3-EAQ-v1-2.9-bpw
+  By Mia's AI Lab (Mia-AiLab). MIT License. The weights are downloaded by scripts/prepare.sh, not distributed here.
+
+Chat template (model/chat_template.jinja)
+  https://huggingface.co/Mia-AiLab/DeepSeek-V4.1-Flash-EXL3-2.9bpw
+  Written by Mia's AI Lab (Mia-AiLab): a port of the checkpoint's encoding/encoding.py (DeepSeek, MIT) to Jinja.
+  One change, by hashd1ve (https://github.com/hashd1ve): each piece of the prompt is written out as it is made, not added
+  to one growing string (issue #1 of this repository).
+
+GLM-5.3-Flash-EXL3-2x-DGX-Sparks-TensorFold
+  https://github.com/MiaAI-Lab/GLM-5.3-Flash-EXL3-2x-DGX-Sparks-TensorFold
+  Copyright 2026 MiaAI-Lab and its contributors. Apache License, Version 2.0. scripts/config.sh, scripts/nodes.sh,
+  start.sh, stop.sh, scripts/banner.sh, scripts/zig_flags.py, scripts/publish-image.sh, the tools/ checks other than
+  validate.py, bench.py and smoke.py, docs/hermes-agent.md and the .github templates are adapted from it, including
+  code by webzone, Alexbob0, john, Eduardo Florencio and Steve Darlow (see CREDITS.md). scripts/memguard.sh, bench.py and
+  smoke.py are written for this project.
+
+NVIDIA PyTorch container (nvcr.io/nvidia/pytorch:26.07-py3)
+  The image's base, under NVIDIA's container license and its components' own licenses.

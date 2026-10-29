@@ -1,0 +1,7 @@
+{
+  "registry": "nvcr.io/nvidia/pytorch",
+  "tag": "26.07-py3",
+  "platform": "linux/arm64",
+  "manifest_digest": "sha256:7531d90bcbe0e43e1f7363029c7e145ce90eebeb494a7b4695fdba0329d7c3c3",
+  "image_id": "sha256:15b8de8baabe68e46afc51e88f3ccad5042013bafe8f244ec082ce0bb06d47e3"
+}

@@ -1,0 +1,16 @@
+{
+  "label": "public-lucataco-a0",
+  "variant": "a0",
+  "depth_policy": "conf",
+  "drafts": 5,
+  "parallel": 2,
+  "context": 524288,
+  "prefill_chunk": 2048,
+  "dontneed": 1,
+  "trace": false,
+  "engine": "lucataco",
+  "storage": 0,
+  "adaptive": false,
+  "calibration": false,
+  "costs": ""
+}

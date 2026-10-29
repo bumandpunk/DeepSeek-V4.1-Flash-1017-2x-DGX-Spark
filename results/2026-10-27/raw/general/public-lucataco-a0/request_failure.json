@@ -1,0 +1,30 @@
+{
+  "request_sha256": "21a30aabe415efba92182fa41d194e832bf457b9bca540069e119e9a0e69e84d",
+  "request": {
+    "path": "/v1/chat/completions",
+    "body": {
+      "messages": [
+        {
+          "role": "user",
+          "content": "Write a Python class LRUCache with get(key) and put(key, value), both O(1), using a dict and a doubly linked list. Then write unittest test cases for it."
+        }
+      ],
+      "max_tokens": 32,
+      "temperature": 0,
+      "chat_template_kwargs": {
+        "enable_thinking": false
+      }
+    }
+  },
+  "response": {
+    "start": 457257.831315848,
+    "end": 457259.090110785,
+    "ttft_s": null,
+    "decode_s": null,
+    "tokens": null,
+    "prompt_tokens": null,
+    "decode_tps": null,
+    "chunks": 0,
+    "text": ""
+  }
+}

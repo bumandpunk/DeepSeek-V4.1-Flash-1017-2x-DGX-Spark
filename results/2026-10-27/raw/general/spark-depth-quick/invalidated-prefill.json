@@ -1,0 +1,7 @@
+{
+  "sections": [
+    "prefill"
+  ],
+  "reason": "Shared previous spill directory produced disk prefix-cache hits: 6144/8192 and 30720/32768. Excluded from cold-prefill comparisons. Decode/concurrency unaffected.",
+  "remedy": "All later profiles receive a unique spill namespace."
+}

@@ -1,0 +1,125 @@
+import numpy as np
+import cmath 
+def pmns_mixing_matrix(s12, s23, s13, dCP):
+    '''Returns the 3x3 PMNS mixing matrix.
+    Computes and returns the 3x3 complex PMNS mixing matrix
+    parameterized by three rotation angles: theta_12, theta_23, theta_13,
+    and one CP-violation phase, delta_CP.
+    Input
+    s12 : Sin(theta_12); float
+    s23 : Sin(theta_23); float
+    s13 : Sin(theta_13); float
+    dCP : delta_CP in radians; float
+    Output
+    pmns: numpy array of floats with shape (3,3) containing the 3x3 PMNS mixing matrix
+    '''
+
+    c12 = np.sqrt(1.0 - s12**2)
+    c23 = np.sqrt(1.0 - s23**2)
+    c13 = np.sqrt(1.0 - s13**2)
+
+    phase_plus = cmath.exp(1j * dCP)
+    phase_minus = cmath.exp(-1j * dCP)
+
+    pmns = np.array([
+        [c12 * c13, s12 * c13, s13 * phase_minus],
+        [-s12 * c23 - c12 * s23 * s13 * phase_plus,
+         c12 * c23 - s12 * s23 * s13 * phase_plus,
+         s23 * c13],
+        [s12 * s23 - c12 * c23 * s13 * phase_plus,
+         -c12 * s23 - s12 * c23 * s13 * phase_plus,
+         c23 * c13]
+    ], dtype=complex)
+
+    return pmns
+def hamiltonian_3nu(s12, s23, s13, dCP, D21, D31):
+    U = pmns_mixing_matrix(s12, s23, s13, dCP)
+    D = np.diag(np.array([0.0, D21, D31], dtype=complex))
+    H = 0.5 * U @ D @ np.conjugate(U.T)
+    return [[complex(H[i, j]) for j in range(3)] for i in range(3)]
+def hamiltonian_3nu_su3_coefficients(hamiltonian):
+    '''Returns the h_k of the SU(3)-expansion of the 3nu Hamiltonian.
+    Input
+    hamiltonian: a list of lists containing the 3x3 Hamiltonian matrix; each inner list contains three complex numbers
+    Output
+    hks: a list containing the h_k coefficients of the 3nu Hamiltonian in the expansion using the Gell-Mann matrices (k=1 to k=8); a list of floats (possibly complex)
+    '''
+
+    H = hamiltonian
+
+    h1 = H[0][1].real
+    h2 = -H[0][1].imag
+    h3 = 0.5 * (H[0][0].real - H[1][1].real)
+    h4 = H[0][2].real
+    h5 = -H[0][2].imag
+    h6 = H[1][2].real
+    h7 = -H[1][2].imag
+    h8 = (np.sqrt(3.0) / 6.0) * (H[0][0].real + H[1][1].real - 2.0 * H[2][2].real)
+
+    return [h1, h2, h3, h4, h5, h6, h7, h8]
+def tensor_d(i, j, k):
+    '''Returns the tensor d_ijk of the SU(3) algebra.
+    Input
+    i: the first index; int
+    j: the second index; int
+    k: the third index; int
+    Output
+    result: the value of d_ijk for given indices i, j, and k; float
+    '''
+
+    def gell_mann(n):
+        if n == 1:
+            return np.array([[0, 1, 0],
+                             [1, 0, 0],
+                             [0, 0, 0]], dtype=complex)
+        elif n == 2:
+            return np.array([[0, -1j, 0],
+                             [1j, 0, 0],
+                             [0, 0, 0]], dtype=complex)
+        elif n == 3:
+            return np.array([[1, 0, 0],
+                             [0, -1, 0],
+                             [0, 0, 0]], dtype=complex)
+        elif n == 4:
+            return np.array([[0, 0, 1],
+                             [0, 0, 0],
+                             [1, 0, 0]], dtype=complex)
+        elif n == 5:
+            return np.array([[0, 0, -1j],
+                             [0, 0, 0],
+                             [1j, 0, 0]], dtype=complex)
+        elif n == 6:
+            return np.array([[0, 0, 0],
+                             [0, 0, 1],
+                             [0, 1, 0]], dtype=complex)
+        elif n == 7:
+            return np.array([[0, 0, 0],
+                             [0, 0, -1j],
+                             [0, 1j, 0]], dtype=complex)
+        elif n == 8:
+            sqrt3 = 1.0 / np.sqrt(3.0)
+            return np.array([[sqrt3, 0, 0],
+                             [0, sqrt3, 0],
+                             [0, 0, -2.0 * sqrt3]], dtype=complex)
+        else:
+            return np.zeros((3, 3), dtype=complex)
+
+    lambda_i = gell_mann(i)
+    lambda_j = gell_mann(j)
+    lambda_k = gell_mann(k)
+
+    anticommutator = lambda_i @ lambda_j + lambda_j @ lambda_i
+    result = np.real(np.trace(anticommutator @ lambda_k)) / 4.0
+
+    return float(result)
+from scicode_helpers import process_hdf5_to_tuple
+targets=process_hdf5_to_tuple('70.4',3,"/data/test_data.h5")
+
+target=targets[0]
+assert np.allclose(tensor_d(8,8,8), target)
+
+target=targets[1]
+assert np.allclose(tensor_d(3,4,4), target)
+
+target=targets[2]
+assert np.allclose(tensor_d(5,5,8), target)

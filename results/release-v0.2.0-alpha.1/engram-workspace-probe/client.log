@@ -1,0 +1,40 @@
+{"passed": 5, "checks": ["model_listing", "chat_generation", "completion_generation", "streaming_generation", "invalid_key_rejected"]}
+{"name": "json-schema", "passed": true, "seconds": 5.306757420999929}
+{"name": "tool-call", "passed": true, "seconds": 0.9041631950531155}
+{"name": "regex", "passed": true, "seconds": 0.15840299997944385}
+{"event": "ready", "ready_after_s": 0.05890321731567383, "probe_started_unix": 1793232104.8556426}
+{"event": "begin", "section": "decode"}
+{"prompt": "code", "decode_tps_median": 94.94033943433413, "decode_tps_all": [95.137, 94.94, 94.435, 95.187, 94.411, 95.035, 94.562, 95.07, 94.935], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"prompt": "prose", "decode_tps_median": 57.17034933777662, "decode_tps_all": [57.163, 57.352, 57.243, 56.514, 57.974, 57.247, 57.159, 57.17, 57.06], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"prompt": "structured", "decode_tps_median": 140.2699286364477, "decode_tps_all": [140.27, 139.926, 140.839, 140.584, 140.668, 139.632, 139.877, 140.529, 140.055], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"event": "end", "section": "decode"}
+{"event": "begin", "section": "concurrent"}
+{"streams": 2, "rep": 0, "aggregate_tps": 81.73653744576836, "per_stream_decode_tps": [70.581, 42.235]}
+{"streams": 2, "rep": 1, "aggregate_tps": 81.78090968042295, "per_stream_decode_tps": [72.573, 41.437]}
+{"streams": 2, "rep": 2, "aggregate_tps": 81.84785411621, "per_stream_decode_tps": [72.648, 41.448]}
+{"streams": 4, "rep": 0, "aggregate_tps": 107.08170565295508, "per_stream_decode_tps": [70.666, 30.752, 105.666, 79.621]}
+{"streams": 4, "rep": 1, "aggregate_tps": 106.8723409207185, "per_stream_decode_tps": [80.686, 30.707, 105.719, 69.634]}
+{"streams": 4, "rep": 2, "aggregate_tps": 107.06725001678406, "per_stream_decode_tps": [80.924, 30.714, 105.993, 69.544]}
+{"event": "end", "section": "concurrent"}
+{"event": "begin", "section": "prefill"}
+{"length": 8192, "rep": 0, "prompt_tokens": 8192, "ttft_s": 4.981259831925854, "prefill_tps": 1644.5638807066223}
+{"length": 8192, "rep": 1, "prompt_tokens": 8192, "ttft_s": 4.058643460972235, "prefill_tps": 2018.4083866380402}
+{"length": 8192, "rep": 2, "prompt_tokens": 8192, "ttft_s": 4.050408018054441, "prefill_tps": 2022.512290980235}
+{"length": 32768, "rep": 0, "prompt_tokens": 32768, "ttft_s": 18.03580331604462, "prefill_tps": 1816.8306354754734}
+{"length": 32768, "rep": 1, "prompt_tokens": 32768, "ttft_s": 15.352009734022431, "prefill_tps": 2134.443670093632}
+{"length": 32768, "rep": 2, "prompt_tokens": 32768, "ttft_s": 15.539380384027027, "prefill_tps": 2108.7069876790147}
+{"length": 131072, "rep": 0, "prompt_tokens": 131072, "ttft_s": 73.88458504190203, "prefill_tps": 1774.0100986649024}
+{"length": 131072, "rep": 1, "prompt_tokens": 131072, "ttft_s": 70.51877866103314, "prefill_tps": 1858.6822189594586}
+{"length": 131072, "rep": 2, "prompt_tokens": 131072, "ttft_s": 70.15539122698829, "prefill_tps": 1868.309729410753}
+{"event": "end", "section": "prefill"}
+{"event": "begin", "section": "depth"}
+{"length": 131072, "prompt_tokens": 131072, "ttft_s": 67.9250569329597, "tokens": 512, "decode_tps": 97.93983953839593}
+{"event": "end", "section": "depth"}
+{"event": "complete", "label": "engram-probe-speed"}
+{"name": "bisect", "rep": 0, "tokens": 1119, "tps": 106.24097014537548, "ttft_s": 1.6260056140599772, "request_sha256": "2a7d57fda05999ddffcb0263a9bc992ee86bfbb3674b4d31ec5af36dc4b2c65e", "text_sha256": "d378d2856ff9a2add4a207b44a199f810f943f3affa5febb14ddb1cc2d365de9", "grade": {"passed": 204, "total": 204}}
+{"name": "graphlib", "rep": 0, "tokens": 2140, "tps": 107.412957548671, "ttft_s": 1.5228299549780786, "request_sha256": "dc5ed1327ea6ec34c4d326068e33795a062c63d5433b6e071e1a989c2b72f3c2", "text_sha256": "64dc237725390530f068a8dd4d43606ef1f3cdb911e07294feb3bc555c0f39f1", "grade": {"passed": 126, "total": 126}}
+{"name": "textwrap", "rep": 0, "tokens": 4777, "tps": 103.35573105349317, "ttft_s": 2.7110018100356683, "request_sha256": "7ca8aec0281153a69e590dfd21ae7c77c280c9068717a7fa0913c94efdfe77cb", "text_sha256": "45cf85eceaaeec04d9ba0067ca39f655952b162f631abf5bd9af3f385b282ba1", "grade": {"passed": 88, "total": 88}}
+{"name": "bisect", "rep": 1, "tokens": 1119, "tps": 105.94450423799448, "ttft_s": 0.8021518909372389, "request_sha256": "2a7d57fda05999ddffcb0263a9bc992ee86bfbb3674b4d31ec5af36dc4b2c65e", "text_sha256": "d378d2856ff9a2add4a207b44a199f810f943f3affa5febb14ddb1cc2d365de9", "grade": {"passed": 204, "total": 204}}
+{"name": "graphlib", "rep": 1, "tokens": 2140, "tps": 107.45483860594572, "ttft_s": 0.4139354230137542, "request_sha256": "dc5ed1327ea6ec34c4d326068e33795a062c63d5433b6e071e1a989c2b72f3c2", "text_sha256": "64dc237725390530f068a8dd4d43606ef1f3cdb911e07294feb3bc555c0f39f1", "grade": {"passed": 126, "total": 126}}
+{"name": "textwrap", "rep": 1, "tokens": 4777, "tps": 105.09487461783112, "ttft_s": 0.6538705700077116, "request_sha256": "7ca8aec0281153a69e590dfd21ae7c77c280c9068717a7fa0913c94efdfe77cb", "text_sha256": "45cf85eceaaeec04d9ba0067ca39f655952b162f631abf5bd9af3f385b282ba1", "grade": {"passed": 88, "total": 88}}
+COMPLETE engram-probe-fullfile

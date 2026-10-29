@@ -1,0 +1,240 @@
+{
+  "scope": "Final full runs with retained server logs; prefix cache only, not OS page cache.",
+  "runs": {
+    "e320-final-v1": {
+      "server_log": "server-events/e320-final-v1-server-r0.log",
+      "server_log_sha256": "696e292ee74f6311396042ece755d73456e1be7ce1865260574c83c3fd56a218",
+      "records": [
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        }
+      ],
+      "all_prefix_cache_counts_zero": true
+    },
+    "a0-text-baseline": {
+      "server_log": "server-events/a0-text-baseline-server-r0.log",
+      "server_log_sha256": "cf17f3dd25d1fdeee7025088a1e1fc9e19d2e3f8597d628dceb0b6e9e8b24a53",
+      "records": [
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        }
+      ],
+      "all_prefix_cache_counts_zero": true
+    },
+    "a0-mia-native": {
+      "server_log": "server-events/a0-mia-native-server-r0.log",
+      "server_log_sha256": "b4590857db252dfb940a01d5c5027f3040b999c029052614ca64c94f96fa002f",
+      "records": [
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        }
+      ],
+      "all_prefix_cache_counts_zero": true
+    },
+    "a0-text-fused": {
+      "server_log": "server-events/a0-text-fused-server-r0.log",
+      "server_log_sha256": "68ab350eb8e069bb09ddc2c778511e3f7f38a95ef2890c1f8136914e0dff478a",
+      "records": [
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        }
+      ],
+      "all_prefix_cache_counts_zero": true
+    },
+    "e320-return-baseline": {
+      "server_log": "server-events/e320-return-baseline-server-r0.log",
+      "server_log_sha256": "339aaa4f37c37047fd6892d3467f29d5326ce4b5ca9a2ca5260d27b9a752e759",
+      "records": [
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 8192,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 32768,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        },
+        {
+          "prompt": 131072,
+          "cached": 0
+        }
+      ],
+      "all_prefix_cache_counts_zero": true
+    }
+  }
+}

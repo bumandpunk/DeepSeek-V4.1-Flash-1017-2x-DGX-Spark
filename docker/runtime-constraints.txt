@@ -1,0 +1,13 @@
+# torch, torchvision, triton and numpy also retain their pinned NGC versions.
+huggingface-hub==1.33.0
+tokenizers==0.23.1
+safetensors==0.8.0
+jinja2==3.1.6
+transformers==5.20.1
+Pillow==12.3.0
+xgrammar==0.2.8
+av==19.0.2
+hf-xet==1.7.0
+typer==0.27.3
+annotated-doc==0.0.5
+shellingham==1.5.4

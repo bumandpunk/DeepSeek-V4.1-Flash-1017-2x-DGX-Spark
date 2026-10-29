@@ -1,0 +1,18 @@
+{
+  "status": "failed_and_preserved",
+  "image_id": "sha256:f4cb7eee4900efdf56b2a043787568c7d55c0b14ed9871b336a8da8445392893",
+  "build_source_sha256": "22e2e55a555e8879a7b8483f6835a8dcb1ace14424b477c880dfe74bf869238c",
+  "controller_source_sha256": "888c99ecdf7f45da033eb1407ba16791515138e0108b783abc796f33d63ba629",
+  "recorded_requests": 54,
+  "completed_requests": 53,
+  "failed_request_sha256": "b40c1559d5418d29a3d817695110a3c3b840f75632a43c4bc96d6dfc350ce453",
+  "failed_prompt_tokens": 32768,
+  "guard_floor_gib": 2.5,
+  "worker_available_gib_at_guard": 2.47979736328125,
+  "engine_protected_host_floor_before_fix_gib": 2.0,
+  "root_cause": "Engine admission permitted a lower host reserve than the external memory guard.",
+  "fix": "Engine protected host floor follows configured guard floor plus 0.5 GiB. External guard remains enabled.",
+  "original_service_recovered": true,
+  "programming_grading_started": false,
+  "final_validation": "Recorded separately after the fix; these incomplete requests are not included in the final completed-run medians."
+}

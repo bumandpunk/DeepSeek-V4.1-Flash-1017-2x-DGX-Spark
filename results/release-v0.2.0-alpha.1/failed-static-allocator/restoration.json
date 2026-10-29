@@ -1,0 +1,15 @@
+{
+  "phase": "restored",
+  "restored_utc": "2026-10-28T13:10:42.936343+00:00",
+  "recovery_armed": false,
+  "restore_api": {
+    "passed": 5,
+    "checks": [
+      "model_listing",
+      "chat_generation",
+      "completion_generation",
+      "streaming_generation",
+      "invalid_key_rejected"
+    ]
+  }
+}

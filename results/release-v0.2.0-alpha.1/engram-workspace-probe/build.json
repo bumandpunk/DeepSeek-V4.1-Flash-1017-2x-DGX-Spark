@@ -1,0 +1,29 @@
+{
+  "image_id": "sha256:46e811203a56f7066cda6e0b211f93dec052d0549bdf06ca5e233205e4c2a7a5",
+  "worker_image_id": "sha256:46e811203a56f7066cda6e0b211f93dec052d0549bdf06ca5e233205e4c2a7a5",
+  "base_image_id": "sha256:80f3e96a6236023cc9af346fef03376af4096c9ff6b5dde8d702e5f7c9335080",
+  "patch_files": {
+    "prepare_memory_budget.py": "b3897567d41643e0c781e3f202bc693abb598dcce95618965d8cb051ea80d0f9",
+    "engram.py": "d7ca3c76d2110a8f3cd464059ce542e10f93a8b0de743118c6ac4a64f2cccc69",
+    "control.py": "87d613ea7c1f0045eda3debf420b0d66a8d1dc240adfcda8d284490152077980",
+    "memory_budget.py": "d87073cfb77f40add9530871c962d354af656b117f990651fa87367c533536fc",
+    "prepare_engram.py": "12a6639e0ba163e6ea169ee4dc5a1300bcb2009a32e278d0334249dc41f9250c",
+    "test_engram_cuda.py": "4c4430b017b294984af54071fc20927582846885342779dde97793d5da5e8fe8"
+  },
+  "cuda_test": {
+    "passed": true,
+    "torch": "2.13.0a0+9186a08b2c.nv26.07",
+    "gpu": "NVIDIA GB10",
+    "exact_cases": 8,
+    "measurements": {
+      "reference": {
+        "peak_extra_bytes": 629145600
+      },
+      "sum_cast": {
+        "peak_extra_bytes": 524288000
+      }
+    },
+    "peak_saved_bytes": 104857600
+  },
+  "scope": "Layered diagnostic only; not final clean-build evidence"
+}

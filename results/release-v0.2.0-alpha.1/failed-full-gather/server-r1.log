@@ -1,0 +1,57 @@
+[tensorfold] loading DeepSeek-V4.1-Flash-1017: DeepSeek-V4.1-Flash (deepseek_v41) on CUDA, rank 1 of 2
+[tensorfold] TORCH_ALLOW_TF32_CUBLAS_OVERRIDE=1 (NVIDIA's PyTorch container default) set to 0: DeepSeek-V4.1-Flash's fp32 GEMMs stay fp32
+[tensorfold] rank 1: rank cache reading /cache/rank/rank1of2-527f63d09cf4e4cf568b.bin
+[tensorfold] rank 1: layers 0..4 loaded (7 s, 13.7 GiB)
+[tensorfold] rank 1: layers 0..9 loaded (12 s, 26.0 GiB)
+[tensorfold] rank 1: layers 0..14 loaded (17 s, 38.2 GiB)
+[tensorfold] rank 1: layers 0..19 loaded (22 s, 48.9 GiB)
+[tensorfold] rank 1: layers 0..24 loaded (26 s, 58.7 GiB)
+[tensorfold] rank 1: layers 0..29 loaded (32 s, 70.9 GiB)
+[tensorfold] rank 1: layers 0..34 loaded (38 s, 83.2 GiB)
+[tensorfold] rank 1: layers 0..39 loaded (44 s, 95.4 GiB)
+[tensorfold] rank 1: DSpark (3 stages) loaded, 99.0 GiB
+[tensorfold] rank 1: weights in 45 s (from the rank cache)
+[tensorfold] rank 1: allocator ceiling 103.0 GiB (holds 100.6, host available 5.4, total reserve 4.0, includes kernel 1.0, workspace 1.0, protected host floor 3.0)
+[tensorfold] rank 1 ready in 67.9s, following rank 0
+[spark1017] rank 1: allocator cap 102.938 -> 102.750 GiB; host available 5.145, protected floor 3.000
+[tensorfold] rank 1: the lane is broken (rank 0 lost a rank); every step fails from now on
+Traceback (most recent call last):
+  File "/usr/local/bin/tensorfold", line 6, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/opt/tensorfold/src/tensorfold/cli.py", line 42, in main
+    return int(args.func(args) or 0)
+               ^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/cli.py", line 384, in cmd_serve
+    return _serve_cuda(args, family, model_dir, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/cli.py", line 293, in _serve_cuda
+    engine.follow()
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/engine.py", line 408, in follow
+    self.multi.follow(Link(self.nccl.store, rank=self.rank, world=self.world, host=self._master))
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/multi.py", line 1702, in follow
+    self._fill(next(f for f in self.filling if f.sid == int(op[1])))
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/multi.py", line 1129, in _fill
+    s.filled = next(s.steps)
+               ^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/engine.py", line 494, in prefill_steps
+    out = m.forward(sc, ids, s, taps=taps, host_ids=host[s:e], replay=replay, image=block)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/model.py", line 1240, in forward
+    return self._forward_k(sc, ids, start, all_logits, taps, h, pre, hashes, shared, replay, img)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/model.py", line 1342, in _forward_k
+    g = None if posted else self.comm.gather(pa)
+                            ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/model.py", line 139, in gather
+    self.nccl.all_gather(x.view(-1), out.view(-1))
+  File "/opt/tensorfold/src/tensorfold/cuda/rdma.py", line 129, in all_gather
+    self.nccl.all_gather(send, recv)
+  File "/opt/tensorfold/src/tensorfold/cuda/comm.py", line 91, in all_gather
+    self._check(self.lib.ncclAllGather(send.data_ptr(), recv.data_ptr(), send.numel(), _DTYPES[send.dtype],
+  File "/opt/tensorfold/src/tensorfold/cuda/comm.py", line 83, in _check
+    raise RuntimeError(f"NCCL error {code}: {self.lib.ncclGetErrorString(code).decode()}")
+RuntimeError: NCCL error 4: invalid argument (run with NCCL_DEBUG=WARN for details)

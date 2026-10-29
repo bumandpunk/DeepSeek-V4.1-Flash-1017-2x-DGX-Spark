@@ -1,0 +1,347 @@
+{
+  "decode": [
+    {
+      "set": "b",
+      "prompt": "code",
+      "max_tokens": 384,
+      "reps": 9,
+      "decode_tps_median": 94.86543848465486,
+      "decode_tps_all": [
+        95.084,
+        94.865,
+        95.16,
+        95.285,
+        94.753,
+        94.854,
+        94.836,
+        95.101,
+        94.778
+      ],
+      "tokens_all": [
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384
+      ],
+      "chunks_all": [
+        93,
+        93,
+        93,
+        93,
+        93,
+        93,
+        93,
+        93,
+        93
+      ],
+      "ttft_s_median": 0.17472216906026006,
+      "identical_texts": true,
+      "sample": "# LRU Cache Implementation\n\n```python\nclass _Node:\n    \"\"\"Doubly linked list node.\"\"\"\n    __slots__ = (\"key\", \"value\", \"prev\", \"next\")\n\n    def __init__(self, key=None, value=None):\n        self.key = key\n        self.value = value\n        self.prev = None\n        self.next = None\n\n\nclass LRUCache:\n    \"\"\"\n    Least Recently Used (LRU) cache.\n\n    Both `get` and `put` run in O(1) time:\n      - `di"
+    },
+    {
+      "set": "b",
+      "prompt": "prose",
+      "max_tokens": 384,
+      "reps": 9,
+      "decode_tps_median": 57.36020420430449,
+      "decode_tps_all": [
+        57.414,
+        57.342,
+        57.454,
+        57.399,
+        57.34,
+        57.36,
+        58.446,
+        57.143,
+        57.31
+      ],
+      "tokens_all": [
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384
+      ],
+      "chunks_all": [
+        197,
+        197,
+        197,
+        197,
+        197,
+        197,
+        197,
+        197,
+        197
+      ],
+      "ttft_s_median": 0.12810121499933302,
+      "identical_texts": true,
+      "sample": "# The Printing Press and the Transformation of Europe\n\nAround 1440, the German goldsmith Johannes Gutenberg introduced a revolutionary invention to Europe: the mechanical movable-type printing press. By combining existing technologies—the screw press, oil-based ink, and metal movable type—Gutenberg created a system that could reproduce texts quickly and cheaply. His masterpiece, the Gutenberg Bibl"
+    },
+    {
+      "set": "b",
+      "prompt": "structured",
+      "max_tokens": 384,
+      "reps": 9,
+      "decode_tps_median": 139.36544031204238,
+      "decode_tps_all": [
+        138.411,
+        139.365,
+        140.029,
+        139.21,
+        139.89,
+        138.628,
+        139.615,
+        138.797,
+        139.555
+      ],
+      "tokens_all": [
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384
+      ],
+      "chunks_all": [
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65
+      ],
+      "ttft_s_median": 0.12259015603922307,
+      "identical_texts": true,
+      "sample": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n77\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n88\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98\n99\n100\n101\n102\n103\n104\n105\n106\n107\n108\n109\n110\n111\n112\n113\n114\n115\n116\n117\n118\n119\n120\n121\n122\n123\n124\n125\n126\n127\n"
+    }
+  ],
+  "concurrent": [
+    {
+      "streams": 2,
+      "rep": 0,
+      "max_tokens": 384,
+      "total_tokens": 768,
+      "wall_s": 9.356542931054719,
+      "aggregate_tps": 82.08159847703782,
+      "per_stream_decode_tps": [
+        72.822,
+        41.574
+      ],
+      "per_stream_tokens": [
+        384,
+        384
+      ],
+      "ttft_s": [
+        0.329,
+        0.144
+      ]
+    },
+    {
+      "streams": 2,
+      "rep": 1,
+      "max_tokens": 384,
+      "total_tokens": 768,
+      "wall_s": 9.339845495996997,
+      "aggregate_tps": 82.22834096443675,
+      "per_stream_decode_tps": [
+        73.018,
+        41.652
+      ],
+      "per_stream_tokens": [
+        384,
+        384
+      ],
+      "ttft_s": [
+        0.326,
+        0.143
+      ]
+    },
+    {
+      "streams": 2,
+      "rep": 2,
+      "max_tokens": 384,
+      "total_tokens": 768,
+      "wall_s": 9.434193376917392,
+      "aggregate_tps": 81.40600571947815,
+      "per_stream_decode_tps": [
+        70.466,
+        42.116
+      ],
+      "per_stream_tokens": [
+        384,
+        384
+      ],
+      "ttft_s": [
+        0.203,
+        0.34
+      ]
+    },
+    {
+      "streams": 4,
+      "rep": 0,
+      "max_tokens": 384,
+      "total_tokens": 1536,
+      "wall_s": 15.019125069957227,
+      "aggregate_tps": 102.26960577566949,
+      "per_stream_decode_tps": [
+        59.905,
+        46.135,
+        92.141,
+        65.623
+      ],
+      "per_stream_tokens": [
+        384,
+        384,
+        384,
+        384
+      ],
+      "ttft_s": [
+        0.193,
+        6.717,
+        0.311,
+        4.645
+      ]
+    },
+    {
+      "streams": 4,
+      "rep": 1,
+      "max_tokens": 384,
+      "total_tokens": 1536,
+      "wall_s": 15.17425440507941,
+      "aggregate_tps": 101.22408383280047,
+      "per_stream_decode_tps": [
+        67.227,
+        46.265,
+        91.937,
+        58.274
+      ],
+      "per_stream_tokens": [
+        384,
+        384,
+        384,
+        384
+      ],
+      "ttft_s": [
+        4.666,
+        6.895,
+        0.323,
+        0.191
+      ]
+    },
+    {
+      "streams": 4,
+      "rep": 2,
+      "max_tokens": 384,
+      "total_tokens": 1536,
+      "wall_s": 14.353474977076985,
+      "aggregate_tps": 107.01241354118407,
+      "per_stream_decode_tps": [
+        74.045,
+        30.204,
+        120.052,
+        69.683
+      ],
+      "per_stream_tokens": [
+        384,
+        384,
+        384,
+        384
+      ],
+      "ttft_s": [
+        5.866,
+        0.329,
+        11.162,
+        0.191
+      ]
+    }
+  ],
+  "prefill": [
+    {
+      "length": 8192,
+      "rep": 0,
+      "prompt_tokens": 8192,
+      "ttft_s": 6.860001601977274,
+      "prefill_tps": 1194.1688173423752
+    },
+    {
+      "length": 8192,
+      "rep": 1,
+      "prompt_tokens": 8192,
+      "ttft_s": 4.211943506961688,
+      "prefill_tps": 1944.9453646422123
+    },
+    {
+      "length": 8192,
+      "rep": 2,
+      "prompt_tokens": 8192,
+      "ttft_s": 4.432282291003503,
+      "prefill_tps": 1848.2577286712637
+    },
+    {
+      "length": 32768,
+      "rep": 0,
+      "prompt_tokens": 32768,
+      "ttft_s": 19.123523863963783,
+      "prefill_tps": 1713.4917305564045
+    },
+    {
+      "length": 32768,
+      "rep": 1,
+      "prompt_tokens": 32768,
+      "ttft_s": 17.09931384504307,
+      "prefill_tps": 1916.3342048078223
+    },
+    {
+      "length": 32768,
+      "rep": 2,
+      "prompt_tokens": 32768,
+      "ttft_s": 16.220775997964665,
+      "prefill_tps": 2020.125301287166
+    },
+    {
+      "length": 131072,
+      "rep": 0,
+      "prompt_tokens": 131072,
+      "ttft_s": 67.08361373608932,
+      "prefill_tps": 1953.8601560083594
+    },
+    {
+      "length": 131072,
+      "rep": 1,
+      "prompt_tokens": 131072,
+      "ttft_s": 66.09399954602122,
+      "prefill_tps": 1983.1149711061837
+    },
+    {
+      "length": 131072,
+      "rep": 2,
+      "prompt_tokens": 131072,
+      "ttft_s": 70.46090053697117,
+      "prefill_tps": 1860.2089811671638
+    }
+  ],
+  "depth": [
+    {
+      "length": 131072,
+      "prompt_tokens": 131072,
+      "ttft_s": 67.63440298603382,
+      "tokens": 512,
+      "decode_tps": 97.12686059115194
+    }
+  ]
+}

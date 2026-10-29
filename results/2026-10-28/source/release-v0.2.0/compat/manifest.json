@@ -1,0 +1,25 @@
+{
+  "upstream_commit": "07aa02585f64cfb04c60a96de6554c0d4708ed46",
+  "files": {
+    "src/tensorfold/cuda/server.py": {
+      "before": "933dbd468f057a1a9f592171ee6f7bdc823231237b1fcc4962ac671cf727e0a9",
+      "after": "666370dc7ef049000f6acca0ba1a4f07b332f5f152e3c0d3521c193f568491f7"
+    },
+    "src/tensorfold/families/deepseek_v41/cuda/engine.py": {
+      "before": "019f616166d3ed72f117461e4978df37d36c85c28cef9c7f42a51b5a3824fee5",
+      "after": "62c1409215d76d190bde59ffa21f27c9b647416d45051f4752b62195a3dc2ad8"
+    },
+    "src/tensorfold/families/deepseek_v41/cuda/multi.py": {
+      "before": "0e19663c2b2f994ef7c160d21fa444624af012c3f756a9265fae5a082c24213d",
+      "after": "1e045c266a1b6b1f8672f60c10176a8caefe6abece26fa4230ccfe61498673bc"
+    },
+    "src/tensorfold/cuda/scheduler.py": {
+      "before": "01615e5560200617566834c99aecbe37d4a9517fe6615585209a8d83312ae90a",
+      "after": "00be19c31efa0737ffb64d040108e14c06557da30687219422fd12094c92425d"
+    },
+    "src/tensorfold/families/deepseek_v41/cuda/spill.py": {
+      "before": "2221bcbf4601f68abf782209976e142318125866641ecf97b6dbcf0987ccba0c",
+      "after": "08b738303fd4eb1eeb682f1c681946461c87de1dbfe24caffd8203894ada296e"
+    }
+  }
+}

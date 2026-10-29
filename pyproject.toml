@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spark1017"
+version = "0.2.0a1"
+description = "Segmented RDMA and HC fusion, bounded speculation and exact storage experiments for dual GB10"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+
+[tool.setuptools.packages.find]
+where = ["src"]

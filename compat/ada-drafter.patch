@@ -1,0 +1,33 @@
+--- a/src/tensorfold/cuda/exl3/experts_grouped.cuh
++++ b/src/tensorfold/cuda/exl3/experts_grouped.cuh
+@@ -1340,8 +1340,16 @@
+ 
+ // programmatic dependent launch (sm_90+): wait for the grid this one depends on (its writes visible), or let the next
+ // grid start; both return at once when the launch carries no programmatic dependency
+-__device__ __forceinline__ void pdl_wait() { asm volatile("griddepcontrol.wait;\n" ::: "memory"); }
+-__device__ __forceinline__ void pdl_launch() { asm volatile("griddepcontrol.launch_dependents;\n" ::: "memory"); }
++__device__ __forceinline__ void pdl_wait() {
++#if __CUDA_ARCH__ >= 900
++asm volatile("griddepcontrol.wait;\n" ::: "memory");
++#endif
++}
++__device__ __forceinline__ void pdl_launch() {
++#if __CUDA_ARCH__ >= 900
++asm volatile("griddepcontrol.launch_dependents;\n" ::: "memory");
++#endif
++}
+ __device__ __forceinline__ int ld_acquire(const int* p) {
+     int v;
+     asm volatile("ld.acquire.gpu.global.b32 %0, [%1];\n" : "=r"(v) : "l"(p) : "memory");
+--- a/src/tensorfold/cuda/exl3/experts.cu
++++ b/src/tensorfold/cuda/exl3/experts.cu
+@@ -406,7 +406,9 @@
+     const float* __restrict__ wts, const float* __restrict__ y, const float* __restrict__ add, float* __restrict__ out,
+     int D, int store_y, int* __restrict__ epoch) {
+     const int n = R * slots;
++#if __CUDA_ARCH__ >= 900
+     asm volatile("griddepcontrol.launch_dependents;\n" ::: "memory");   // gate/up (it waits for this grid's end)
++#endif
+     if (blockIdx.x == 0 && threadIdx.x == 0 && epoch != nullptr) epoch[0] += 1;     // this launch's number
+     if (blockIdx.x == 0) {
+         extern __shared__ int sh_prep[];

@@ -1,0 +1,60 @@
+PROBLEM DESCRIPTION:
+You will be provided with problem steps along with background knowledge necessary for solving the problem. Your task will be to develop a Python solution focused on the next step of the problem-solving process.
+
+PROBLEM STEPS AND FUNCTION CODE:
+Here, you'll find the Python code for the initial steps of the problem-solving process. This code is integral to building the solution.
+
+The ligation of 2-mer ij depends on the concentration of 2-mer j'i', which is the complementary sequence that serves as the template. Given the concentration Z*Z matrix d, where d[i, j] is the concentration of ij, write a function that returns the concentration matrix dcomp, where dcomp[i, j] is the concentration of the complementary sequence j'i'. Here, our d matrix is aranged in a way that the first Z/2 rows/columns correspond to monomers A, B, C, ..., and the second Z/2 rows/columns are their counterparts A', B', C', etc.
+Background
+Decomposed into steps:
+- for monomer i among the first half of monomers, the index of i' is i+Z/2
+- for monomer i' among the second half of monomers, the index of i' is i-Z/2
+
+def GetComp(d):
+    '''Concentration matrix of complementary 2-mers
+    Inputs:
+    d: concentration of 2-mers, numpy float array with dimensions [Z, Z]
+    Outputs:
+    dcomp: concentration of 2-mers, numpy float array with dimensions [Z, Z], where dcomp[i, j]==d[j', i'].
+    '''
+    Z = d.shape[0]
+    half = Z // 2
+    indices = np.arange(Z)
+    comp = np.where(indices < half, indices + half, indices - half)
+    dcomp = d[np.ix_(comp, comp)].T
+
+    return dcomp
+
+NEXT STEP - PROBLEM STEP AND FUNCTION HEADER:
+This part will describe the next step in the problem-solving process. A function header will be provided, and your task is to develop the Python code for this next step based on the provided description and function header.
+
+Let $r_i$ denote the concentration of all chains ending with monomer i, and $l_j$ the concentration of all chains starting with monomer j. They can be calculated from the concentration of each type of monomer $c_i$ (which is a constant throughout the process) and the 2-mer concetrations $d_{ij}$. In the night phase, when 2 ends i and j of such chains meet due to hybridization with a complementary template j'i', they are ligated at rate $\lambda_{ij}$ and form a new 2-mer ij; in the day phase, 2-mers break up spontaneously at a given rate. Let's describe this process by the master euqation $\dot{d}_{ij}(t)=\lambda_{i j} \cdot r_i(t) \cdot l_j(t) \cdot d_{j' i'}(t)-d_{i j}(t)$, where all the breakage rates are set to 1 for simplicity. To integrate this ODE method, write a function that returns the change of $d_{ij}$ (flattened to 1d) during timestep $\delta t$. The inputs are the following: the time t; the flattened $d_{ij}$ matrix, noted as y; the concentration of each type of monomer $c_i$, and the ligation rate matrix $\lambda_{ij}$.
+Background
+- The concentration of chains ending with i can be counted by $r_i(t)=c_i-\sum_k d_{i k}(t)$
+- The concentration of chains starting with i can be counted by $l_i(t)=c_i-\sum_k d_{k i}(t)$
+
+def step(t, y, c, lig):
+    '''To integrate the master equation of all the 2-mers
+    Inputs:
+    t: timepoint, float
+    y: flattened current state of the d matrix, numpy float array with length [Z^2]
+    c: concentration of monomers of each type, numpy float array with length [Z]
+    lig: lambda_{ij} matrix of each 2-mer's ligation rate during the night phase, numpy float array with dimensions [Z, Z]
+    Outputs:
+    ystep: flattened changing rate of the d matrix, numpy float array with length [Z^2]
+    '''
+
+    return ystep
+
+DEPENDENCIES:
+Use only the following dependencies in your solution. Do not include these dependencies at the beginning of your code.
+
+import numpy as np
+from math import exp
+from scipy.integrate import solve_ivp
+
+RESPONSE GUIDELINES:
+Now, based on the instructions and information provided above, write the complete and executable Python program for the next step in a single block.
+Your response should focus exclusively on implementing the solution for the next step, adhering closely to the specified function header and the context provided by the initial steps.
+Your response should NOT include the dependencies and functions of all previous steps. If your next step function calls functions from previous steps, please make sure it uses the headers provided without modification.
+DO NOT generate EXAMPLE USAGE OR TEST CODE in your response. Please make sure your response python code in format of ```python```.

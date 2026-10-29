@@ -1,0 +1,8 @@
+{
+  "step": "10.7",
+  "status": "failed",
+  "returncode": 1,
+  "seconds": 0.38323954306542873,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/work/run.py\", line 143, in <module>\n    assert cmp_tuple_or_list(select_big_weights(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

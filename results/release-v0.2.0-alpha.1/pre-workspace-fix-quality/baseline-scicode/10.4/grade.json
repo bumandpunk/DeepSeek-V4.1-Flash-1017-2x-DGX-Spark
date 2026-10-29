@@ -1,0 +1,8 @@
+{
+  "step": "10.4",
+  "status": "failed",
+  "returncode": 1,
+  "seconds": 0.389208078966476,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/work/run.py\", line 61, in <module>\n    assert np.allclose(real_cij(\n                       ^^^^^^^^\nNameError: name 'real_cij' is not defined\n"
+}

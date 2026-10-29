@@ -1,0 +1,105 @@
+PROBLEM DESCRIPTION:
+You will be provided with problem steps along with background knowledge necessary for solving the problem. Your task will be to develop a Python solution focused on the next step of the problem-solving process.
+
+PROBLEM STEPS AND FUNCTION CODE:
+Here, you'll find the Python code for the initial steps of the problem-solving process. This code is integral to building the solution.
+
+Based on lennard jones potential with potential well depth epislon that reaches zero at distance sigma, write a function that calculates the forces between two particles whose three dimensional displacement is r. The inputs of the function contain a float sigma, a float epsilon and r, which is a 1 by 3 array of float numbers. The output is force, which is a 1 by 3 array of float numbers.
+Background
+The Lennard-Jones potential models soft repulsive and attractive (van der Waals) interactions. Hence, the Lennard-Jones potential describes electronically neutral atoms or molecules. The commonly used expression for the Lennard-Jones potential is:
+
+$V_{\mathrm{LJ}}(r)=4 \varepsilon\left[\left(\frac{\sigma}{r}\right)^{12}-\left(\frac{\sigma}{r}\right)^6\right]$
+
+where r is the distance between two interacting particles, epsilon is the depth of the potential well (usually referred to as 'dispersion energy'), and sigma is the distance at which the particle-particle potential energy V is zero (often referred to as 'size of the particle').
+
+To get force, we just use the negative gradiant of Lennard-Jones potential (by definition):
+
+$\vec{F}=-\frac{\partial U}{\partial \vec{r}}=-\left(\frac{\partial U}{\partial x} ; \frac{\partial U}{\partial y} ; \frac{\partial U}{\partial z}\right)$
+
+def f_ij(sigma, epsilon, r):
+    '''This function computes the force between two particles interacting through Lennard Jones Potantial
+    Inputs:
+    sigma: the distance at which potential reaches zero, float
+    epsilon: potential well depth, float
+    r: 3D displacement between two particles, 1d array of float with shape (3,)
+    Outputs:
+    f: force, 1d array of float with shape (3,)
+    '''
+    r_norm = np.linalg.norm(r)
+    sr6 = (sigma / r_norm) ** 6
+    sr12 = sr6 ** 2
+    factor = 24.0 * epsilon * (2.0 * sr12 - sr6) / (r_norm ** 2)
+    f = factor * r
+    return f
+
+------
+
+Write a function to aggregate the net forces on each atom for a system of atoms interacting through Lennard Jones Potential. The function that computes the force between two particles interacting through Lennard Jones Potantial is given. The inputs of the function contain a float sigma, a float epsilon and positions, which is a N by 3 array of float. The output is forces, which is a N by 3 array of float numbers, and N is the nubmer of atoms.
+Background
+Newton's third law:
+Force on j due to i is negative of i due to j
+
+def aggregate_forces(sigma, epsilon, positions):
+    '''This function aggregates the net forces on each atom for a system of atoms interacting through Lennard Jones Potential
+    Inputs:
+    sigma: the distance at which Lennard Jones potential reaches zero, float
+    epsilon: potential well depth of Lennard Jones potential, float 
+    positions: 3D positions of all atoms, 2D array of floats with shape (N,3) where N is the number of atoms, 3 is x,y,z coordinate
+    Outputs:
+    forces: net forces on each atom, 2D array of floats with shape (N,3) where N is the number of atoms, 3 is x,y,z coordinate
+    '''
+    positions = np.asarray(positions)
+    forces = np.zeros_like(positions, dtype=float)
+    n_atoms = positions.shape[0]
+
+    for i in range(n_atoms):
+        for j in range(i + 1, n_atoms):
+            r = positions[i] - positions[j]
+            f = f_ij(sigma, epsilon, r)
+            forces[i] += f
+            forces[j] -= f
+
+    return forces
+
+NEXT STEP - PROBLEM STEP AND FUNCTION HEADER:
+This part will describe the next step in the problem-solving process. A function header will be provided, and your task is to develop the Python code for this next step based on the provided description and function header.
+
+This function runs Velocity Verlet algorithm to integrate the positions and velocities of atoms interacting through Lennard Jones Potential forward for one time step according to Newton's Second Law. The function that aggregates the net forces on each atom for a system of atoms interacting through Lennard Jones Potential is given. The inputs of the function contain a float sigma, a float epsilon, positions, which is a N (N is the nubmer of atoms) by 3 array of float numbers, velocities, which is a N by 3 array of float, a float dt, and a float m. The outputs are new_positions and new_velosities, which are both N by 3 array of float numbers.
+Background
+velocity Verlet algorithm, similar to the leapfrog method, except that the velocity and position are calculated at the same value of the time variable (leapfrog does not, as the name suggests). This uses a similar approach, but explicitly incorporates velocity, solving the problem of the first time step in the basic Verlet algorithm:
+
+$\begin{aligned} & \mathbf{x}(t+\Delta t)=\mathbf{x}(t)+\mathbf{v}(t) \Delta t+\frac{1}{2} \mathbf{a}(t) \Delta t^2 \\ & \mathbf{v}(t+\Delta t)=\mathbf{v}(t)+\frac{\mathbf{a}(t)+\mathbf{a}(t+\Delta t)}{2} \Delta t\end{aligned}$
+
+It can be shown that the error in the velocity Verlet is of the same order as in the basic Verlet. Note that the velocity algorithm is not necessarily more memory-consuming, because, in basic Verlet, we keep track of two vectors of position, while in velocity Verlet, we keep track of one vector of position and one vector of velocity. The standard implementation scheme of this algorithm is:
+Calculate $\mathbf{v}\left(t+\frac{1}{2} \Delta t\right)=\mathbf{v}(t)+\frac{1}{2} \mathbf{a}(t) \Delta t$.
+2. Calculate $\mathbf{x}(t+\Delta t)=\mathbf{x}(t)+\mathbf{v}\left(t+\frac{1}{2} \Delta t\right) \Delta t$.
+3. Derive $\mathbf{a}(t+\Delta t)$ from the interaction potential using $\mathbf{x}(t+\Delta t)$.
+4. Calculate $\mathbf{v}(t+\Delta t)=\mathbf{v}\left(t+\frac{1}{2} \Delta t\right)+\frac{1}{2} \mathbf{a}(t+\Delta t) \Delta t$.
+
+def velocity_verlet(sigma, epsilon, positions, velocities, dt, m):
+    '''This function runs Velocity Verlet algorithm to integrate the positions and velocities of atoms interacting through
+    Lennard Jones Potential forward for one time step according to Newton's Second Law.
+    Inputs:
+    sigma: the distance at which Lennard Jones potential reaches zero, float
+    epsilon: potential well depth of Lennard Jones potential, float 
+    positions: current positions of all atoms, 2D array of floats with shape (N,3) where N is the number of atoms, 3 is x,y,z coordinate
+    velocities: current velocities of all atoms, 2D array of floats with shape (N,3) where N is the number of atoms, 3 is x,y,z coordinate
+    dt: time step size, float
+    m: mass,float
+    Outputs:
+    new_positions: new positions of all atoms, 2D array of floats with shape (N,3) where N is the number of atoms, 3 is x,y,z coordinate
+    new_velocities: new velocities of all atoms, 2D array of floats with shape (N,3) where N is the number of atoms, 3 is x,y,z coordinate
+    '''
+
+    return new_positions, new_velocities
+
+DEPENDENCIES:
+Use only the following dependencies in your solution. Do not include these dependencies at the beginning of your code.
+
+import numpy as np
+
+RESPONSE GUIDELINES:
+Now, based on the instructions and information provided above, write the complete and executable Python program for the next step in a single block.
+Your response should focus exclusively on implementing the solution for the next step, adhering closely to the specified function header and the context provided by the initial steps.
+Your response should NOT include the dependencies and functions of all previous steps. If your next step function calls functions from previous steps, please make sure it uses the headers provided without modification.
+DO NOT generate EXAMPLE USAGE OR TEST CODE in your response. Please make sure your response python code in format of ```python```.

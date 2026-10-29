@@ -1,0 +1,42 @@
+[
+  {
+    "rows": 1,
+    "all_state_bit_exact": true,
+    "median_ms": {
+      "original": 0.012048000004142523,
+      "split": 0.011391999665647745
+    }
+  },
+  {
+    "rows": 17,
+    "all_state_bit_exact": true,
+    "median_ms": {
+      "original": 0.026335999369621277,
+      "split": 0.026239999569952488
+    }
+  },
+  {
+    "rows": 128,
+    "all_state_bit_exact": true,
+    "median_ms": {
+      "original": 0.0867839977145195,
+      "split": 0.08292799815535545
+    }
+  },
+  {
+    "rows": 512,
+    "all_state_bit_exact": true,
+    "median_ms": {
+      "original": 0.3263680040836334,
+      "split": 0.343968003988266
+    }
+  },
+  {
+    "rows": 2048,
+    "all_state_bit_exact": true,
+    "median_ms": {
+      "original": 1.4967039823532104,
+      "split": 1.784816026687622
+    }
+  }
+]

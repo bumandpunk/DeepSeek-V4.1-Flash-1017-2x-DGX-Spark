@@ -1,0 +1,62 @@
+{
+  "python_algorithms": {
+    "tests": 7,
+    "status": "passed",
+    "scope": [
+      "1000 DP/brute-force comparisons",
+      "5000 deterministic rank-state replay steps",
+      "3000 suffix-index/brute-force checks",
+      "censored acceptance",
+      "host storage budget",
+      "two-rank configuration mismatch rejection",
+      "unproductive proposal fallback"
+    ]
+  },
+  "native_exact_storage": {
+    "status": "passed",
+    "resident_reads": 80000,
+    "collision_heavy_cache_reads": 100000,
+    "sanitizers": [
+      "address",
+      "undefined"
+    ]
+  },
+  "linux_aio": {
+    "status": "passed",
+    "stats": {
+      "resident_prompt_hits": 320,
+      "batches": 154,
+      "hot_bytes": 8960,
+      "resident_bytes": 160000,
+      "disk_reads_completed": 9972,
+      "disk_bytes_submitted": 43180032,
+      "disk_reads_submitted": 9973,
+      "coalesced": 1289,
+      "hot_hits": 61,
+      "resident_hits": 11321,
+      "logical_reads": 22644
+    }
+  },
+  "package": {
+    "wheel": "spark1017-0.1.0-py3-none-any.whl",
+    "sha256": "1fd55e2d0381272ddefb3b5e81341e54d40f8985070ccf34e7be878281bd7f9f",
+    "installed_wheel_tests": 7,
+    "status": "passed"
+  },
+  "fresh_inference_docker_build": "not run; source overlay is tested on the pinned existing base image",
+  "source_reconstruction": "pinned public source + compatibility patch reproduced measured overlay hashes",
+  "record_consistency": {
+    "status": "passed",
+    "source_files": 10,
+    "complete_edit_generations": 24,
+    "scicode_steps": 100,
+    "canitedit_generations": 48,
+    "fixed_requests_per_arm": 58,
+    "scope": "Bundled records agree with tables; no generated code is executed by check_results.py."
+  },
+  "cold_prefill": {
+    "requests_per_arm": 10,
+    "all_cached_zero": true,
+    "os_file_cache": "not globally reset"
+  }
+}

@@ -1,0 +1,24 @@
+name: Bug report
+description: A reproducible runtime, build, or lifecycle failure
+body:
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Release/commit, image ID, OS, driver, hardware, profile, context and concurrency. Redact private addresses and paths.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction and expected behavior
+      description: Include exact non-secret commands and a minimal public input.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Actual result and recovery
+      description: Attach redacted logs and whether stop/restore succeeded. Do not upload keys, raw snapshots, weights or private code.
+    validations:
+      required: true

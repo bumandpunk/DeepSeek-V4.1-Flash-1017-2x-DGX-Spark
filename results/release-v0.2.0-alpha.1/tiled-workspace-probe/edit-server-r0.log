@@ -1,0 +1,455 @@
+[tensorfold] loading DeepSeek-V4.1-Flash-1017: DeepSeek-V4.1-Flash (deepseek_v41) on CUDA, rank 0 of 2
+[tensorfold] TORCH_ALLOW_TF32_CUBLAS_OVERRIDE=1 (NVIDIA's PyTorch container default) set to 0: DeepSeek-V4.1-Flash's fp32 GEMMs stay fp32
+[spark1017] peer configuration verified dbe3523470d66f1818fc68a58633b69185c24609f25547e2c9aebef419ecdb9c
+[tensorfold] rank 0: rank cache reading /cache/rank/rank0of2-be2419b74147335dd94e.bin
+[tensorfold] rank 0: layers 0..4 loaded (8 s, 13.7 GiB)
+[tensorfold] rank 0: layers 0..9 loaded (13 s, 26.0 GiB)
+[tensorfold] rank 0: layers 0..14 loaded (18 s, 38.2 GiB)
+[tensorfold] rank 0: layers 0..19 loaded (22 s, 48.9 GiB)
+[tensorfold] rank 0: layers 0..24 loaded (27 s, 58.7 GiB)
+[tensorfold] rank 0: layers 0..29 loaded (32 s, 70.9 GiB)
+[tensorfold] rank 0: layers 0..34 loaded (38 s, 83.2 GiB)
+[tensorfold] rank 0: layers 0..39 loaded (44 s, 95.4 GiB)
+[tensorfold] rank 0: DSpark (3 stages) loaded, 99.0 GiB
+[tensorfold] rank 0: weights in 46 s (from the rank cache)
+[tensorfold] decode gathers over RDMA writes
+[tensorfold] spilled kept prompts: /cache/spill/20261029T015837833341Z/dsv41-spill/v1-ceaf07dde2fe956b (0 on disk, 0.00 of 16 GiB)
+[tensorfold] warm-up: 22 prompt lengths 8.5s, decode graphs {}, reserved 100.41 GiB
+[tensorfold] --parallel warm-up: 64 round graphs, 2 drafter graphs, 5.8s
+[tensorfold] --parallel 2: 2 streams share one window of 262144 tokens (an extent each)
+[tensorfold] rank 0: allocator ceiling 102.7 GiB (holds 100.5, host available 5.1, total reserve 4.0, includes kernel 1.0, workspace 1.0, protected host floor 3.0)
+[tensorfold] DeepSeek-V4.1 engine ready: 2 rank(s), context 262144, DSpark 5 drafts
+[tensorfold] serving DeepSeek-V4.1-Flash-1017 at http://0.0.0.0:19890/v1 on CUDA, rank 0 of 2 (sampling: temperature 1.0, top_p 1.0; drafts: on; prompts: bf16 activations; context: 262144; loaded in 68.4s)
+[tensorfold] 127.0.0.1 "GET /v1/models HTTP/1.1" 200 - key=file-1
+[tensorfold] 127.0.0.1 "GET /v1/models HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] done req-3006700cd7ba prompt=10 cached=0 thinking=False tokens=3 sha=a6239b5f67be finish=stop tok/s=39.9 ttft=0.11s prefill=0.08s rounds=1 accepted=1/5
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=8 ram=0 disk=0 selected=fresh
+[tensorfold] done req-800ce0c08bfb prompt=8 cached=0 thinking=False tokens=5 sha=ce738617af36 finish=stop tok/s=82.1 ttft=0.09s prefill=0.05s rounds=1 accepted=3/5
+[tensorfold] 127.0.0.1 "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] done req-5087b6413a6f prompt=10 cached=0 thinking=False tokens=3 sha=a6239b5f67be finish=stop tok/s=43.3 ttft=0.07s prefill=0.04s rounds=1 accepted=1/5
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 401 - key=unauthenticated
+[tensorfold] CLIENT_MANAGEMENT_IP "GET /v1/models HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] done req-753a61408566 prompt=10 cached=0 thinking=False tokens=3 sha=a6239b5f67be finish=stop tok/s=42.6 ttft=0.08s prefill=0.05s rounds=1 accepted=1/5
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=8 ram=0 disk=0 selected=fresh
+[tensorfold] done req-6fec61817681 prompt=8 cached=0 thinking=False tokens=5 sha=ce738617af36 finish=stop tok/s=80.6 ttft=0.06s prefill=0.03s rounds=1 accepted=3/5
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] done req-7a4b754fd9f2 prompt=10 cached=0 thinking=False tokens=3 sha=a6239b5f67be finish=stop tok/s=43.2 ttft=0.07s prefill=0.04s rounds=1 accepted=1/5
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 401 - key=unauthenticated
+[tensorfold] prefix cache: prompt=99 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 102.531 -> 102.344 GiB; host available 4.799, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.344 -> 102.594 GiB; host available 4.986, protected floor 3.000
+[tensorfold] done req-ae4b369a71a7 prompt=99 cached=0 thinking=False tokens=12 sha=8f48e2b4fc65 finish=stop tok/s=88.2 ttft=2.63s prefill=0.31s rounds=3 accepted=8/10
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=293 ram=0 disk=0 selected=fresh
+[tensorfold] done req-04eb0cbd24a3 prompt=293 cached=0 thinking=False tokens=54 sha=baaf6ad16e64 finish=tool_calls tok/s=120.2 ttft=0.46s prefill=0.45s rounds=9 accepted=44/45
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=15 ram=0 disk=0 selected=fresh
+[tensorfold] done req-8a289429fed4 prompt=15 cached=0 thinking=False tokens=7 sha=be9f5d95e68b finish=stop tok/s=136.2 ttft=0.10s prefill=0.05s rounds=1 accepted=5/5
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "GET /v1/models HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=1 ram=0 disk=0 selected=fresh
+[tensorfold] done req-73165039ae9d prompt=1 cached=0 thinking=False tokens=1 sha=56f4da26ed95 finish=length tok/s=0.0 ttft=0.04s prefill=0.03s rounds=0 accepted=0/0
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-785013b01965 prompt=43 cached=0 thinking=False tokens=32 sha=c70611cf424f finish=length tok/s=80.5 ttft=0.16s prefill=0.16s rounds=9 accepted=22/38
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-4564273f6dc0 prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=94.8 ttft=0.17s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-ec12b71befa2 prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=94.7 ttft=0.17s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-d51f035f87ee prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=94.6 ttft=0.17s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-8c7e44bf2923 prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=94.8 ttft=0.16s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-b649582caa6b prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=94.8 ttft=0.17s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-f4a5ffa91474 prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=94.7 ttft=0.16s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-4ff5cdef9659 prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=94.7 ttft=0.16s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-f508f8cd0087 prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=95.1 ttft=0.16s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=43 ram=0 disk=0 selected=fresh
+[tensorfold] done req-08f5b1da3fea prompt=43 cached=0 thinking=False tokens=384 sha=68023c42aaff finish=length tok/s=94.9 ttft=0.16s prefill=0.16s rounds=92 accepted=291/385
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-4fa374d27ed5 prompt=23 cached=0 thinking=False tokens=32 sha=42953761acbd finish=length tok/s=55.9 ttft=0.12s prefill=0.11s rounds=15 accepted=16/33
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-88159d47020b prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.3 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-715ee60d0fbb prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.2 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-f4181f4547d6 prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.3 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-dfca72a3321a prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.3 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-9c04655737f7 prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.3 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-ae025126a0be prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.3 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-1c1212c48387 prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=56.8 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-797096c0ab6d prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.3 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-957f0c929fed prompt=23 cached=0 thinking=False tokens=384 sha=be732c958851 finish=length tok/s=57.0 ttft=0.12s prefill=0.11s rounds=196 accepted=187/334
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-dad2d1740841 prompt=23 cached=0 thinking=False tokens=32 sha=ea2bfd40cf04 finish=length tok/s=123.7 ttft=0.12s prefill=0.11s rounds=6 accepted=25/26
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-8a71b384a783 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=139.1 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-f5a32483a159 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=139.2 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-ad58c689fd64 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=139.6 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-e10a1628d8ab prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=140.2 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-4ebcaae5c683 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=140.1 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-bbc2ea4658fb prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=139.5 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-f9467e07d13c prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=139.4 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-6a0ac2fef3c8 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=139.2 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=23 ram=0 disk=0 selected=fresh
+[tensorfold] done req-c4b2270761a5 prompt=23 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=139.0 ttft=0.11s prefill=0.11s rounds=64 accepted=319/320
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 102.312 -> 102.750 GiB; host available 5.006, protected floor 3.000
+[tensorfold] done req-5d5c56a4b097 prompt=48 cached=0 thinking=False tokens=384 sha=dcfa850a039b finish=length tok/s=72.8 ttft=0.31s prefill=0.17s rounds=91 accepted=292/364
+[tensorfold] done req-e35cf9d43813 prompt=28 cached=0 thinking=False tokens=384 sha=c500b2d50c01 finish=length tok/s=41.5 ttft=0.13s prefill=0.13s rounds=202 accepted=181/319
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] done req-fa38078b921c prompt=48 cached=0 thinking=False tokens=384 sha=dcfa850a039b finish=length tok/s=72.8 ttft=0.31s prefill=0.18s rounds=91 accepted=292/364
+[tensorfold] done req-ac534895191a prompt=28 cached=0 thinking=False tokens=384 sha=c500b2d50c01 finish=length tok/s=41.4 ttft=0.13s prefill=0.13s rounds=202 accepted=181/319
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] done req-709681b99602 prompt=48 cached=0 thinking=False tokens=384 sha=dcfa850a039b finish=length tok/s=72.9 ttft=0.31s prefill=0.17s rounds=91 accepted=292/364
+[tensorfold] done req-a2bbed8f6315 prompt=28 cached=0 thinking=False tokens=384 sha=c500b2d50c01 finish=length tok/s=41.5 ttft=0.13s prefill=0.13s rounds=202 accepted=181/319
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] done req-ea24c7c8abf8 prompt=48 cached=0 thinking=False tokens=384 sha=dcfa850a039b finish=length tok/s=70.8 ttft=0.18s prefill=0.17s rounds=91 accepted=292/364
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] done req-a35c6464f4f5 prompt=28 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=105.6 ttft=5.71s prefill=0.12s rounds=64 accepted=319/320
+[tensorfold] done req-7bb0fb1400f3 prompt=28 cached=0 thinking=False tokens=384 sha=c500b2d50c01 finish=length tok/s=30.8 ttft=0.31s prefill=0.13s rounds=213 accepted=170/260
+[tensorfold] done req-919676c92b64 prompt=48 cached=0 thinking=False tokens=384 sha=42298ae5b6a8 finish=length tok/s=79.4 ttft=9.51s prefill=0.17s rounds=92 accepted=291/376
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] done req-073a20f049c4 prompt=48 cached=0 thinking=False tokens=384 sha=42298ae5b6a8 finish=length tok/s=68.0 ttft=0.18s prefill=0.17s rounds=93 accepted=290/360
+[tensorfold] done req-6dbac8f11966 prompt=48 cached=0 thinking=False tokens=384 sha=dcfa850a039b finish=length tok/s=70.3 ttft=0.36s prefill=0.17s rounds=93 accepted=290/352
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] done req-f3731f56d5d7 prompt=28 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=104.9 ttft=6.07s prefill=0.12s rounds=64 accepted=319/320
+[tensorfold] done req-c41ac86dc86d prompt=28 cached=0 thinking=False tokens=384 sha=c500b2d50c01 finish=length tok/s=45.2 ttft=5.94s prefill=0.12s rounds=202 accepted=181/315
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=28 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] done req-9749404b9a80 prompt=28 cached=0 thinking=False tokens=384 sha=83178f830b95 finish=length tok/s=101.5 ttft=0.13s prefill=0.12s rounds=64 accepted=319/320
+[tensorfold] prefix cache: prompt=48 ram=0 disk=0 selected=fresh
+[tensorfold] done req-3b45e1129e46 prompt=48 cached=0 thinking=False tokens=384 sha=dcfa850a039b finish=length tok/s=73.3 ttft=4.07s prefill=0.17s rounds=91 accepted=292/372
+[tensorfold] done req-507bfcdd8ee5 prompt=28 cached=0 thinking=False tokens=384 sha=c500b2d50c01 finish=length tok/s=30.8 ttft=0.26s prefill=0.13s rounds=213 accepted=170/256
+[tensorfold] done req-5bded882aa3b prompt=48 cached=0 thinking=False tokens=384 sha=42298ae5b6a8 finish=length tok/s=79.9 ttft=9.47s prefill=0.17s rounds=92 accepted=291/377
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=8192 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 102.438 -> 102.625 GiB; host available 4.093, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.625 -> 102.094 GiB; host available 3.583, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.188 -> 102.031 GiB; host available 3.591, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.031 -> 102.156 GiB; host available 4.579, protected floor 3.000
+[tensorfold] spilled kept prompt 6ec9e622-000000: 8192 positions, wrote rows 0..8192 and 14.2 MiB in 0.02s
+[tensorfold] done req-4c4f73677862 prompt=8192 cached=0 thinking=False tokens=1 sha=c1a6860e444c finish=length tok/s=0.0 ttft=4.35s prefill=4.07s rounds=0 accepted=0/0
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=8192 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 102.219 -> 102.031 GiB; host available 3.587, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.031 -> 101.906 GiB; host available 4.336, protected floor 3.000
+[tensorfold] spilled kept prompt 6ec9e622-000001: 8192 positions, wrote rows 0..8192 and 14.2 MiB in 0.02s
+[tensorfold] done req-13d77b780676 prompt=8192 cached=0 thinking=False tokens=1 sha=895ea7bfb9e6 finish=length tok/s=0.0 ttft=4.05s prefill=3.64s rounds=0 accepted=0/0
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=8192 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 101.781 -> 101.656 GiB; host available 3.209, protected floor 3.000
+[spark1017] rank 0: allocator cap 101.656 -> 101.812 GiB; host available 4.233, protected floor 3.000
+[tensorfold] spilled kept prompt 6ec9e622-000002: 8192 positions, wrote rows 0..8192 and 14.2 MiB in 0.02s
+[tensorfold] done req-7a228575916b prompt=8192 cached=0 thinking=False tokens=1 sha=c1a6860e444c finish=length tok/s=0.0 ttft=4.07s prefill=3.65s rounds=0 accepted=0/0
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=32768 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 101.906 -> 102.062 GiB; host available 4.483, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.188 -> 102.062 GiB; host available 3.615, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.469 -> 103.000 GiB; host available 4.444, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.000 -> 102.719 GiB; host available 4.142, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.719 -> 102.562 GiB; host available 4.003, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.438 -> 102.562 GiB; host available 3.997, protected floor 3.000
+[tensorfold] spilled kept prompt 6ec9e622-000003: 32768 positions, wrote rows 0..32768 and 42.4 MiB in 0.09s
+[tensorfold] done req-31f2266ac401 prompt=32768 cached=0 thinking=False tokens=1 sha=895ea7bfb9e6 finish=length tok/s=0.0 ttft=15.54s prefill=14.39s rounds=0 accepted=0/0
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=32768 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 102.562 -> 102.375 GiB; host available 3.807, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.375 -> 102.562 GiB; host available 3.994, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.562 -> 102.438 GiB; host available 3.878, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.438 -> 102.656 GiB; host available 4.084, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.594 -> 102.750 GiB; host available 4.180, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.719 -> 102.875 GiB; host available 4.310, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.625 -> 102.750 GiB; host available 4.165, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.750 -> 102.625 GiB; host available 4.039, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.625 -> 102.812 GiB; host available 4.241, protected floor 3.000
+[tensorfold] spilled kept prompt 6ec9e622-000004: 32768 positions, wrote rows 0..32768 and 42.4 MiB in 0.24s
+[tensorfold] done req-965797ca468a prompt=32768 cached=0 thinking=False tokens=1 sha=8266498d9690 finish=length tok/s=0.0 ttft=15.21s prefill=14.47s rounds=0 accepted=0/0
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=32768 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 102.812 -> 102.562 GiB; host available 3.976, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.562 -> 102.719 GiB; host available 4.144, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.719 -> 102.594 GiB; host available 4.015, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.656 -> 102.531 GiB; host available 3.962, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.562 -> 102.688 GiB; host available 4.097, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.594 -> 102.812 GiB; host available 4.237, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.812 -> 102.688 GiB; host available 4.103, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.625 -> 102.500 GiB; host available 3.913, protected floor 3.000
+[tensorfold] spilled kept prompt 6ec9e622-000005: 32768 positions, wrote rows 0..32768 and 49.6 MiB in 0.06s
+[tensorfold] done req-7cedbe238963 prompt=32768 cached=0 thinking=False tokens=1 sha=c1a6860e444c finish=length tok/s=0.0 ttft=14.84s prefill=14.26s rounds=0 accepted=0/0
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=131072 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 102.469 -> 102.281 GiB; host available 3.678, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.219 -> 102.531 GiB; host available 4.082, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.531 -> 102.750 GiB; host available 4.300, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.719 -> 102.906 GiB; host available 4.471, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.906 -> 102.781 GiB; host available 4.326, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.500 -> 102.688 GiB; host available 4.104, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.531 -> 102.719 GiB; host available 4.137, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.719 -> 102.594 GiB; host available 4.016, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.594 -> 102.719 GiB; host available 4.152, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.625 -> 102.500 GiB; host available 3.934, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.500 -> 102.625 GiB; host available 4.045, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.562 -> 102.750 GiB; host available 4.173, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.750 -> 102.562 GiB; host available 3.998, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.562 -> 102.750 GiB; host available 4.188, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.750 -> 102.625 GiB; host available 4.060, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.625 -> 102.750 GiB; host available 4.178, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.750 -> 103.094 GiB; host available 4.404, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.094 -> 102.969 GiB; host available 4.286, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.969 -> 102.844 GiB; host available 4.138, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.656 -> 102.812 GiB; host available 4.109, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.812 -> 102.656 GiB; host available 3.965, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.688 -> 102.812 GiB; host available 4.108, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.812 -> 102.969 GiB; host available 4.264, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.000 -> 102.875 GiB; host available 4.186, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.875 -> 102.719 GiB; host available 4.025, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.594 -> 102.812 GiB; host available 4.114, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.719 -> 102.594 GiB; host available 3.906, protected floor 3.000
+[tensorfold] spilled kept prompt 6ec9e622-000006: 131072 positions, wrote rows 0..131072 and 148.4 MiB in 0.55s
+[tensorfold] done req-87094ed7a47f prompt=131072 cached=0 thinking=False tokens=1 sha=57d9aaa33d57 finish=length tok/s=0.0 ttft=65.26s prefill=62.72s rounds=0 accepted=0/0
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=131072 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 102.531 -> 103.094 GiB; host available 4.270, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.094 -> 102.719 GiB; host available 3.911, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.719 -> 102.844 GiB; host available 4.027, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.844 -> 102.688 GiB; host available 3.858, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.719 -> 102.844 GiB; host available 4.030, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.750 -> 102.875 GiB; host available 4.040, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.719 -> 102.844 GiB; host available 4.002, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.750 -> 102.875 GiB; host available 4.052, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.875 -> 102.719 GiB; host available 3.896, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.594 -> 102.719 GiB; host available 3.889, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.719 -> 102.594 GiB; host available 3.780, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.594 -> 102.750 GiB; host available 3.913, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.688 -> 102.812 GiB; host available 3.970, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.906 -> 102.719 GiB; host available 3.903, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.781 -> 102.656 GiB; host available 3.826, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.750 -> 102.625 GiB; host available 3.782, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.688 -> 102.844 GiB; host available 4.016, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.656 -> 102.844 GiB; host available 4.016, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.844 -> 103.094 GiB; host available 4.267, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.031 -> 102.875 GiB; host available 4.056, protected floor 3.000
+[tensorfold] spilled kept prompt 6ec9e622-000007: 131072 positions, wrote rows 0..131072 and 148.4 MiB in 0.14s
+[tensorfold] done req-c0232eac93f6 prompt=131072 cached=0 thinking=False tokens=1 sha=c1a6860e444c finish=length tok/s=0.0 ttft=64.91s prefill=62.45s rounds=0 accepted=0/0
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=131072 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 102.812 -> 102.625 GiB; host available 3.682, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.625 -> 102.781 GiB; host available 5.200, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.750 -> 102.906 GiB; host available 4.457, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.906 -> 103.125 GiB; host available 4.669, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.125 -> 103.531 GiB; host available 5.097, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.531 -> 103.344 GiB; host available 4.893, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.344 -> 103.688 GiB; host available 5.235, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.688 -> 103.406 GiB; host available 4.846, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.344 -> 103.188 GiB; host available 4.627, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.156 -> 103.312 GiB; host available 4.727, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.312 -> 103.188 GiB; host available 4.603, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.344 -> 103.219 GiB; host available 4.634, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.250 -> 103.094 GiB; host available 4.532, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.094 -> 103.219 GiB; host available 4.651, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.219 -> 103.094 GiB; host available 4.535, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.094 -> 102.906 GiB; host available 4.223, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.875 -> 103.094 GiB; host available 4.384, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.969 -> 103.094 GiB; host available 4.391, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.094 -> 102.969 GiB; host available 4.272, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.094 -> 103.250 GiB; host available 4.542, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.250 -> 103.062 GiB; host available 4.377, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.938 -> 103.125 GiB; host available 4.441, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.062 -> 103.250 GiB; host available 4.569, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.250 -> 103.094 GiB; host available 4.407, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.938 -> 103.094 GiB; host available 4.394, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.000 -> 103.156 GiB; host available 4.456, protected floor 3.000
+[tensorfold] spilled kept prompt 6ec9e622-000008: 131072 positions, wrote rows 0..131072 and 148.4 MiB in 0.49s
+[tensorfold] done req-f9af8bdd868c prompt=131072 cached=0 thinking=False tokens=1 sha=483029d52621 finish=length tok/s=0.0 ttft=67.16s prefill=64.58s rounds=0 accepted=0/0
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /tokenize HTTP/1.1" 200 - key=file-1
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=131072 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 103.000 -> 102.875 GiB; host available 4.048, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.875 -> 103.062 GiB; host available 4.249, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.000 -> 103.125 GiB; host available 4.283, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.062 -> 103.188 GiB; host available 4.355, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.031 -> 103.250 GiB; host available 4.416, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.250 -> 103.094 GiB; host available 4.266, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.969 -> 103.156 GiB; host available 4.315, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.969 -> 103.188 GiB; host available 4.354, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.156 -> 103.312 GiB; host available 4.496, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.219 -> 103.094 GiB; host available 4.251, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.094 -> 102.969 GiB; host available 4.154, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.062 -> 103.219 GiB; host available 4.397, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.250 -> 103.125 GiB; host available 4.289, protected floor 3.000
+[spark1017] rank 0: allocator cap 103.219 -> 103.094 GiB; host available 4.264, protected floor 3.000
+[spark1017] rank 0: allocator cap 102.875 -> 103.000 GiB; host available 4.164, protected floor 3.000
+[tensorfold] spilled kept prompt 6ec9e622-000009: 131072 positions, wrote rows 0..131072 and 148.4 MiB in 0.36s
+[tensorfold] done req-d679f5749cb1 prompt=131072 cached=0 thinking=False tokens=512 sha=075413e21ec8 finish=length tok/s=100.3 ttft=65.30s prefill=62.82s rounds=106 accepted=405/430
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=1044 ram=0 disk=0 selected=fresh
+[spark1017] lookup rounds=20 accepted=247 proposed=288
+[spark1017] lookup rounds=40 accepted=510 proposed=588
+[spark1017] lookup rounds=60 accepted=766 proposed=888
+[tensorfold] done req-72fbeb098b91 prompt=1044 cached=0 thinking=False tokens=1119 sha=850f796cb9be finish=stop tok/s=149.1 ttft=0.79s prefill=0.77s rounds=113 accepted=1005/1181
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=2205 ram=0 disk=0 selected=fresh
+[spark1017] lookup rounds=80 accepted=1035 proposed=1188
+[spark1017] lookup rounds=100 accepted=1335 proposed=1488
+[spark1017] lookup rounds=120 accepted=1635 proposed=1788
+[spark1017] lookup rounds=140 accepted=1935 proposed=2088
+[spark1017] lookup rounds=160 accepted=2209 proposed=2388
+[spark1017] lookup rounds=180 accepted=2509 proposed=2688
+[spark1017] lookup rounds=200 accepted=2795 proposed=2988
+[tensorfold] done req-18ad3a204e73 prompt=2205 cached=0 thinking=False tokens=2140 sha=28529e886ef3 finish=stop tok/s=188.6 ttft=1.42s prefill=1.37s rounds=144 accepted=1995/2047
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=4761 ram=0 disk=0 selected=fresh
+[spark1017] rank 0: allocator cap 102.969 -> 103.188 GiB; host available 4.507, protected floor 3.000
+[spark1017] lookup rounds=220 accepted=3091 proposed=3288
+[spark1017] lookup rounds=240 accepted=3391 proposed=3588
+[spark1017] lookup rounds=260 accepted=3682 proposed=3888
+[spark1017] lookup rounds=280 accepted=3977 proposed=4188
+[spark1017] lookup rounds=300 accepted=4277 proposed=4488
+[spark1017] lookup rounds=320 accepted=4577 proposed=4788
+[spark1017] lookup rounds=340 accepted=4877 proposed=5088
+[spark1017] lookup rounds=360 accepted=5177 proposed=5388
+[spark1017] lookup rounds=380 accepted=5477 proposed=5688
+[spark1017] lookup rounds=400 accepted=5777 proposed=5988
+[spark1017] lookup rounds=420 accepted=6077 proposed=6288
+[spark1017] lookup rounds=440 accepted=6377 proposed=6588
+[spark1017] lookup rounds=460 accepted=6662 proposed=6888
+[spark1017] lookup rounds=480 accepted=6962 proposed=7188
+[tensorfold] spilled kept prompt 6ec9e622-000011: 4096 positions, wrote rows 0..4096 and 10.7 MiB in 0.09s
+[tensorfold] done req-3efaee287d2b prompt=4761 cached=0 thinking=False tokens=4777 sha=b2ee60c94b77 finish=stop tok/s=186.9 ttft=2.63s prefill=2.54s rounds=330 accepted=4446/4522
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=1044 ram=0 disk=0 selected=fresh
+[spark1017] lookup rounds=500 accepted=7237 proposed=7488
+[spark1017] lookup rounds=520 accepted=7479 proposed=7788
+[spark1017] lookup rounds=540 accepted=7752 proposed=8088
+[tensorfold] done req-6a663891e4ff prompt=1044 cached=0 thinking=False tokens=1119 sha=850f796cb9be finish=stop tok/s=150.1 ttft=0.77s prefill=0.76s rounds=113 accepted=1005/1181
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=2205 ram=2048 disk=0 selected=ram
+[tensorfold] kept prompt 10: continued at 2048 of 2205 (copy)
+[spark1017] lookup rounds=560 accepted=7997 proposed=8388
+[spark1017] lookup rounds=580 accepted=8297 proposed=8688
+[spark1017] lookup rounds=600 accepted=8597 proposed=8988
+[spark1017] lookup rounds=620 accepted=8897 proposed=9288
+[spark1017] lookup rounds=640 accepted=9171 proposed=9588
+[spark1017] lookup rounds=660 accepted=9471 proposed=9888
+[spark1017] lookup rounds=680 accepted=9771 proposed=10188
+[tensorfold] done req-c68304eca861 prompt=2205 cached=2048 thinking=False tokens=2140 sha=28529e886ef3 finish=stop tok/s=189.7 ttft=0.41s prefill=0.39s rounds=144 accepted=1995/2047
+[tensorfold] CLIENT_MANAGEMENT_IP "POST /v1/chat/completions HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=4761 ram=4096 disk=4096 selected=ram
+[tensorfold] kept prompt 11: continued at 4096 of 4761 (copy)
+[spark1017] lookup rounds=700 accepted=10053 proposed=10488
+[spark1017] lookup rounds=720 accepted=10353 proposed=10788
+[spark1017] lookup rounds=740 accepted=10644 proposed=11088
+[spark1017] lookup rounds=760 accepted=10939 proposed=11388
+[spark1017] lookup rounds=780 accepted=11239 proposed=11688
+[spark1017] lookup rounds=800 accepted=11539 proposed=11988
+[spark1017] lookup rounds=820 accepted=11839 proposed=12288
+[spark1017] lookup rounds=840 accepted=12139 proposed=12588
+[spark1017] lookup rounds=860 accepted=12439 proposed=12888
+[spark1017] lookup rounds=880 accepted=12739 proposed=13188
+[spark1017] lookup rounds=900 accepted=13039 proposed=13488
+[spark1017] lookup rounds=920 accepted=13339 proposed=13788
+[spark1017] lookup rounds=940 accepted=13624 proposed=14088
+[spark1017] lookup rounds=960 accepted=13924 proposed=14388
+[tensorfold] spilled kept prompt 6ec9e622-000013: 4096 positions, wrote rows 4096..4096 and 0.0 MiB in 0.00s
+[tensorfold] done req-d01fbd6e7d4a prompt=4761 cached=4096 thinking=False tokens=4777 sha=b2ee60c94b77 finish=stop tok/s=190.9 ttft=0.63s prefill=0.62s rounds=330 accepted=4446/4522

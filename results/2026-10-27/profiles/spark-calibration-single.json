@@ -1,0 +1,17 @@
+{
+  "label": "spark-calibration-single",
+  "variant": "e320",
+  "depth_policy": "joint",
+  "drafts": 5,
+  "parallel": 2,
+  "context": 524288,
+  "prefill_chunk": 2048,
+  "dontneed": 1,
+  "trace": false,
+  "engine": "spark",
+  "storage": 0,
+  "adaptive": false,
+  "calibration": true,
+  "costs": "",
+  "memory_floor": null
+}

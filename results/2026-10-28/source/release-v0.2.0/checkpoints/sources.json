@@ -1,0 +1,12 @@
+{
+  "quantized_pack": {
+    "repo": "LibertAIDAI/DeepSeek-V4.1-Flash-1017-EXL3-2.9bpw",
+    "reference_revision": "afc7aa0aab98ee735c0f54e0a122019af1ac08f1"
+  },
+  "engram": {
+    "repo": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "reference_revision": "1bae0e1088993b9b82de08f59de5be5a34e42170"
+  },
+  "selection_sha256": "6107ac46ef90342cd0ab95745cd714c60b369734fce3e3941464ef302239d3cf",
+  "note": "Public deployment reference pins. Local A0 identity checks and E320 tensor manifests are separate experiment evidence."
+}

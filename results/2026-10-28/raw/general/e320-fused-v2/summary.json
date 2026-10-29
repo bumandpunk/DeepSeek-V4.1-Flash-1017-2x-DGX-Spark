@@ -1,0 +1,347 @@
+{
+  "decode": [
+    {
+      "set": "b",
+      "prompt": "code",
+      "max_tokens": 384,
+      "reps": 9,
+      "decode_tps_median": 94.38556040449961,
+      "decode_tps_all": [
+        95.407,
+        95.067,
+        94.386,
+        94.6,
+        94.181,
+        94.485,
+        94.287,
+        94.265,
+        94.128
+      ],
+      "tokens_all": [
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384
+      ],
+      "chunks_all": [
+        93,
+        93,
+        93,
+        93,
+        93,
+        93,
+        93,
+        93,
+        93
+      ],
+      "ttft_s_median": 0.1773135339608416,
+      "identical_texts": true,
+      "sample": "# LRU Cache Implementation\n\n```python\nclass _Node:\n    \"\"\"Doubly linked list node.\"\"\"\n    __slots__ = (\"key\", \"value\", \"prev\", \"next\")\n\n    def __init__(self, key=None, value=None):\n        self.key = key\n        self.value = value\n        self.prev = None\n        self.next = None\n\n\nclass LRUCache:\n    \"\"\"\n    Least Recently Used (LRU) cache.\n\n    Both `get` and `put` run in O(1) time by combining"
+    },
+    {
+      "set": "b",
+      "prompt": "prose",
+      "max_tokens": 384,
+      "reps": 9,
+      "decode_tps_median": 57.5014523539694,
+      "decode_tps_all": [
+        57.501,
+        57.508,
+        57.383,
+        57.922,
+        57.431,
+        57.616,
+        57.236,
+        57.54,
+        57.401
+      ],
+      "tokens_all": [
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384
+      ],
+      "chunks_all": [
+        197,
+        197,
+        197,
+        197,
+        197,
+        197,
+        197,
+        197,
+        197
+      ],
+      "ttft_s_median": 0.13268728693947196,
+      "identical_texts": true,
+      "sample": "The invention of the printing press by Johannes Gutenberg in the mid-15th century is arguably the most transformative technological breakthrough of the European millennium. Before its advent, the written word was a scarce and expensive commodity, laboriously copied by hand onto parchment by monks and scribes. This process was not only slow and prone to error but also restricted the dissemination o"
+    },
+    {
+      "set": "b",
+      "prompt": "structured",
+      "max_tokens": 384,
+      "reps": 9,
+      "decode_tps_median": 140.11578586991718,
+      "decode_tps_all": [
+        139.182,
+        139.0,
+        140.116,
+        140.515,
+        140.119,
+        139.279,
+        140.446,
+        140.124,
+        139.679
+      ],
+      "tokens_all": [
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384,
+        384
+      ],
+      "chunks_all": [
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65
+      ],
+      "ttft_s_median": 0.13127580902073532,
+      "identical_texts": true,
+      "sample": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n77\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n88\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98\n99\n100\n101\n102\n103\n104\n105\n106\n107\n108\n109\n110\n111\n112\n113\n114\n115\n116\n117\n118\n119\n120\n121\n122\n123\n124\n125\n126\n127\n"
+    }
+  ],
+  "concurrent": [
+    {
+      "streams": 2,
+      "rep": 0,
+      "max_tokens": 384,
+      "total_tokens": 768,
+      "wall_s": 9.468608939088881,
+      "aggregate_tps": 81.11011923087204,
+      "per_stream_decode_tps": [
+        67.401,
+        42.013
+      ],
+      "per_stream_tokens": [
+        384,
+        384
+      ],
+      "ttft_s": [
+        0.222,
+        0.352
+      ]
+    },
+    {
+      "streams": 2,
+      "rep": 1,
+      "max_tokens": 384,
+      "total_tokens": 768,
+      "wall_s": 9.458152321050875,
+      "aggregate_tps": 81.19979187591146,
+      "per_stream_decode_tps": [
+        67.245,
+        42.031
+      ],
+      "per_stream_tokens": [
+        384,
+        384
+      ],
+      "ttft_s": [
+        0.207,
+        0.345
+      ]
+    },
+    {
+      "streams": 2,
+      "rep": 2,
+      "max_tokens": 384,
+      "total_tokens": 768,
+      "wall_s": 9.449446372920647,
+      "aggregate_tps": 81.2746027323742,
+      "per_stream_decode_tps": [
+        68.892,
+        41.216
+      ],
+      "per_stream_tokens": [
+        384,
+        384
+      ],
+      "ttft_s": [
+        0.335,
+        0.155
+      ]
+    },
+    {
+      "streams": 4,
+      "rep": 0,
+      "max_tokens": 384,
+      "total_tokens": 1536,
+      "wall_s": 15.250909860013053,
+      "aggregate_tps": 100.7153025031836,
+      "per_stream_decode_tps": [
+        57.824,
+        46.879,
+        88.968,
+        64.705
+      ],
+      "per_stream_tokens": [
+        384,
+        384,
+        384,
+        384
+      ],
+      "ttft_s": [
+        0.319,
+        7.08,
+        0.14,
+        4.618
+      ]
+    },
+    {
+      "streams": 4,
+      "rep": 1,
+      "max_tokens": 384,
+      "total_tokens": 1536,
+      "wall_s": 15.047524626017548,
+      "aggregate_tps": 102.07658988271183,
+      "per_stream_decode_tps": [
+        60.944,
+        45.349,
+        105.877,
+        60.989
+      ],
+      "per_stream_tokens": [
+        384,
+        384,
+        384,
+        384
+      ],
+      "ttft_s": [
+        0.372,
+        6.602,
+        6.778,
+        0.188
+      ]
+    },
+    {
+      "streams": 4,
+      "rep": 2,
+      "max_tokens": 384,
+      "total_tokens": 1536,
+      "wall_s": 14.627713427064009,
+      "aggregate_tps": 105.00615886814629,
+      "per_stream_decode_tps": [
+        69.53,
+        30.608,
+        105.717,
+        78.938
+      ],
+      "per_stream_tokens": [
+        384,
+        384,
+        384,
+        384
+      ],
+      "ttft_s": [
+        4.094,
+        0.174,
+        0.296,
+        9.775
+      ]
+    }
+  ],
+  "prefill": [
+    {
+      "length": 8192,
+      "rep": 0,
+      "prompt_tokens": 8192,
+      "ttft_s": 3.8145308919483796,
+      "prefill_tps": 2147.5773121385587
+    },
+    {
+      "length": 8192,
+      "rep": 1,
+      "prompt_tokens": 8192,
+      "ttft_s": 3.6596600560005754,
+      "prefill_tps": 2238.4592761745607
+    },
+    {
+      "length": 8192,
+      "rep": 2,
+      "prompt_tokens": 8192,
+      "ttft_s": 3.6401309850625694,
+      "prefill_tps": 2250.468467650262
+    },
+    {
+      "length": 32768,
+      "rep": 0,
+      "prompt_tokens": 32768,
+      "ttft_s": 14.541485944064334,
+      "prefill_tps": 2253.4148247329235
+    },
+    {
+      "length": 32768,
+      "rep": 1,
+      "prompt_tokens": 32768,
+      "ttft_s": 14.48205264203716,
+      "prefill_tps": 2262.6626770354424
+    },
+    {
+      "length": 32768,
+      "rep": 2,
+      "prompt_tokens": 32768,
+      "ttft_s": 14.508781436015852,
+      "prefill_tps": 2258.4942880632557
+    },
+    {
+      "length": 131072,
+      "rep": 0,
+      "prompt_tokens": 131072,
+      "ttft_s": 63.560107394936495,
+      "prefill_tps": 2062.173985729323
+    },
+    {
+      "length": 131072,
+      "rep": 1,
+      "prompt_tokens": 131072,
+      "ttft_s": 63.491822091978975,
+      "prefill_tps": 2064.391848923777
+    },
+    {
+      "length": 131072,
+      "rep": 2,
+      "prompt_tokens": 131072,
+      "ttft_s": 63.57621662400197,
+      "prefill_tps": 2061.6514627659726
+    }
+  ],
+  "depth": [
+    {
+      "length": 131072,
+      "prompt_tokens": 131072,
+      "ttft_s": 63.54116687097121,
+      "tokens": 512,
+      "decode_tps": 104.60464965753093
+    }
+  ]
+}

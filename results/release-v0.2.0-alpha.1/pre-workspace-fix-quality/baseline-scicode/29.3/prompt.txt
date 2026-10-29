@@ -1,0 +1,89 @@
+PROBLEM DESCRIPTION:
+You will be provided with problem steps along with background knowledge necessary for solving the problem. Your task will be to develop a Python solution focused on the next step of the problem-solving process.
+
+PROBLEM STEPS AND FUNCTION CODE:
+Here, you'll find the Python code for the initial steps of the problem-solving process. This code is integral to building the solution.
+
+Provide a fucntion that normalizes the input vector. The input should be a numpy array and the output should be a numpy array with the same shape.
+Background
+
+The formula to normalize a vector $v$ using the L2 norm is:
+$$
+\mathbf{v}^{\prime}=\frac{\mathbf{v}}{\|\mathbf{v}\|_2}
+$$
+where $\|\mathbf{v}\|_2=\sqrt{v_1^2+v_2^2+\ldots+v_N^2}$.
+
+def normalize(v):
+    '''Normalize the input vector.
+    Input:
+    v (N*1 numpy array): The input vector.
+    Output:
+    n (N*1 numpy array): The normalized vector.
+    '''
+    norm = np.linalg.norm(v)
+    if norm == 0:
+        return v.copy()
+    n = v / norm
+    return n
+
+------
+
+Provide a function that computes the inner product of the two vectors in the N-dimension space. The input should be two numpy arrays, and the output should be a scalar value.
+Background
+The inner product is defined as
+$$
+\text { inner product }=\mathbf{u} \cdot \mathbf{v}=u_1 \cdot v_1+u_2 \cdot v_2+\ldots+u_n \cdot v_n
+$$
+
+def inner_product(u, v):
+    '''Calculates the inner product of two vectors.
+    Input:
+    u (numpy array): Vector 1.
+    v (numpy array): Vector 2.
+    Output:
+    p (float): Inner product of the vectors.
+    '''
+    p = float(np.sum(u * v))
+    return p
+
+NEXT STEP - PROBLEM STEP AND FUNCTION HEADER:
+This part will describe the next step in the problem-solving process. A function header will be provided, and your task is to develop the Python code for this next step based on the provided description and function header.
+
+With the previous functions, provide a function that performs Gram-Schmidt orthogonalization on N linearly independent vectors in N-dimension space. The input is an $N\times N$ numpy array, containing N vectors in the shape of $N\times1$. The output should also be an $N\times N$ numpy array, containing the orthogonal and normalized vectors.
+Background
+The Gram-Schmidt orthogonalization is defined as
+
+$$
+\begin{aligned}
+& \varepsilon_1=\alpha_1, \\
+& \varepsilon_2=\alpha_2-\frac{\left(\alpha_2, \varepsilon_1\right)}{\left(\varepsilon_1, \varepsilon_1\right)} \varepsilon_1, \\
+& \varepsilon_3=\alpha_3-\frac{\left(\alpha_3, \varepsilon_1\right)}{\left(\varepsilon_1, \varepsilon_1\right)} \varepsilon_1-\frac{\left(\alpha_3, \varepsilon_2\right)}{\left(\varepsilon_2, \varepsilon_2\right)} \varepsilon_2, \\
+& \ldots \ldots \ldots \ldots \\
+& \varepsilon_{\mathrm{i}+1}=\alpha_{\mathrm{i}+1}-\sum_{\mathrm{k}=1}^{\mathrm{i}} \frac{\left(\alpha_{\mathrm{i}+1}, \varepsilon_{\mathrm{k}}\right)}{\left(\varepsilon_{\mathrm{k}}, \varepsilon_{\mathrm{k}}\right)} \varepsilon_{\mathrm{k}} \\
+& \ldots \ldots \ldots \ldots \ldots \\
+& \varepsilon_{\mathrm{n}}=\alpha_{\mathrm{n}}-\sum_{\mathrm{k}=1}^{n-1} \frac{\left(\alpha_{\mathrm{n}}, \varepsilon_{\mathrm{k}}\right)}{\left(\varepsilon_{\mathrm{k}}, \varepsilon_{\mathrm{k}}\right)} \varepsilon_{\mathrm{k}}
+\end{aligned}
+$$
+
+and this function wants to not only do the orthogonalization but also the normalization for all the vectors.
+
+def orthogonalize(A):
+    '''Perform Gram-Schmidt orthogonalization on the input vectors to produce orthogonal and normalized vectors.
+    Input:
+    A (N*N numpy array): N linearly independent vectors in the N-dimension space.
+    Output:
+    B (N*N numpy array): The collection of the orthonomal vectors.
+    '''
+
+    return B
+
+DEPENDENCIES:
+Use only the following dependencies in your solution. Do not include these dependencies at the beginning of your code.
+
+import numpy as np
+
+RESPONSE GUIDELINES:
+Now, based on the instructions and information provided above, write the complete and executable Python program for the next step in a single block.
+Your response should focus exclusively on implementing the solution for the next step, adhering closely to the specified function header and the context provided by the initial steps.
+Your response should NOT include the dependencies and functions of all previous steps. If your next step function calls functions from previous steps, please make sure it uses the headers provided without modification.
+DO NOT generate EXAMPLE USAGE OR TEST CODE in your response. Please make sure your response python code in format of ```python```.

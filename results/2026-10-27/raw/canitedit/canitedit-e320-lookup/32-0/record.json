@@ -1,0 +1,34 @@
+{
+  "request": {
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are PythonEditGPT. You will be provided the original code snippet and an instruction that specifies the changes you need to make. You will produce the changed code, based on the original code and the instruction given. Only produce the code, do not include any additional prose."
+      },
+      {
+        "role": "user",
+        "content": "## Code Before\n```py\nimport numpy as np\n\nclass MarkovChain:\n\n    def create_transition_matrix(self, matrix):\n        \n        matrix = np.array(matrix)\n        column_sums = np.sum(matrix, axis=0)\n        normalized_matrix = matrix / column_sums\n        return normalized_matrix.tolist()\n```\n\n## Instruction\nEdit the code to include a method called `translate_from_list(self, adj_list: Dict[int, List[int]]) -> List[List[float]]` that creates the transition matrix that represents the adjacency list, assume all edges are undirected. All columns must sum to 1.\n\n## Code After"
+      }
+    ],
+    "temperature": 0,
+    "top_p": 1,
+    "max_tokens": 8192,
+    "seed": 1049,
+    "enable_thinking": false,
+    "reasoning_effort": "none",
+    "chat_template_kwargs": {
+      "enable_thinking": false
+    }
+  },
+  "response": {
+    "start": 466651.140123082,
+    "end": 466653.735804832,
+    "ttft_s": 0.4232637830427848,
+    "decode_s": 2.125783949973993,
+    "tokens": 235,
+    "prompt_tokens": 188,
+    "decode_tps": 110.0770376984278,
+    "chunks": 43,
+    "text": "```py\nimport numpy as np\nfrom typing import Dict, List\n\nclass MarkovChain:\n\n    def create_transition_matrix(self, matrix):\n        \n        matrix = np.array(matrix)\n        column_sums = np.sum(matrix, axis=0)\n        normalized_matrix = matrix / column_sums\n        return normalized_matrix.tolist()\n\n    def translate_from_list(self, adj_list: Dict[int, List[int]]) -> List[List[float]]:\n        nodes = sorted(adj_list.keys())\n        node_index = {node: i for i, node in enumerate(nodes)}\n        n = len(nodes)\n        matrix = np.zeros((n, n))\n        for node, neighbors in adj_list.items():\n            i = node_index[node]\n            for neighbor in neighbors:\n                j = node_index[neighbor]\n                matrix[i, j] = 1\n                matrix[j, i] = 1\n        column_sums = np.sum(matrix, axis=0)\n        column_sums[column_sums == 0] = 1\n        normalized_matrix = matrix / column_sums\n        return normalized_matrix.tolist()\n```"
+  }
+}

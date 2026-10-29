@@ -1,0 +1,17 @@
+name: Performance comparison
+description: A matched baseline/candidate result, including regressions
+body:
+  - type: textarea
+    id: conditions
+    attributes:
+      label: Matched conditions
+      description: List image/source IDs, identical weight identity, hardware, profile, context, slots, sampler, prefill chunk and cache state.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Complete results
+      description: Include repetitions/order, request/output hashes, correctness, TTFT, decode and complete-task duration. Preserve failures and short/truncated responses.
+    validations:
+      required: true

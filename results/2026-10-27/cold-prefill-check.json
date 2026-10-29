@@ -1,0 +1,96 @@
+[
+  {
+    "label": "e320-fixed-baseline",
+    "cold_requests": 10,
+    "all_cached_zero": true,
+    "rows": [
+      {
+        "prompt_tokens": 8192,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 8192,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 8192,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 32768,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 32768,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 32768,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 131072,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 131072,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 131072,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 131072,
+        "cached_tokens": 0
+      }
+    ]
+  },
+  {
+    "label": "spark-fixed-lookup",
+    "cold_requests": 10,
+    "all_cached_zero": true,
+    "rows": [
+      {
+        "prompt_tokens": 8192,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 8192,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 8192,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 32768,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 32768,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 32768,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 131072,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 131072,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 131072,
+        "cached_tokens": 0
+      },
+      {
+        "prompt_tokens": 131072,
+        "cached_tokens": 0
+      }
+    ]
+  }
+]

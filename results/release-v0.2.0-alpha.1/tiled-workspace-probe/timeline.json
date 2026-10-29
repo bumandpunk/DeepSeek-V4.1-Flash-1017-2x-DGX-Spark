@@ -1,0 +1,44 @@
+[
+  {
+    "event": "diagnostic_image_ready",
+    "utc": "2026-10-29T01:47:41.521408+00:00"
+  },
+  {
+    "event": "api_ready",
+    "utc": "2026-10-29T01:49:00.864788+00:00",
+    "profile": "baseline"
+  },
+  {
+    "event": "profile_probe_passed",
+    "utc": "2026-10-29T01:58:19.409310+00:00",
+    "profile": "baseline"
+  },
+  {
+    "event": "api_ready",
+    "utc": "2026-10-29T01:59:55.339900+00:00",
+    "profile": "edit"
+  },
+  {
+    "event": "profile_probe_passed",
+    "utc": "2026-10-29T02:10:34.941842+00:00",
+    "profile": "edit"
+  },
+  {
+    "event": "api_ready",
+    "utc": "2026-10-29T02:12:10.178543+00:00",
+    "profile": "prefill-experimental"
+  },
+  {
+    "event": "profile_probe_passed",
+    "utc": "2026-10-29T02:21:28.145272+00:00",
+    "profile": "prefill-experimental"
+  },
+  {
+    "event": "all_profiles_passed",
+    "utc": "2026-10-29T02:21:28.148106+00:00"
+  },
+  {
+    "event": "original_restored",
+    "utc": "2026-10-29T02:22:48.523711+00:00"
+  }
+]

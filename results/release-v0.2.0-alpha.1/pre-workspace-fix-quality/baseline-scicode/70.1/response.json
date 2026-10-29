@@ -1,0 +1,41 @@
+{
+  "id": "chatcmpl-22ce13bedeb747b3b4944878",
+  "object": "chat.completion",
+  "created": 1793174825,
+  "model": "DeepSeek-V4.1-Flash-1017",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "```python\ndef pmns_mixing_matrix(s12, s23, s13, dCP):\n    '''Returns the 3x3 PMNS mixing matrix.\n    Computes and returns the 3x3 complex PMNS mixing matrix\n    parameterized by three rotation angles: theta_12, theta_23, theta_13,\n    and one CP-violation phase, delta_CP.\n    Input\n    s12 : Sin(theta_12); float\n    s23 : Sin(theta_23); float\n    s13 : Sin(theta_13); float\n    dCP : delta_CP in radians; float\n    Output\n    pmns: numpy array of floats with shape (3,3) containing the 3x3 PMNS mixing matrix\n    '''\n\n    c12 = np.sqrt(1.0 - s12**2)\n    c23 = np.sqrt(1.0 - s23**2)\n    c13 = np.sqrt(1.0 - s13**2)\n\n    phase_plus = cmath.exp(1j * dCP)\n    phase_minus = cmath.exp(-1j * dCP)\n\n    pmns = np.array([\n        [c12 * c13, s12 * c13, s13 * phase_minus],\n        [-s12 * c23 - c12 * s23 * s13 * phase_plus,\n         c12 * c23 - s12 * s23 * s13 * phase_plus,\n         s23 * c13],\n        [s12 * s23 - c12 * c23 * s13 * phase_plus,\n         -c12 * s23 - s12 * c23 * s13 * phase_plus,\n         c23 * c13]\n    ], dtype=complex)\n\n    return pmns\n```",
+        "reasoning_content": "We need answer only code block. Need implement exact function. Need infer c from s. Function parameters s12, s23, s13, dCP. Need compute PMNS matrix using formula. Return numpy array complex shape (3,3). Need consider c = sqrt(1-s^2). Could use np.sqrt. Formula given. Need ensure complex values. Let's parse carefully.\n\nU = [\n[c12 c13, s12 c13, s13 e^{-iδ}],\n[-s12 c23 - c12 s23 s13 e^{iδ}, c12 c23 - s12 s23 s13 e^{iδ}, s23 c13],\n[s12 s23 - c12 c23 s13 e^{iδ}, -c12 s23 - s12 c23 s13 e^{iδ}, c23 c13]\n]\n\nWait check standard PMNS formula. The third row first element in prompt: s12 s23 - c12 c23 s13 e^{iδ}; but standard is s12 c23 - c12 s23 s13 e^{iδ}? Let's inspect provided formula. In first element row2: -s12 c23 - c12 s23 s13 e^{iδ}. Second row second: c12 c23 - s12 s23 s13 e^{iδ}. Third row first: s12 s23 - c12 c23 s13 e^{iδ}. Third row second: -c12 s23 - s12 c23 s13 e^{iδ}. This looks nonstandard? Let's compare standard PMNS:\nU = R23 Δ R13 Δ* R12? Standard:\nUe1=c12 c13\nUe2=s12 c13\nUe3=s13 e^{-iδ}\nUμ1= -s12 c23 - c12 s23 s13 e^{iδ}\nUμ2= c12 c23 - s12 s23 s13 e^{iδ}\nUμ3= s23 c13\nUτ1= s12 s23 - c12 c23 s13 e^{iδ}\nUτ2= -c12 s23 - s12 c23 s13 e^{iδ}\nUτ3= c23 c13\nYes that's what prompt. Some parameter ordering maybe.\n\nNeed implement. Use cmath.exp or np.exp. Since dependency cmath maybe. Need all complex. dCP phase: exp(-i dCP), exp(i dCP). Can use cmath.exp(1j*dCP). Need c12 = sqrt(1-s12^2), etc. Potential s may be np? float. Using math sqrt? no math dependency. np.sqrt. Return np.array with dtype complex. If use np.sqrt positive.\n\nNeed write complete executable Python program for next step single block. It can import? They say do not include dependencies at beginning. But function uses np. They said use only dependencies, do not include dependencies at beginning. Wait \"Do not include these dependencies at the beginning of your code.\" Means our code shouldn't import np/cmath? But executable needs np? Maybe environment already has. They explicitly: \"Use only following dependencies in solution. Do not include these dependencies at beginning of your code.\" So code only function, relying on imports already. We should not include import numpy. Need return. Use np.\n\nPotential subtle: They mention Output pmns: numpy array of floats? Contradiction says complex. Use dtype=complex.\n\nLet's construct code:\n\ndef pmns_mixing_matrix(s12, s23, s13, dCP):\n    c12 = np.sqrt(1.0 - s12**2)\n    c23 = np.sqrt(1.0 - s23**2)\n    c13 = np.sqrt(1.0 - s13**2)\n    cp_plus = cmath.exp(1j * dCP)\n    cp_minus = cmath.exp(-1j * dCP)\n    pmns = np.array([\n        [c12*c13, s12*c13, s13*cp_minus],\n        [-s12*c23 - c12*s23*s13*cp_plus, c12*c23 - s12*s23*s13*cp_plus, s23*c13],\n        [s12*s23 - c12*c23*s13*cp_plus, -c12*s23 - s12*c23*s13*cp_plus, c23*c13]\n    ], dtype=complex)\n    return pmns\n\nNeed ensure c variables floats maybe np.float64. np.array dtype complex.\n\nCould use np.exp instead of cmath. Both. cmath available.\n\nNo comments? Fine.\n\nDouble-check sign for last element? Given. Yes.\n\nNeed include only code block."
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 851,
+    "completion_tokens": 1369,
+    "total_tokens": 2220,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 991
+    }
+  },
+  "tensorfold": {
+    "prefill_s": 0.7154,
+    "decode_s": 17.3174,
+    "rounds": 412,
+    "drafts": true,
+    "cached": 0,
+    "min_rows": 2,
+    "drafted": 1406,
+    "accepted": 956,
+    "token_sha": "d67eaa44b8da"
+  },
+  "_wall_seconds": 18.065938427927904,
+  "_api_retries": 0
+}

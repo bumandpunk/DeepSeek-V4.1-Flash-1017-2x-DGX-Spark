@@ -1,0 +1,5 @@
+results/** linguist-generated=true
+benchmarks/edit/sources/** linguist-vendored=true
+benchmarks/scicode/scicode/** linguist-vendored=true
+benchmarks/scicode/problems_dev.jsonl linguist-vendored=true
+benchmarks/kit_bench.py linguist-vendored=true

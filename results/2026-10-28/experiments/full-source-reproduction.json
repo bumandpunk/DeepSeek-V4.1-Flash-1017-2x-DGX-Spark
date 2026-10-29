@@ -1,0 +1,11 @@
+{
+  "commit": "07aa02585f64cfb04c60a96de6554c0d4708ed46",
+  "tree": "4be11177acaef017ed15797401dea42b08cdf581",
+  "sha256": {
+    "model.py": "41025e62853c85b2387c720efc27c9df8174c6484268664be7929f22ca44f1bc",
+    "rounds.py": "8ec2be964fd3c284418740c7773bc2e5b61748eed25c459ad7473d8d35b1ed1c",
+    "engine.py": "ea568fae10d3863a988325404fd15449daf044e06c47ff1532d71541907da635",
+    "multi.py": "198638a9338b80dc2b3fcf6ceada2b456f1d8f3e825eedc487bc34520efe00c9",
+    "experts.py": "6720a9e7e2efa71996215d36cab37115e8bac7788ff7d97a9fbf2afb0a43dcdd"
+  }
+}

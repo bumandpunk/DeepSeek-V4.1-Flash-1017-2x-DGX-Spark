@@ -1,0 +1,13 @@
+{
+  "image_id": "sha256:79466476aa5616c1679dbafac72ad748ba2aba0ffe2328cdb5e135a5273904ad",
+  "context": 524288,
+  "model_read_only": true,
+  "engram_read_only": true,
+  "scope": "Earlier completed A0 quality suite before allocator refresh/Engram sum-cast. Its 512K shared window differs from the final 256K window; no speed comparison is claimed.",
+  "unchanged_harnesses": {
+    "benchmarks/scicode/run.py": "36c84ccbe310a4c0895debf133c217270333ca39fbe7e0b80e9975127467501d",
+    "benchmarks/canitedit/run.py": "37a2930dabbd4edf8b754dd96ed2784d8442a18d4b3fe71350a9a6fd7271e885",
+    "benchmarks/edit/run.py": "ccc757cb755953c35bb179df5eab2063d835b04579bf553294c68d9321dc93d2"
+  },
+  "a0_input_metadata_equal": true
+}

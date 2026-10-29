@@ -1,0 +1,19 @@
+{
+  "label": "canitedit-e320-baseline",
+  "variant": "e320",
+  "depth_policy": "joint",
+  "drafts": 5,
+  "parallel": 2,
+  "context": 524288,
+  "prefill_chunk": 2048,
+  "dontneed": 1,
+  "trace": false,
+  "engine": "spark",
+  "storage": 0,
+  "adaptive": false,
+  "calibration": false,
+  "costs": "",
+  "memory_floor": null,
+  "kernel_trace": false,
+  "lookup": false
+}

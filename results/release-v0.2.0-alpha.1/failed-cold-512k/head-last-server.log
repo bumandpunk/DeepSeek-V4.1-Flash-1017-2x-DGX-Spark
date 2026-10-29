@@ -1,0 +1,122 @@
+[tensorfold] loading DeepSeek-V4.1-Flash-1017: DeepSeek-V4.1-Flash (deepseek_v41) on CUDA, rank 0 of 2
+[tensorfold] TORCH_ALLOW_TF32_CUBLAS_OVERRIDE=1 (NVIDIA's PyTorch container default) set to 0: DeepSeek-V4.1-Flash's fp32 GEMMs stay fp32
+[spark1017] peer configuration verified a671c06e6f3eb357ecda502ec1b8db1d8d59089b21e3d039b80eddb133c0e669
+[tensorfold] rank 0: rank cache writing /cache/rank/rank0of2-be2419b74147335dd94e.bin
+[tensorfold] rank 0: layers 0..4 loaded (43 s, 13.7 GiB)
+[tensorfold] rank 0: layers 0..9 loaded (77 s, 26.0 GiB)
+[tensorfold] rank 0: layers 0..14 loaded (115 s, 38.2 GiB)
+[tensorfold] rank 0: layers 0..19 loaded (150 s, 48.9 GiB)
+[tensorfold] rank 0: layers 0..24 loaded (183 s, 58.7 GiB)
+[tensorfold] rank 0: layers 0..29 loaded (223 s, 70.9 GiB)
+[tensorfold] rank 0: layers 0..34 loaded (262 s, 83.2 GiB)
+[tensorfold] rank 0: layers 0..39 loaded (300 s, 95.4 GiB)
+[tensorfold] rank 0: DSpark (3 stages) loaded, 99.0 GiB
+[tensorfold] rank 0: weights in 311 s (written to the rank cache)
+[tensorfold] decode gathers over RDMA writes
+[tensorfold] spilled kept prompts: /cache/spill/20261028T115331250209Z/dsv41-spill/v1-171f6d8f8cd9ea1d (0 on disk, 0.00 of 16 GiB)
+[tensorfold] warm-up: 22 prompt lengths 42.8s, decode graphs {}, reserved 100.89 GiB
+[tensorfold] --parallel warm-up: 64 round graphs, 2 drafter graphs, 25.5s
+[tensorfold] --parallel 2: 2 streams share one window of 524288 tokens (an extent each)
+[tensorfold] rank 0: allocator ceiling 101.7 GiB (holds 101.0, host available 3.6, total reserve 4.0, includes kernel 1.0, workspace 1.0, protected host floor 3.0)
+[tensorfold] DeepSeek-V4.1 engine ready: 2 rank(s), context 524288, DSpark 5 drafts
+[tensorfold] serving DeepSeek-V4.1-Flash-1017 at http://0.0.0.0:19890/v1 on CUDA, rank 0 of 2 (sampling: temperature 1.0, top_p 1.0; drafts: on; prompts: bf16 activations; context: 524288; loaded in 391.8s)
+[tensorfold] 127.0.0.1 "GET /v1/models HTTP/1.1" 200 - key=file-1
+[tensorfold] 127.0.0.1 "GET /v1/models HTTP/1.1" 200 - key=file-1
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] rank 0: memory guard GiB {'available': 3.582, 'allocated': 100.616, 'reserved': 101.029, 'needed': 0.75, 'ceiling': 101.652, 'host_floor': 3.0}; admission=True
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] rank 0: memory guard GiB {'available': 3.599, 'allocated': 100.616, 'reserved': 101.029, 'needed': 0.75, 'ceiling': 101.652, 'host_floor': 3.0}; admission=True
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] rank 0: memory guard GiB {'available': 3.61, 'allocated': 100.616, 'reserved': 101.029, 'needed': 0.75, 'ceiling': 101.652, 'host_floor': 3.0}; admission=True
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] rank 0: memory guard GiB {'available': 3.599, 'allocated': 100.616, 'reserved': 101.029, 'needed': 0.75, 'ceiling': 101.652, 'host_floor': 3.0}; admission=True
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] rank 0: memory guard GiB {'available': 3.621, 'allocated': 100.616, 'reserved': 101.029, 'needed': 0.75, 'ceiling': 101.652, 'host_floor': 3.0}; admission=True
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] rank 0: memory guard GiB {'available': 3.608, 'allocated': 100.616, 'reserved': 101.029, 'needed': 0.75, 'ceiling': 101.652, 'host_floor': 3.0}; admission=True
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] prefix cache: prompt=10 ram=0 disk=0 selected=fresh
+[tensorfold] request error: NoRoom: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded
+[tensorfold] 127.0.0.1 "POST /v1/chat/completions HTTP/1.1" 500 - key=file-1
+Traceback (most recent call last):
+  File "/opt/tensorfold/src/tensorfold/cuda/http.py", line 285, in do_POST
+    result = app.run(body, chat, lambda delta: True, prepared=prepared, cancelled=cancelled)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/app.py", line 60, in run
+    return super().run(body, chat, emit, prepared=prepared, cancelled=cancelled)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/cuda/server.py", line 559, in run
+    stats = request.stats = generate_gated(generate, prompt, max_tokens, gates, on_tokens)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/engine/call_gate.py", line 258, in generate_gated
+    runs = [generate(list(prompt), max_tokens, take)]
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/cuda/server.py", line 545, in generate
+    stats = self.engine.generate(ids, count, sampling, feed, **extra)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/engine.py", line 376, in generate
+    return self.scheduler.submit(list(prompt), max_tokens, sampling, bool(draft), on_tokens,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/cuda/scheduler.py", line 112, in submit
+    raise failed or value
+  File "/opt/tensorfold/src/tensorfold/cuda/scheduler.py", line 165, in _admit
+    self.decoder.admit(stream)
+  File "/usr/local/lib/python3.12/dist-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/multi.py", line 966, in admit
+    self._admit(s, index, positions, reuse, workspace)
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/multi.py", line 1014, in _admit
+    evicted = self._memory_guard(int(workspace[min(e.rank, 1)]), admission=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/tensorfold/src/tensorfold/families/deepseek_v41/cuda/multi.py", line 710, in _memory_guard
+    raise NoRoom(message)
+tensorfold.cuda.memory_gate.NoRoom: memory_pressure: insufficient safe workspace; request deferred or stopped before CUDA allocation; model remains loaded

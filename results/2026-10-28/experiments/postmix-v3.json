@@ -1,0 +1,37 @@
+[
+  {
+    "rows": 1,
+    "all_state_bit_exact": true,
+    "graph_replays": 10
+  },
+  {
+    "rows": 2,
+    "all_state_bit_exact": true,
+    "graph_replays": 10
+  },
+  {
+    "rows": 3,
+    "all_state_bit_exact": true,
+    "graph_replays": 10
+  },
+  {
+    "rows": 6,
+    "all_state_bit_exact": true,
+    "graph_replays": 10
+  },
+  {
+    "rows": 12,
+    "all_state_bit_exact": true,
+    "graph_replays": 10
+  },
+  {
+    "rows": 17,
+    "all_state_bit_exact": true,
+    "graph_replays": 10
+  },
+  {
+    "rows": 34,
+    "all_state_bit_exact": true,
+    "graph_replays": 10
+  }
+]

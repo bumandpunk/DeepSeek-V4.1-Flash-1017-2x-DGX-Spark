@@ -1,0 +1,29 @@
+{
+  "image_id": "sha256:899344a99782cc4ad22e93f73cb78060761c854b2d42525fc2d94c56055dd879",
+  "worker_image_id": "sha256:899344a99782cc4ad22e93f73cb78060761c854b2d42525fc2d94c56055dd879",
+  "base_image_id": "sha256:a981e975f1eb5649506a916c1766760fd95b631e3a264e27e721d5fe0dd922b3",
+  "patch_files": {
+    "engram.py": "e0705332d84bdbd10667909dba53129da20b5536c8d72a164cfe861895b0dea8",
+    "test_engram_cuda.py": "3838813de62bf21f2867487185bfe23e52c9d5c89a80b9d781c2bca1d7c4b221"
+  },
+  "cuda_test": {
+    "passed": true,
+    "torch": "2.13.0a0+9186a08b2c.nv26.07",
+    "gpu": "NVIDIA GB10",
+    "exact_cases": 9,
+    "measurements": {
+      "reference": {
+        "peak_extra_bytes": 629145600,
+        "gather_calls": 1,
+        "max_gather_bytes": 419430400
+      },
+      "sum_cast": {
+        "peak_extra_bytes": 138412032,
+        "gather_calls": 13,
+        "max_gather_bytes": 33382400
+      }
+    },
+    "peak_saved_bytes": 490733568
+  },
+  "scope": "Layered diagnostic only; not final clean-build evidence"
+}

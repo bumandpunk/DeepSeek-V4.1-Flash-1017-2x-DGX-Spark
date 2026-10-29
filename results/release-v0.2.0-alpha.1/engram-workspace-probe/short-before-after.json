@@ -1,0 +1,7 @@
+{
+  "requests": 48,
+  "request_multiset_complete_outputs_and_tokens_equal": true,
+  "reference": "../failed-static-allocator/bench/requests.jsonl",
+  "candidate": "bench/engram-probe-speed/requests.jsonl",
+  "scope": "The completed ordinary/concurrent prefix of the failed static-cap run; not a full quality suite."
+}

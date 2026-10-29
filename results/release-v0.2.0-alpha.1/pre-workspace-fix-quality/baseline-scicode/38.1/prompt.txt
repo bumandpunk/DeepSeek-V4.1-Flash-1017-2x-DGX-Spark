@@ -1,0 +1,72 @@
+PROBLEM DESCRIPTION:
+You will be provided with problem steps along with background knowledge necessary for solving the problem. Your task will be to develop a Python solution focused on the next step of the problem-solving process.
+
+PROBLEM STEPS AND FUNCTION CODE:
+Here, you'll find the Python code for the initial steps of the problem-solving process. This code is integral to building the solution.
+
+
+
+NEXT STEP - PROBLEM STEP AND FUNCTION HEADER:
+This part will describe the next step in the problem-solving process. A function header will be provided, and your task is to develop the Python code for this next step based on the provided description and function header.
+
+Given two vectors, return the cross-product of these two vectors. The input should be two numpy arrays and the output should be one numpy array.
+Background
+Given the two input vectors
+$$
+\begin{aligned}
+& \mathbf{a}=a_1 \mathbf{i}+a_2 \mathbf{j}+a_3 \mathbf{k} \\
+& \mathbf{b}=b_1 \mathbf{i}+b_2 \mathbf{j}+b_3 \mathbf{k}
+\end{aligned}
+$$
+their cross product a × b can be expanded using distributivity:
+$$
+\begin{aligned}
+\mathbf{a} \times \mathbf{b}= & \left(a_1 \mathbf{i}+a_2 \mathbf{j}+a_3 \mathbf{k}\right) \times\left(b_1 \mathbf{i}+b_2 \mathbf{j}+b_3 \mathbf{k}\right) \\
+= & a_1 b_1(\mathbf{i} \times \mathbf{i})+a_1 b_2(\mathbf{i} \times \mathbf{j})+a_1 b_3(\mathbf{i} \times \mathbf{k})+ \\
+& a_2 b_1(\mathbf{j} \times \mathbf{i})+a_2 b_2(\mathbf{j} \times \mathbf{j})+a_2 b_3(\mathbf{j} \times \mathbf{k})+ \\
+& a_3 b_1(\mathbf{k} \times \mathbf{i})+a_3 b_2(\mathbf{k} \times \mathbf{j})+a_3 b_3(\mathbf{k} \times \mathbf{k})
+\end{aligned}
+$$
+
+From this decomposition, by using the above-mentioned equalities and collecting similar terms, we obtain:
+
+$$
+\begin{aligned}
+\mathbf{a} \times \mathbf{b}= & a_1 b_1 \mathbf{0}+a_1 b_2 \mathbf{k}-a_1 b_3 \mathbf{j} \\
+& -a_2 b_1 \mathbf{k}+a_2 b_2 \mathbf{0}+a_2 b_3 \mathbf{i} \\
+& +a_3 b_1 \mathbf{j}-a_3 b_2 \mathbf{i}+a_3 b_3 \mathbf{0} \\
+= & \left(a_2 b_3-a_3 b_2\right) \mathbf{i}+\left(a_3 b_1-a_1 b_3\right) \mathbf{j}+\left(a_1 b_2-a_2 b_1\right) \mathbf{k}
+\end{aligned}
+$$
+
+For column vectors, we can represent the same result as follows:
+
+$$
+\mathbf{a} \times \mathbf{b}=\left[\begin{array}{l}
+a_2 b_3-a_3 b_2 \\
+a_3 b_1-a_1 b_3 \\
+a_1 b_2-a_2 b_1
+\end{array}\right]
+$$
+
+def cross(a, b):
+    '''Calculates the cross product of the input vectors.
+    Input:
+    a (numpy array): Vector a.
+    b (numpy array): Vector b.
+    Output:
+    t (numpy array): The cross product of a and b.
+    '''
+
+    return t
+
+DEPENDENCIES:
+Use only the following dependencies in your solution. Do not include these dependencies at the beginning of your code.
+
+import numpy as np
+
+RESPONSE GUIDELINES:
+Now, based on the instructions and information provided above, write the complete and executable Python program for the next step in a single block.
+Your response should focus exclusively on implementing the solution for the next step, adhering closely to the specified function header and the context provided by the initial steps.
+Your response should NOT include the dependencies and functions of all previous steps. If your next step function calls functions from previous steps, please make sure it uses the headers provided without modification.
+DO NOT generate EXAMPLE USAGE OR TEST CODE in your response. Please make sure your response python code in format of ```python```.

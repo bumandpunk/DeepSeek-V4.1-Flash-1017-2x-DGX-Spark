@@ -1,0 +1,27 @@
+[
+  {
+    "file": "model.py",
+    "sha256": "a5a2d643970856e662a04eabe665994696084d80bbfcd30b9b253ebe18abf843",
+    "matches_local_image_snapshot": true
+  },
+  {
+    "file": "engine.py",
+    "sha256": "019f616166d3ed72f117461e4978df37d36c85c28cef9c7f42a51b5a3824fee5",
+    "matches_local_image_snapshot": true
+  },
+  {
+    "file": "multi.py",
+    "sha256": "0e19663c2b2f994ef7c160d21fa444624af012c3f756a9265fae5a082c24213d",
+    "matches_local_image_snapshot": true
+  },
+  {
+    "file": "engram_io.cpp",
+    "sha256": "e2b0e2833c44c4c108413806bda2abd00342034b1db557e4df37a38082b8a83e",
+    "matches_local_image_snapshot": true
+  },
+  {
+    "file": "rounds.py",
+    "sha256": "40e45675daea4e866be1e523758220df3ce98bfd63e5b7cc1e98ddcb871470fc",
+    "matches_local_image_snapshot": true
+  }
+]

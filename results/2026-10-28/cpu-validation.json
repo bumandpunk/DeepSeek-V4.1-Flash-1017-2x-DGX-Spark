@@ -1,0 +1,52 @@
+{
+  "utc": "2026-10-28T03:47:05.432131+00:00",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_algorithms.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "output": "[spark1017] peer configuration verified same\ntest_censored_suffix_is_not_a_failure (test_algorithms.Algorithms.test_censored_suffix_is_not_a_failure) ... ok\ntest_dp_matches_exhaustive_global_optimum (test_algorithms.Algorithms.test_dp_matches_exhaustive_global_optimum) ... ok\ntest_lookup_committed_continuation_and_ring_bounds (test_algorithms.Algorithms.test_lookup_committed_continuation_and_ring_bounds) ... ok\ntest_lookup_rejects_unproductive_proposals_deterministically (test_algorithms.Algorithms.test_lookup_rejects_unproductive_proposals_deterministically) ... ok\ntest_no_memory_overcommit (test_algorithms.Algorithms.test_no_memory_overcommit) ... ok\ntest_peer_configuration_mismatch_fails_on_both_ranks (test_algorithms.Algorithms.test_peer_configuration_mismatch_fails_on_both_ranks) ... ok\ntest_tp_ranks_plan_identically_after_deterministic_replay (test_algorithms.Algorithms.test_tp_ranks_plan_identically_after_deterministic_replay) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.329s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_remote_delta.py",
+        "-v"
+      ],
+      "returncode": 0,
+      "output": "test_exact_ring_after_reuse_rewind_gap_and_wrap (test_remote_delta.RingDeltaTest.test_exact_ring_after_reuse_rewind_gap_and_wrap) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.031s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "tests/test_control.py"
+      ],
+      "returncode": 0,
+      "output": "control agreement, rejection and exact boundary checks passed\n"
+    },
+    {
+      "command": [
+        "python3",
+        "tests/test_remote_protocol.py"
+      ],
+      "returncode": 0,
+      "output": "[spark1017] helper unavailable; both ranks use local drafter: ConnectionError\nprotocol tests passed\n"
+    }
+  ],
+  "scope": "CPU algorithm/protocol tests. Linux AIO must run separately on Linux with PyTorch; broad discovery on this Mac cannot import that integration test."
+}

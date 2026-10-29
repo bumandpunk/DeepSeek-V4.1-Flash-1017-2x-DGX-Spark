@@ -1,0 +1,1595 @@
+{
+  "alignment": "Ready probe completion anchors the first stream; approximate within one second. Telemetry interval is five seconds. Missing samples stay null. Earlier screening runs preceded telemetry.",
+  "runs": {
+    "a0-mia-native": {
+      "start_utc": "2026-10-28T04:30:29.708629+00:00",
+      "end_utc": "2026-10-28T04:38:26.330276+00:00",
+      "full": {
+        "0": {
+          "samples": 94,
+          "available_gib": {
+            "min": 2.8506546020507812,
+            "median": 3.2242794036865234,
+            "max": 3.772937774658203
+          },
+          "temperature_c": {
+            "min": 65.0,
+            "median": 81.0,
+            "max": 84.0
+          },
+          "sm_mhz": {
+            "min": 2372.0,
+            "median": 2418.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 61.91,
+            "median": 81.38499999999999,
+            "max": 83.92
+          },
+          "gpu_util_percent": {
+            "min": 0.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 95,
+          "available_gib": {
+            "min": 4.540821075439453,
+            "median": 4.829021453857422,
+            "max": 5.643287658691406
+          },
+          "temperature_c": {
+            "min": 63.0,
+            "median": 82.0,
+            "max": 85.0
+          },
+          "sm_mhz": {
+            "min": 2372.0,
+            "median": 2411.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 42.28,
+            "median": 81.18,
+            "max": 84.04
+          },
+          "gpu_util_percent": {
+            "min": 55.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        }
+      },
+      "code_decode": {
+        "0": {
+          "samples": 7,
+          "available_gib": {
+            "min": 3.6395225524902344,
+            "median": 3.7202377319335938,
+            "max": 3.772937774658203
+          },
+          "temperature_c": {
+            "min": 65.0,
+            "median": 71.0,
+            "max": 75.0
+          },
+          "sm_mhz": {
+            "min": 2496.0,
+            "median": 2509.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 66.33,
+            "median": 67.27,
+            "max": 69.97
+          },
+          "gpu_util_percent": {
+            "min": 96.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 8,
+          "available_gib": {
+            "min": 5.471012115478516,
+            "median": 5.526847839355469,
+            "max": 5.643287658691406
+          },
+          "temperature_c": {
+            "min": 63.0,
+            "median": 72.5,
+            "max": 77.0
+          },
+          "sm_mhz": {
+            "min": 2496.0,
+            "median": 2499.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 52.06,
+            "median": 67.555,
+            "max": 69.59
+          },
+          "gpu_util_percent": {
+            "min": 87.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        }
+      },
+      "prefill_128k": {
+        "0": {
+          "samples": 33,
+          "available_gib": {
+            "min": 2.9331398010253906,
+            "median": 3.145519256591797,
+            "max": 3.4422035217285156
+          },
+          "temperature_c": {
+            "min": 77.0,
+            "median": 81.0,
+            "max": 83.0
+          },
+          "sm_mhz": {
+            "min": 2372.0,
+            "median": 2405.0,
+            "max": 2431.0
+          },
+          "power_w": {
+            "min": 80.71,
+            "median": 82.53,
+            "max": 83.92
+          },
+          "gpu_util_percent": {
+            "min": 96.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 34,
+          "available_gib": {
+            "min": 4.609703063964844,
+            "median": 4.703512191772461,
+            "max": 4.8051605224609375
+          },
+          "temperature_c": {
+            "min": 79.0,
+            "median": 84.0,
+            "max": 85.0
+          },
+          "sm_mhz": {
+            "min": 2372.0,
+            "median": 2398.0,
+            "max": 2437.0
+          },
+          "power_w": {
+            "min": 42.28,
+            "median": 81.97,
+            "max": 83.69
+          },
+          "gpu_util_percent": {
+            "min": 96.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        }
+      }
+    },
+    "a0-return-decode": {
+      "start_utc": "2026-10-28T04:40:24.947055+00:00",
+      "end_utc": "2026-10-28T04:42:33.111492+00:00",
+      "full": {
+        "0": {
+          "samples": 25,
+          "available_gib": {
+            "min": 4.071735382080078,
+            "median": 4.299434661865234,
+            "max": 4.5712738037109375
+          },
+          "temperature_c": {
+            "min": 69.0,
+            "median": 75.0,
+            "max": 76.0
+          },
+          "sm_mhz": {
+            "min": 2463.0,
+            "median": 2489.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 52.95,
+            "median": 65.36,
+            "max": 69.6
+          },
+          "gpu_util_percent": {
+            "min": 51.0,
+            "median": 95.0,
+            "max": 95.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 26,
+          "available_gib": {
+            "min": 4.639915466308594,
+            "median": 4.809270858764648,
+            "max": 5.023105621337891
+          },
+          "temperature_c": {
+            "min": 69.0,
+            "median": 78.0,
+            "max": 82.0
+          },
+          "sm_mhz": {
+            "min": 2463.0,
+            "median": 2496.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 45.88,
+            "median": 66.87,
+            "max": 71.05
+          },
+          "gpu_util_percent": {
+            "min": 0.0,
+            "median": 95.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        }
+      },
+      "code_decode": {
+        "0": {
+          "samples": 7,
+          "available_gib": {
+            "min": 4.467823028564453,
+            "median": 4.508186340332031,
+            "max": 4.5712738037109375
+          },
+          "temperature_c": {
+            "min": 69.0,
+            "median": 74.0,
+            "max": 76.0
+          },
+          "sm_mhz": {
+            "min": 2483.0,
+            "median": 2496.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 64.59,
+            "median": 67.69,
+            "max": 69.06
+          },
+          "gpu_util_percent": {
+            "min": 90.0,
+            "median": 95.0,
+            "max": 95.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 8,
+          "available_gib": {
+            "min": 4.8219146728515625,
+            "median": 4.907651901245117,
+            "max": 5.023105621337891
+          },
+          "temperature_c": {
+            "min": 69.0,
+            "median": 75.5,
+            "max": 78.0
+          },
+          "sm_mhz": {
+            "min": 2496.0,
+            "median": 2496.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 45.88,
+            "median": 68.53,
+            "max": 69.37
+          },
+          "gpu_util_percent": {
+            "min": 95.0,
+            "median": 95.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        }
+      },
+      "prefill_128k": {
+        "0": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        },
+        "1": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        }
+      }
+    },
+    "a0-text-baseline": {
+      "start_utc": "2026-10-28T04:08:42.143634+00:00",
+      "end_utc": "2026-10-28T04:17:39.639146+00:00",
+      "full": {
+        "0": {
+          "samples": 107,
+          "available_gib": {
+            "min": 2.743927001953125,
+            "median": 3.359527587890625,
+            "max": 4.943416595458984
+          },
+          "temperature_c": {
+            "min": 62.0,
+            "median": 79.0,
+            "max": 84.0
+          },
+          "sm_mhz": {
+            "min": 2359.0,
+            "median": 2437.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 26.13,
+            "median": 73.56,
+            "max": 78.19
+          },
+          "gpu_util_percent": {
+            "min": 0.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 107,
+          "available_gib": {
+            "min": 2.6618576049804688,
+            "median": 4.548488616943359,
+            "max": 6.691257476806641
+          },
+          "temperature_c": {
+            "min": 68.0,
+            "median": 80.0,
+            "max": 84.0
+          },
+          "sm_mhz": {
+            "min": 2327.0,
+            "median": 2437.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 38.27,
+            "median": 73.87,
+            "max": 77.57
+          },
+          "gpu_util_percent": {
+            "min": 21.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        }
+      },
+      "code_decode": {
+        "0": {
+          "samples": 7,
+          "available_gib": {
+            "min": 3.967029571533203,
+            "median": 4.295421600341797,
+            "max": 4.525932312011719
+          },
+          "temperature_c": {
+            "min": 68.0,
+            "median": 73.0,
+            "max": 75.0
+          },
+          "sm_mhz": {
+            "min": 2483.0,
+            "median": 2496.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 64.68,
+            "median": 67.04,
+            "max": 67.75
+          },
+          "gpu_util_percent": {
+            "min": 84.0,
+            "median": 95.0,
+            "max": 95.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 8,
+          "available_gib": {
+            "min": 5.415042877197266,
+            "median": 5.60057258605957,
+            "max": 5.779193878173828
+          },
+          "temperature_c": {
+            "min": 68.0,
+            "median": 72.5,
+            "max": 77.0
+          },
+          "sm_mhz": {
+            "min": 2483.0,
+            "median": 2496.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 64.39,
+            "median": 66.175,
+            "max": 67.74
+          },
+          "gpu_util_percent": {
+            "min": 66.0,
+            "median": 95.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        }
+      },
+      "prefill_128k": {
+        "0": {
+          "samples": 39,
+          "available_gib": {
+            "min": 2.743927001953125,
+            "median": 3.1282577514648438,
+            "max": 3.418346405029297
+          },
+          "temperature_c": {
+            "min": 75.0,
+            "median": 79.0,
+            "max": 82.0
+          },
+          "sm_mhz": {
+            "min": 2379.0,
+            "median": 2411.0,
+            "max": 2450.0
+          },
+          "power_w": {
+            "min": 66.37,
+            "median": 74.82,
+            "max": 76.43
+          },
+          "gpu_util_percent": {
+            "min": 95.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 40,
+          "available_gib": {
+            "min": 2.7052459716796875,
+            "median": 3.7763442993164062,
+            "max": 5.25616455078125
+          },
+          "temperature_c": {
+            "min": 76.0,
+            "median": 80.5,
+            "max": 84.0
+          },
+          "sm_mhz": {
+            "min": 2359.0,
+            "median": 2418.0,
+            "max": 2457.0
+          },
+          "power_w": {
+            "min": 38.27,
+            "median": 75.10499999999999,
+            "max": 76.85
+          },
+          "gpu_util_percent": {
+            "min": 62.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        }
+      }
+    },
+    "a0-text-fused": {
+      "start_utc": "2026-10-28T04:19:59.590107+00:00",
+      "end_utc": "2026-10-28T04:28:39.967516+00:00",
+      "full": {
+        "0": {
+          "samples": 103,
+          "available_gib": {
+            "min": 2.728626251220703,
+            "median": 3.425243377685547,
+            "max": 4.544841766357422
+          },
+          "temperature_c": {
+            "min": 67.0,
+            "median": 79.0,
+            "max": 82.0
+          },
+          "sm_mhz": {
+            "min": 2385.0,
+            "median": 2450.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 25.43,
+            "median": 75.74,
+            "max": 79.28
+          },
+          "gpu_util_percent": {
+            "min": 0.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 104,
+          "available_gib": {
+            "min": 3.1376266479492188,
+            "median": 3.4206790924072266,
+            "max": 4.759307861328125
+          },
+          "temperature_c": {
+            "min": 65.0,
+            "median": 81.0,
+            "max": 85.0
+          },
+          "sm_mhz": {
+            "min": 2379.0,
+            "median": 2434.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 33.28,
+            "median": 77.345,
+            "max": 80.31
+          },
+          "gpu_util_percent": {
+            "min": 93.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        }
+      },
+      "code_decode": {
+        "0": {
+          "samples": 7,
+          "available_gib": {
+            "min": 4.463535308837891,
+            "median": 4.515785217285156,
+            "max": 4.544841766357422
+          },
+          "temperature_c": {
+            "min": 67.0,
+            "median": 72.0,
+            "max": 74.0
+          },
+          "sm_mhz": {
+            "min": 2489.0,
+            "median": 2496.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 65.16,
+            "median": 67.26,
+            "max": 68.56
+          },
+          "gpu_util_percent": {
+            "min": 95.0,
+            "median": 95.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 7,
+          "available_gib": {
+            "min": 4.6587371826171875,
+            "median": 4.7129974365234375,
+            "max": 4.752391815185547
+          },
+          "temperature_c": {
+            "min": 70.0,
+            "median": 74.0,
+            "max": 76.0
+          },
+          "sm_mhz": {
+            "min": 2496.0,
+            "median": 2496.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 66.59,
+            "median": 68.17,
+            "max": 69.68
+          },
+          "gpu_util_percent": {
+            "min": 95.0,
+            "median": 95.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        }
+      },
+      "prefill_128k": {
+        "0": {
+          "samples": 39,
+          "available_gib": {
+            "min": 2.742931365966797,
+            "median": 3.221050262451172,
+            "max": 3.586639404296875
+          },
+          "temperature_c": {
+            "min": 76.0,
+            "median": 79.0,
+            "max": 81.0
+          },
+          "sm_mhz": {
+            "min": 2385.0,
+            "median": 2431.0,
+            "max": 2457.0
+          },
+          "power_w": {
+            "min": 25.43,
+            "median": 77.02,
+            "max": 78.83
+          },
+          "gpu_util_percent": {
+            "min": 0.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 39,
+          "available_gib": {
+            "min": 3.1376266479492188,
+            "median": 3.37762451171875,
+            "max": 3.539684295654297
+          },
+          "temperature_c": {
+            "min": 78.0,
+            "median": 83.0,
+            "max": 85.0
+          },
+          "sm_mhz": {
+            "min": 2385.0,
+            "median": 2424.0,
+            "max": 2450.0
+          },
+          "power_w": {
+            "min": 76.62,
+            "median": 78.43,
+            "max": 80.31
+          },
+          "gpu_util_percent": {
+            "min": 95.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        }
+      }
+    },
+    "e320-final-v1": {
+      "start_utc": "2026-10-28T03:08:34.191955+00:00",
+      "end_utc": "2026-10-28T03:17:09.891474+00:00",
+      "full": {
+        "0": {
+          "samples": 102,
+          "available_gib": {
+            "min": 16.23876190185547,
+            "median": 16.93070411682129,
+            "max": 18.629470825195312
+          },
+          "temperature_c": {
+            "min": 62.0,
+            "median": 78.0,
+            "max": 82.0
+          },
+          "sm_mhz": {
+            "min": 2379.0,
+            "median": 2444.0,
+            "max": 2528.0
+          },
+          "power_w": {
+            "min": 38.3,
+            "median": 76.58,
+            "max": 79.42
+          },
+          "gpu_util_percent": {
+            "min": 53.0,
+            "median": 95.5,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 102,
+          "available_gib": {
+            "min": 18.02022933959961,
+            "median": 18.73517608642578,
+            "max": 19.81494140625
+          },
+          "temperature_c": {
+            "min": 63.0,
+            "median": 81.5,
+            "max": 86.0
+          },
+          "sm_mhz": {
+            "min": 2379.0,
+            "median": 2437.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 33.75,
+            "median": 77.555,
+            "max": 82.21
+          },
+          "gpu_util_percent": {
+            "min": 0.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        }
+      },
+      "code_decode": {
+        "0": {
+          "samples": 8,
+          "available_gib": {
+            "min": 18.56362533569336,
+            "median": 18.60243797302246,
+            "max": 18.629470825195312
+          },
+          "temperature_c": {
+            "min": 62.0,
+            "median": 69.0,
+            "max": 73.0
+          },
+          "sm_mhz": {
+            "min": 2489.0,
+            "median": 2515.0,
+            "max": 2528.0
+          },
+          "power_w": {
+            "min": 64.04,
+            "median": 66.96000000000001,
+            "max": 67.81
+          },
+          "gpu_util_percent": {
+            "min": 93.0,
+            "median": 95.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 8,
+          "available_gib": {
+            "min": 19.703624725341797,
+            "median": 19.732933044433594,
+            "max": 19.747669219970703
+          },
+          "temperature_c": {
+            "min": 63.0,
+            "median": 71.0,
+            "max": 75.0
+          },
+          "sm_mhz": {
+            "min": 2489.0,
+            "median": 2499.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 64.91,
+            "median": 67.44999999999999,
+            "max": 68.5
+          },
+          "gpu_util_percent": {
+            "min": 95.0,
+            "median": 95.0,
+            "max": 95.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        }
+      },
+      "prefill_128k": {
+        "0": {
+          "samples": 38,
+          "available_gib": {
+            "min": 16.279170989990234,
+            "median": 16.70314598083496,
+            "max": 17.023616790771484
+          },
+          "temperature_c": {
+            "min": 76.0,
+            "median": 79.0,
+            "max": 81.0
+          },
+          "sm_mhz": {
+            "min": 2379.0,
+            "median": 2431.0,
+            "max": 2450.0
+          },
+          "power_w": {
+            "min": 38.3,
+            "median": 77.28,
+            "max": 79.32
+          },
+          "gpu_util_percent": {
+            "min": 91.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 39,
+          "available_gib": {
+            "min": 18.307174682617188,
+            "median": 18.610816955566406,
+            "max": 18.906635284423828
+          },
+          "temperature_c": {
+            "min": 71.0,
+            "median": 82.0,
+            "max": 86.0
+          },
+          "sm_mhz": {
+            "min": 2379.0,
+            "median": 2424.0,
+            "max": 2444.0
+          },
+          "power_w": {
+            "min": 33.75,
+            "median": 78.35,
+            "max": 80.55
+          },
+          "gpu_util_percent": {
+            "min": 0.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        }
+      }
+    },
+    "e320-fused-v2": {
+      "start_utc": "2026-10-28T02:25:17.085876+00:00",
+      "end_utc": "2026-10-28T02:33:56.134663+00:00",
+      "full": {
+        "0": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        },
+        "1": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        }
+      },
+      "code_decode": {
+        "0": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        },
+        "1": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        }
+      },
+      "prefill_128k": {
+        "0": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        },
+        "1": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        }
+      }
+    },
+    "e320-fused-v3": {
+      "start_utc": "2026-10-28T02:41:00.331531+00:00",
+      "end_utc": "2026-10-28T02:49:36.923360+00:00",
+      "full": {
+        "0": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        },
+        "1": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        }
+      },
+      "code_decode": {
+        "0": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        },
+        "1": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        }
+      },
+      "prefill_128k": {
+        "0": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        },
+        "1": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        }
+      }
+    },
+    "e320-fused-v4": {
+      "start_utc": "2026-10-28T02:55:25.820552+00:00",
+      "end_utc": "2026-10-28T03:04:08.725004+00:00",
+      "full": {
+        "0": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        },
+        "1": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        }
+      },
+      "code_decode": {
+        "0": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        },
+        "1": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        }
+      },
+      "prefill_128k": {
+        "0": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        },
+        "1": {
+          "samples": 0,
+          "available_gib": null,
+          "temperature_c": null,
+          "sm_mhz": null,
+          "power_w": null,
+          "gpu_util_percent": null,
+          "oom_counter_max": null,
+          "oom_kill_counter_max": null
+        }
+      }
+    },
+    "e320-return-baseline": {
+      "start_utc": "2026-10-28T03:56:38.539263+00:00",
+      "end_utc": "2026-10-28T04:05:25.210229+00:00",
+      "full": {
+        "0": {
+          "samples": 104,
+          "available_gib": {
+            "min": 16.194461822509766,
+            "median": 16.83780860900879,
+            "max": 18.743297576904297
+          },
+          "temperature_c": {
+            "min": 63.0,
+            "median": 78.0,
+            "max": 84.0
+          },
+          "sm_mhz": {
+            "min": 2353.0,
+            "median": 2427.5,
+            "max": 2522.0
+          },
+          "power_w": {
+            "min": 38.09,
+            "median": 73.745,
+            "max": 76.91
+          },
+          "gpu_util_percent": {
+            "min": 67.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 104,
+          "available_gib": {
+            "min": 17.646072387695312,
+            "median": 18.43344497680664,
+            "max": 20.09494400024414
+          },
+          "temperature_c": {
+            "min": 66.0,
+            "median": 81.0,
+            "max": 85.0
+          },
+          "sm_mhz": {
+            "min": 2366.0,
+            "median": 2424.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 41.81,
+            "median": 75.1,
+            "max": 78.45
+          },
+          "gpu_util_percent": {
+            "min": 0.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        }
+      },
+      "code_decode": {
+        "0": {
+          "samples": 8,
+          "available_gib": {
+            "min": 18.683181762695312,
+            "median": 18.70277214050293,
+            "max": 18.743297576904297
+          },
+          "temperature_c": {
+            "min": 63.0,
+            "median": 68.5,
+            "max": 72.0
+          },
+          "sm_mhz": {
+            "min": 2496.0,
+            "median": 2515.0,
+            "max": 2522.0
+          },
+          "power_w": {
+            "min": 63.81,
+            "median": 66.58500000000001,
+            "max": 67.78
+          },
+          "gpu_util_percent": {
+            "min": 92.0,
+            "median": 95.0,
+            "max": 95.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0.0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 7,
+          "available_gib": {
+            "min": 19.99626922607422,
+            "median": 20.025070190429688,
+            "max": 20.09494400024414
+          },
+          "temperature_c": {
+            "min": 66.0,
+            "median": 70.0,
+            "max": 74.0
+          },
+          "sm_mhz": {
+            "min": 2496.0,
+            "median": 2515.0,
+            "max": 2515.0
+          },
+          "power_w": {
+            "min": 65.41,
+            "median": 67.21,
+            "max": 67.84
+          },
+          "gpu_util_percent": {
+            "min": 66.0,
+            "median": 95.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        }
+      },
+      "prefill_128k": {
+        "0": {
+          "samples": 39,
+          "available_gib": {
+            "min": 16.22510528564453,
+            "median": 16.472579956054688,
+            "max": 16.958446502685547
+          },
+          "temperature_c": {
+            "min": 77.0,
+            "median": 79.0,
+            "max": 82.0
+          },
+          "sm_mhz": {
+            "min": 2359.0,
+            "median": 2411.0,
+            "max": 2444.0
+          },
+          "power_w": {
+            "min": 71.72,
+            "median": 74.43,
+            "max": 76.91
+          },
+          "gpu_util_percent": {
+            "min": 94.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        },
+        "1": {
+          "samples": 39,
+          "available_gib": {
+            "min": 18.034164428710938,
+            "median": 18.33373260498047,
+            "max": 18.643718719482422
+          },
+          "temperature_c": {
+            "min": 78.0,
+            "median": 83.0,
+            "max": 85.0
+          },
+          "sm_mhz": {
+            "min": 2366.0,
+            "median": 2411.0,
+            "max": 2437.0
+          },
+          "power_w": {
+            "min": 74.41,
+            "median": 76.05,
+            "max": 77.43
+          },
+          "gpu_util_percent": {
+            "min": 94.0,
+            "median": 96.0,
+            "max": 96.0
+          },
+          "oom_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          },
+          "oom_kill_counter_max": {
+            "min": 0,
+            "median": 0,
+            "max": 0
+          }
+        }
+      }
+    }
+  },
+  "guards": {
+    "0": {
+      "killed_container_lines": []
+    },
+    "1": {
+      "killed_container_lines": []
+    }
+  }
+}

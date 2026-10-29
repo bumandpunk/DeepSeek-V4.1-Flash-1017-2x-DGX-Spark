@@ -1,0 +1,84 @@
+{
+  "selected": "pipelined RDMA receive + HC post; all other experimental routes disabled",
+  "experiments": [
+    {
+      "name": "control collective fusion",
+      "status": "disabled",
+      "evidence": [
+        "e320-control-v1",
+        "experiments/control-paired-equality.json"
+      ],
+      "result": "58 paired outputs exact; approximately 0-1 percent timing changes, no stable practical gain"
+    },
+    {
+      "name": "occupancy expert work lists",
+      "status": "disabled",
+      "evidence": [
+        "experiments/prompt-micro-v1.json"
+      ],
+      "result": "9 bit-exact layer-10 cases; small uniform prompts benefit, clustered prompts regress; no stable 2048-row improvement"
+    },
+    {
+      "name": "persistent ready-expert queue",
+      "status": "disabled",
+      "evidence": [
+        "experiments/decode-micro-v2.json",
+        "experiments/decode-micro-v3.json"
+      ],
+      "result": "80 mixed windows, 695 rows exact; representative decode slower despite queue reuse"
+    },
+    {
+      "name": "direct fragment chain",
+      "status": "disabled",
+      "evidence": [
+        "experiments/chain-micro-v1.json"
+      ],
+      "result": "18 bit-exact cases; mostly slower"
+    },
+    {
+      "name": "remote DSpark on RTX4090",
+      "status": "disabled",
+      "evidence": [
+        "e320-remote-profile-v2",
+        "experiments/remote-paired-equality.json",
+        "experiments/helper-latency-packet.json"
+      ],
+      "result": "12/12 outputs exact; traced 3-repetition screening roughly 18-21 percent slower; not a full final comparison"
+    },
+    {
+      "name": "remote drafter failure behavior",
+      "status": "partially validated",
+      "evidence": [
+        "experiments/fallback-test.json"
+      ],
+      "result": "Actual helper outage fell back and finished, but repeated timeout caused 1.97 tok/s. Added 30-second retry suppression passed CPU protocol tests; its improved live outage behavior was not retested. Feature remains off."
+    },
+    {
+      "name": "plain segmented gather",
+      "status": "disabled",
+      "result": "Large-tensor NCCL route remained faster; not selected independently of fused post"
+    },
+    {
+      "name": "prompt HC side stream",
+      "status": "disabled",
+      "evidence": [
+        "experiments/prefill-hc-v4.json",
+        "e320-fused-v4"
+      ],
+      "result": "Valid state bit-exact; lower 128K throughput than the final side-stream-off candidate"
+    },
+    {
+      "name": "e320-fused-v1",
+      "status": "excluded",
+      "result": "Manual early abort after source timestamps caused an extension rebuild; prebuilt on idle ranks before subsequent runs. No final speed claim from the aborted run."
+    },
+    {
+      "name": "e320-remote-profile-v1",
+      "status": "excluded",
+      "evidence": [
+        "e320-remote-profile-v1"
+      ],
+      "result": "Follower link integration error; fixed before the v2 screening run. Partial failed record retained."
+    }
+  ]
+}

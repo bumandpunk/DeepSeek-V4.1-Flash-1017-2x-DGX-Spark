@@ -1,0 +1,21 @@
+[
+  {
+    "event": "start",
+    "utc": "2026-10-28T11:28:20.495280+00:00",
+    "engine_host_floor_gib": 3.0,
+    "external_guard_gib": 2.5,
+    "scope": "Operating-budget probe; not final image validation"
+  },
+  {
+    "event": "api_ready",
+    "utc": "2026-10-28T11:29:45.926353+00:00"
+  },
+  {
+    "event": "long_input_probe_passed",
+    "utc": "2026-10-28T11:35:44.628792+00:00"
+  },
+  {
+    "event": "original_restored",
+    "utc": "2026-10-28T11:37:10.119708+00:00"
+  }
+]

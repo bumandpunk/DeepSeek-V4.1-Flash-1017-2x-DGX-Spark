@@ -1,0 +1,13 @@
+{
+  "equal_across_ranks": true,
+  "binaries": {
+    "tensorfold-native": {
+      "sha256": "d80c36ec4558e8c9fca6120fb0c6569919890abe4964344a4785b662ca084c2a",
+      "bytes": 27132784
+    },
+    "tf-dsv41-lanes": {
+      "sha256": "ebeed730cea9ca1cd063f0d3b509917ebf33c43ed6e32085f4d3ad23e0846888",
+      "bytes": 16567040
+    }
+  }
+}

@@ -1,0 +1,140 @@
+[
+  {
+    "streams": 2,
+    "rep": 0,
+    "max_tokens": 384,
+    "total_tokens": 768,
+    "wall_s": 9.468608939088881,
+    "aggregate_tps": 81.11011923087204,
+    "per_stream_decode_tps": [
+      67.401,
+      42.013
+    ],
+    "per_stream_tokens": [
+      384,
+      384
+    ],
+    "ttft_s": [
+      0.222,
+      0.352
+    ]
+  },
+  {
+    "streams": 2,
+    "rep": 1,
+    "max_tokens": 384,
+    "total_tokens": 768,
+    "wall_s": 9.458152321050875,
+    "aggregate_tps": 81.19979187591146,
+    "per_stream_decode_tps": [
+      67.245,
+      42.031
+    ],
+    "per_stream_tokens": [
+      384,
+      384
+    ],
+    "ttft_s": [
+      0.207,
+      0.345
+    ]
+  },
+  {
+    "streams": 2,
+    "rep": 2,
+    "max_tokens": 384,
+    "total_tokens": 768,
+    "wall_s": 9.449446372920647,
+    "aggregate_tps": 81.2746027323742,
+    "per_stream_decode_tps": [
+      68.892,
+      41.216
+    ],
+    "per_stream_tokens": [
+      384,
+      384
+    ],
+    "ttft_s": [
+      0.335,
+      0.155
+    ]
+  },
+  {
+    "streams": 4,
+    "rep": 0,
+    "max_tokens": 384,
+    "total_tokens": 1536,
+    "wall_s": 15.250909860013053,
+    "aggregate_tps": 100.7153025031836,
+    "per_stream_decode_tps": [
+      57.824,
+      46.879,
+      88.968,
+      64.705
+    ],
+    "per_stream_tokens": [
+      384,
+      384,
+      384,
+      384
+    ],
+    "ttft_s": [
+      0.319,
+      7.08,
+      0.14,
+      4.618
+    ]
+  },
+  {
+    "streams": 4,
+    "rep": 1,
+    "max_tokens": 384,
+    "total_tokens": 1536,
+    "wall_s": 15.047524626017548,
+    "aggregate_tps": 102.07658988271183,
+    "per_stream_decode_tps": [
+      60.944,
+      45.349,
+      105.877,
+      60.989
+    ],
+    "per_stream_tokens": [
+      384,
+      384,
+      384,
+      384
+    ],
+    "ttft_s": [
+      0.372,
+      6.602,
+      6.778,
+      0.188
+    ]
+  },
+  {
+    "streams": 4,
+    "rep": 2,
+    "max_tokens": 384,
+    "total_tokens": 1536,
+    "wall_s": 14.627713427064009,
+    "aggregate_tps": 105.00615886814629,
+    "per_stream_decode_tps": [
+      69.53,
+      30.608,
+      105.717,
+      78.938
+    ],
+    "per_stream_tokens": [
+      384,
+      384,
+      384,
+      384
+    ],
+    "ttft_s": [
+      4.094,
+      0.174,
+      0.296,
+      9.775
+    ]
+  }
+]

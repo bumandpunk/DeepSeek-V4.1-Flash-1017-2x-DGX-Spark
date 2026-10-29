@@ -1,0 +1,45 @@
+{
+  "utc": "2026-10-28T05:04:14.419752+00:00",
+  "record_and_source_checks": [
+    {
+      "tool": "check_round2.py",
+      "result": {
+        "record_consistency": "passed",
+        "e320_speed_requests": 174,
+        "a0_speed_requests": 174,
+        "a0_return_short_requests": 30,
+        "scicode_paired_steps": 50,
+        "canitedit_paired_generations": 24,
+        "runtime_source_files": 33,
+        "release_source_files": 129,
+        "scope": "Artifact consistency only; no inference or generated code execution."
+      }
+    },
+    {
+      "tool": "check_results.py",
+      "result": {
+        "source_files": 10,
+        "complete_edit_generations": 24,
+        "scicode_steps": 100,
+        "canitedit_generations": 48,
+        "fixed_suite_requests_per_arm": 58,
+        "record_consistency": "passed",
+        "scope": "Checks recorded artifacts only; does not rerun inference or execute generated code."
+      }
+    }
+  ],
+  "python_source_syntax_files": 63,
+  "report_embedded_arms_match_records": 7,
+  "report_inline_javascript_syntax": "passed",
+  "report_local_links": [
+    "Spark1017/results/2026-10-28/summary.json",
+    "Spark1017/results/2026-10-28/README.md",
+    "Spark1017/README.md",
+    "Spark1017/docs/round2-design.md",
+    "Spark1017/results/2026-10-28/cold-prefix-validation.json",
+    "Spark1017/results/2026-10-28/deployment-restore.json",
+    "Spark1017-source.zip"
+  ],
+  "report_visual_review": "not performed: local file browser access was blocked",
+  "scope": "Artifact consistency, source syntax and report static checks; no new inference or code grading."
+}

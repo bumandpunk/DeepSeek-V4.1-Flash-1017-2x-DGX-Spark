@@ -1,0 +1,189 @@
+{
+  "decode": [
+    {
+      "set": "b",
+      "prompt": "code",
+      "max_tokens": 384,
+      "reps": 3,
+      "decode_tps_median": 94.9183696906642,
+      "decode_tps_all": [
+        94.755,
+        94.918,
+        95.026
+      ],
+      "tokens_all": [
+        384,
+        384,
+        384
+      ],
+      "chunks_all": [
+        93,
+        93,
+        93
+      ],
+      "ttft_s_median": 0.1769817069871351,
+      "identical_texts": true,
+      "sample": "# LRU Cache Implementation\n\n```python\nclass _Node:\n    \"\"\"Doubly linked list node.\"\"\"\n    __slots__ = (\"key\", \"value\", \"prev\", \"next\")\n\n    def __init__(self, key=None, value=None):\n        self.key = key\n        self.value = value\n        self.prev = None\n        self.next = None\n\n\nclass LRUCache:\n    \"\"\"\n    Least Recently Used (LRU) cache.\n\n    Both `get` and `put` run in O(1) time by combining"
+    },
+    {
+      "set": "b",
+      "prompt": "prose",
+      "max_tokens": 384,
+      "reps": 3,
+      "decode_tps_median": 57.69017374983781,
+      "decode_tps_all": [
+        57.722,
+        57.69,
+        57.548
+      ],
+      "tokens_all": [
+        384,
+        384,
+        384
+      ],
+      "chunks_all": [
+        195,
+        193,
+        193
+      ],
+      "ttft_s_median": 0.13598295801784843,
+      "identical_texts": true,
+      "sample": "The invention of the printing press by Johannes Gutenberg in the mid-15th century is arguably the most transformative technological breakthrough of the European millennium. Before its advent, the written word was a scarce and expensive commodity, laboriously copied by hand onto parchment by monks and scribes. This process was not only slow and prone to error but also restricted the dissemination o"
+    },
+    {
+      "set": "b",
+      "prompt": "structured",
+      "max_tokens": 384,
+      "reps": 3,
+      "decode_tps_median": 140.3813029558875,
+      "decode_tps_all": [
+        140.279,
+        140.751,
+        140.381
+      ],
+      "tokens_all": [
+        384,
+        384,
+        384
+      ],
+      "chunks_all": [
+        65,
+        65,
+        65
+      ],
+      "ttft_s_median": 0.1279851520084776,
+      "identical_texts": true,
+      "sample": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47\n48\n49\n50\n51\n52\n53\n54\n55\n56\n57\n58\n59\n60\n61\n62\n63\n64\n65\n66\n67\n68\n69\n70\n71\n72\n73\n74\n75\n76\n77\n78\n79\n80\n81\n82\n83\n84\n85\n86\n87\n88\n89\n90\n91\n92\n93\n94\n95\n96\n97\n98\n99\n100\n101\n102\n103\n104\n105\n106\n107\n108\n109\n110\n111\n112\n113\n114\n115\n116\n117\n118\n119\n120\n121\n122\n123\n124\n125\n126\n127\n"
+    }
+  ],
+  "concurrent": [
+    {
+      "streams": 2,
+      "rep": 0,
+      "max_tokens": 384,
+      "total_tokens": 768,
+      "wall_s": 9.472334796038922,
+      "aggregate_tps": 81.0782153013803,
+      "per_stream_decode_tps": [
+        67.691,
+        42.019
+      ],
+      "per_stream_tokens": [
+        384,
+        384
+      ],
+      "ttft_s": [
+        0.242,
+        0.356
+      ]
+    },
+    {
+      "streams": 2,
+      "rep": 1,
+      "max_tokens": 384,
+      "total_tokens": 768,
+      "wall_s": 9.49512950098142,
+      "aggregate_tps": 80.88357298556268,
+      "per_stream_decode_tps": [
+        69.127,
+        41.154
+      ],
+      "per_stream_tokens": [
+        384,
+        384
+      ],
+      "ttft_s": [
+        0.392,
+        0.188
+      ]
+    },
+    {
+      "streams": 4,
+      "rep": 0,
+      "max_tokens": 384,
+      "total_tokens": 1536,
+      "wall_s": 14.554005974030588,
+      "aggregate_tps": 105.5379531065714,
+      "per_stream_decode_tps": [
+        79.217,
+        30.782,
+        103.716,
+        70.51
+      ],
+      "per_stream_tokens": [
+        384,
+        384,
+        384,
+        384
+      ],
+      "ttft_s": [
+        9.719,
+        0.165,
+        0.275,
+        4.107
+      ]
+    },
+    {
+      "streams": 4,
+      "rep": 1,
+      "max_tokens": 384,
+      "total_tokens": 1536,
+      "wall_s": 14.844263979990501,
+      "aggregate_tps": 103.47431183320838,
+      "per_stream_decode_tps": [
+        64.797,
+        45.373,
+        105.868,
+        60.608
+      ],
+      "per_stream_tokens": [
+        384,
+        384,
+        384,
+        384
+      ],
+      "ttft_s": [
+        0.384,
+        6.402,
+        6.654,
+        0.211
+      ]
+    }
+  ],
+  "prefill": [
+    {
+      "length": 8192,
+      "rep": 0,
+      "prompt_tokens": 8192,
+      "ttft_s": 4.057174996996764,
+      "prefill_tps": 2019.1389343727965
+    },
+    {
+      "length": 32768,
+      "rep": 0,
+      "prompt_tokens": 32768,
+      "ttft_s": 15.019971704052296,
+      "prefill_tps": 2181.6286106024686
+    }
+  ]
+}

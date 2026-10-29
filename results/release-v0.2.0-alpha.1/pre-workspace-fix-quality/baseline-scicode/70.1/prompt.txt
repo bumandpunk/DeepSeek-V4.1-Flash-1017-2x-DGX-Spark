@@ -1,0 +1,74 @@
+PROBLEM DESCRIPTION:
+You will be provided with problem steps along with background knowledge necessary for solving the problem. Your task will be to develop a Python solution focused on the next step of the problem-solving process.
+
+PROBLEM STEPS AND FUNCTION CODE:
+Here, you'll find the Python code for the initial steps of the problem-solving process. This code is integral to building the solution.
+
+
+
+NEXT STEP - PROBLEM STEP AND FUNCTION HEADER:
+This part will describe the next step in the problem-solving process. A function header will be provided, and your task is to develop the Python code for this next step based on the provided description and function header.
+
+Write a function to compute the PMNS matrix of the three neutrino oscillation problem. Express all values as complex numbers.
+Background
+The flavour mixing matrix for the three neutrino families is
+
+
+$$
+\begin{pmatrix}
+   \nu_{e} \\
+   \nu_{\mu}  \\
+   \nu_{\tau}
+\end{pmatrix}
+=
+\begin{pmatrix}
+   U_{e1} & U_{e2} & U_{e3} \\
+   U_{\mu1} & U_{\mu2} & U_{\mu3} \\
+   U_{\tau1} & U_{\tau2} & U_{\tau3}
+\end{pmatrix}
+\cdot
+\begin{pmatrix}
+   \nu_{1} \\
+   \nu_{2}  \\
+   \nu_{3}
+\end{pmatrix}
+$$
+
+The PMNS matrix $U$ can be expressed as:
+$$
+U = \begin{pmatrix}
+c_{12}c_{13} & s_{12}c_{13} & s_{13}e^{-i\delta_{CP}} \\
+-s_{12}c_{23} - c_{12}s_{23}s_{13}e^{i\delta_{CP}} & c_{12}c_{23} - s_{12}s_{23}s_{13}e^{i\delta_{CP}} & s_{23}c_{13} \\
+s_{12}s_{23} - c_{12}c_{23}s_{13}e^{i\delta_{CP}} & -c_{12}s_{23} - s_{12}c_{23}s_{13}e^{i\delta_{CP}} & c_{23}c_{13}
+\end{pmatrix}
+$$
+
+where $s_{ij}$ and $c_{ij}$ are the sine and cosine of the corresponding mixing angles, and $\delta_{cp}$ is the CP-violating phase (in radians).
+
+def pmns_mixing_matrix(s12, s23, s13, dCP):
+    '''Returns the 3x3 PMNS mixing matrix.
+    Computes and returns the 3x3 complex PMNS mixing matrix
+    parameterized by three rotation angles: theta_12, theta_23, theta_13,
+    and one CP-violation phase, delta_CP.
+    Input
+    s12 : Sin(theta_12); float
+    s23 : Sin(theta_23); float
+    s13 : Sin(theta_13); float
+    dCP : delta_CP in radians; float
+    Output
+    pmns: numpy array of floats with shape (3,3) containing the 3x3 PMNS mixing matrix
+    '''
+
+    return pmns
+
+DEPENDENCIES:
+Use only the following dependencies in your solution. Do not include these dependencies at the beginning of your code.
+
+import numpy as np
+import cmath 
+
+RESPONSE GUIDELINES:
+Now, based on the instructions and information provided above, write the complete and executable Python program for the next step in a single block.
+Your response should focus exclusively on implementing the solution for the next step, adhering closely to the specified function header and the context provided by the initial steps.
+Your response should NOT include the dependencies and functions of all previous steps. If your next step function calls functions from previous steps, please make sure it uses the headers provided without modification.
+DO NOT generate EXAMPLE USAGE OR TEST CODE in your response. Please make sure your response python code in format of ```python```.

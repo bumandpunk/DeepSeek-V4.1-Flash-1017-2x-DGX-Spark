@@ -1,0 +1,48 @@
+{
+  "deployment": "spark1017-alpha",
+  "image": "spark1017:0.2.0-alpha.1",
+  "api_host": "127.0.0.1",
+  "api_port": 19890,
+  "model_name": "DeepSeek-V4.1-Flash-1017",
+  "context": 262144,
+  "parallel": 2,
+  "vision": false,
+  "rollback_minutes": 120,
+  "minimum_start_gib": 110,
+  "guard_floor_gib": 2.5,
+  "guard_hold_seconds": 4,
+  "previous_service": "",
+  "previous_health": null,
+  "nodes": [
+    {
+      "rank": 0,
+      "ssh": "",
+      "fabric_ip": "192.0.2.1",
+      "socket_interface": "enp1s0f0np0",
+      "rdma_devices": ["rocep1s0f0", "roceP2p1s0f0"],
+      "gid_index": 3,
+      "model": "/srv/models/deepseek-1017/model",
+      "engram": "/srv/models/deepseek-1017/engram",
+      "cache": "/srv/spark1017/cache",
+      "state": "/srv/spark1017/state",
+      "key_file": "/srv/spark1017/api.key",
+      "previous_paths": [],
+      "previous_containers": []
+    },
+    {
+      "rank": 1,
+      "ssh": "operator@192.0.2.2",
+      "fabric_ip": "192.0.2.2",
+      "socket_interface": "enp1s0f0np0",
+      "rdma_devices": ["rocep1s0f0", "roceP2p1s0f0"],
+      "gid_index": 3,
+      "model": "/srv/models/deepseek-1017/model",
+      "engram": "/srv/models/deepseek-1017/engram",
+      "cache": "/srv/spark1017/cache",
+      "state": "/srv/spark1017/state",
+      "key_file": "/srv/spark1017/api.key",
+      "previous_paths": [],
+      "previous_containers": []
+    }
+  ]
+}

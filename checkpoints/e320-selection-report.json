@@ -1,0 +1,375 @@
+{
+  "criterion": "sum of selected routing weights on code-prefill tokens",
+  "not_reap_activation_norm": true,
+  "calibration_session": "code-router-v1",
+  "statistics_sha256": "5062275b602697b2f77f733180e7803a958a79e950c1f710a5eba7d301443824",
+  "selection_sha256": "6107ac46ef90342cd0ab95745cd714c60b369734fce3e3941464ef302239d3cf",
+  "original_experts_per_layer": 384,
+  "retained_experts_per_layer": 320,
+  "top_k_unchanged": 6,
+  "dspark_shared_attention_engram": "unchanged",
+  "mean_retained_router_mass_fraction": 0.996595018582463,
+  "min_retained_router_mass_fraction": 0.9852162296437663,
+  "layers": [
+    {
+      "layer": 0,
+      "observed_rows": 518111,
+      "experts_observed": 382,
+      "retained_router_mass_fraction": 0.9852162296437663,
+      "retained_route_occurrence_fraction": 0.9804588206002188,
+      "min_count": 0,
+      "max_count": 58934
+    },
+    {
+      "layer": 1,
+      "observed_rows": 518111,
+      "experts_observed": 384,
+      "retained_router_mass_fraction": 0.9859248400091607,
+      "retained_route_occurrence_fraction": 0.9837238867089614,
+      "min_count": 2,
+      "max_count": 83677
+    },
+    {
+      "layer": 2,
+      "observed_rows": 518111,
+      "experts_observed": 383,
+      "retained_router_mass_fraction": 0.9940670415345384,
+      "retained_route_occurrence_fraction": 0.9932553062953692,
+      "min_count": 0,
+      "max_count": 126655
+    },
+    {
+      "layer": 3,
+      "observed_rows": 518111,
+      "experts_observed": 384,
+      "retained_router_mass_fraction": 0.9954243556559855,
+      "retained_route_occurrence_fraction": 0.9942991624059967,
+      "min_count": 1,
+      "max_count": 306743
+    },
+    {
+      "layer": 4,
+      "observed_rows": 518111,
+      "experts_observed": 383,
+      "retained_router_mass_fraction": 0.9925166788880062,
+      "retained_route_occurrence_fraction": 0.9914509953787252,
+      "min_count": 0,
+      "max_count": 108339
+    },
+    {
+      "layer": 5,
+      "observed_rows": 518111,
+      "experts_observed": 384,
+      "retained_router_mass_fraction": 0.9927224144311279,
+      "retained_route_occurrence_fraction": 0.9917900475638103,
+      "min_count": 2,
+      "max_count": 90915
+    },
+    {
+      "layer": 6,
+      "observed_rows": 518111,
+      "experts_observed": 383,
+      "retained_router_mass_fraction": 0.9964502079042882,
+      "retained_route_occurrence_fraction": 0.995852240157032,
+      "min_count": 0,
+      "max_count": 119727
+    },
+    {
+      "layer": 7,
+      "observed_rows": 518111,
+      "experts_observed": 384,
+      "retained_router_mass_fraction": 0.9963749898010352,
+      "retained_route_occurrence_fraction": 0.9956084056633939,
+      "min_count": 1,
+      "max_count": 377548
+    },
+    {
+      "layer": 8,
+      "observed_rows": 518111,
+      "experts_observed": 384,
+      "retained_router_mass_fraction": 0.9980437633264404,
+      "retained_route_occurrence_fraction": 0.9975941448840113,
+      "min_count": 1,
+      "max_count": 128411
+    },
+    {
+      "layer": 9,
+      "observed_rows": 518111,
+      "experts_observed": 382,
+      "retained_router_mass_fraction": 0.998287378812967,
+      "retained_route_occurrence_fraction": 0.9979486377758177,
+      "min_count": 0,
+      "max_count": 137603
+    },
+    {
+      "layer": 10,
+      "observed_rows": 518111,
+      "experts_observed": 384,
+      "retained_router_mass_fraction": 0.998266518529181,
+      "retained_route_occurrence_fraction": 0.9979312669807564,
+      "min_count": 1,
+      "max_count": 121996
+    },
+    {
+      "layer": 11,
+      "observed_rows": 518111,
+      "experts_observed": 383,
+      "retained_router_mass_fraction": 0.9982147436789511,
+      "retained_route_occurrence_fraction": 0.9978756161002822,
+      "min_count": 0,
+      "max_count": 253446
+    },
+    {
+      "layer": 12,
+      "observed_rows": 518111,
+      "experts_observed": 384,
+      "retained_router_mass_fraction": 0.9977281448830604,
+      "retained_route_occurrence_fraction": 0.9972814705729082,
+      "min_count": 1,
+      "max_count": 100762
+    },
+    {
+      "layer": 13,
+      "observed_rows": 518111,
+      "experts_observed": 383,
+      "retained_router_mass_fraction": 0.9938351320563528,
+      "retained_route_occurrence_fraction": 0.9920856727612423,
+      "min_count": 0,
+      "max_count": 116141
+    },
+    {
+      "layer": 14,
+      "observed_rows": 518111,
+      "experts_observed": 384,
+      "retained_router_mass_fraction": 0.9979950856121214,
+      "retained_route_occurrence_fraction": 0.9974921718833738,
+      "min_count": 2,
+      "max_count": 81769
+    },
+    {
+      "layer": 15,
+      "observed_rows": 518111,
+      "experts_observed": 384,
+      "retained_router_mass_fraction": 0.9931409594451859,
+      "retained_route_occurrence_fraction": 0.9889862725683621,
+      "min_count": 13,
+      "max_count": 158550
+    },
+    {
+      "layer": 16,
+      "observed_rows": 518111,
+      "experts_observed": 381,
+      "retained_router_mass_fraction": 0.9989532304732481,
+      "retained_route_occurrence_fraction": 0.9986505465688498,
+      "min_count": 0,
+      "max_count": 109430
+    },
+    {
+      "layer": 17,
+      "observed_rows": 518111,
+      "experts_observed": 383,
+      "retained_router_mass_fraction": 0.9977638716198807,
+      "retained_route_occurrence_fraction": 0.9973451634881328,
+      "min_count": 0,
+      "max_count": 116306
+    },
+    {
+      "layer": 18,
+      "observed_rows": 518111,
+      "experts_observed": 383,
+      "retained_router_mass_fraction": 0.997800460980965,
+      "retained_route_occurrence_fraction": 0.9972422254433252,
+      "min_count": 0,
+      "max_count": 215458
+    },
+    {
+      "layer": 19,
+      "observed_rows": 518111,
+      "experts_observed": 384,
+      "retained_router_mass_fraction": 0.9943895699277985,
+      "retained_route_occurrence_fraction": 0.9912538046866405,
+      "min_count": 7,
+      "max_count": 144533
+    },
+    {
+      "layer": 20,
+      "observed_rows": 518111,
+      "experts_observed": 383,
+      "retained_router_mass_fraction": 0.9984301253602763,
+      "retained_route_occurrence_fraction": 0.9979135745043051,
+      "min_count": 0,
+      "max_count": 221188
+    },
+    {
+      "layer": 21,
+      "observed_rows": 518111,
+      "experts_observed": 374,
+      "retained_router_mass_fraction": 0.9990264151786172,
+      "retained_route_occurrence_fraction": 0.9987641000995282,
+      "min_count": 0,
+      "max_count": 237913
+    },
+    {
+      "layer": 22,
+      "observed_rows": 518111,
+      "experts_observed": 381,
+      "retained_router_mass_fraction": 0.9980384428894834,
+      "retained_route_occurrence_fraction": 0.9975397807290973,
+      "min_count": 0,
+      "max_count": 275988
+    },
+    {
+      "layer": 23,
+      "observed_rows": 518111,
+      "experts_observed": 383,
+      "retained_router_mass_fraction": 0.9947965379708298,
+      "retained_route_occurrence_fraction": 0.9927988404029252,
+      "min_count": 0,
+      "max_count": 234372
+    },
+    {
+      "layer": 24,
+      "observed_rows": 518111,
+      "experts_observed": 382,
+      "retained_router_mass_fraction": 0.9979456068066609,
+      "retained_route_occurrence_fraction": 0.9971717772189099,
+      "min_count": 0,
+      "max_count": 178576
+    },
+    {
+      "layer": 25,
+      "observed_rows": 518111,
+      "experts_observed": 382,
+      "retained_router_mass_fraction": 0.9992924444341037,
+      "retained_route_occurrence_fraction": 0.9990230536184974,
+      "min_count": 0,
+      "max_count": 177159
+    },
+    {
+      "layer": 26,
+      "observed_rows": 518111,
+      "experts_observed": 377,
+      "retained_router_mass_fraction": 0.9994344289399283,
+      "retained_route_occurrence_fraction": 0.9990877115778922,
+      "min_count": 0,
+      "max_count": 235151
+    },
+    {
+      "layer": 27,
+      "observed_rows": 518111,
+      "experts_observed": 380,
+      "retained_router_mass_fraction": 0.9983763514824882,
+      "retained_route_occurrence_fraction": 0.9973799050782555,
+      "min_count": 0,
+      "max_count": 354335
+    },
+    {
+      "layer": 28,
+      "observed_rows": 518111,
+      "experts_observed": 381,
+      "retained_router_mass_fraction": 0.9987494066704187,
+      "retained_route_occurrence_fraction": 0.997830902387069,
+      "min_count": 0,
+      "max_count": 327114
+    },
+    {
+      "layer": 29,
+      "observed_rows": 518111,
+      "experts_observed": 383,
+      "retained_router_mass_fraction": 0.9970653902710476,
+      "retained_route_occurrence_fraction": 0.995192149944703,
+      "min_count": 0,
+      "max_count": 122739
+    },
+    {
+      "layer": 30,
+      "observed_rows": 518111,
+      "experts_observed": 380,
+      "retained_router_mass_fraction": 0.9983981368586086,
+      "retained_route_occurrence_fraction": 0.997145721026318,
+      "min_count": 0,
+      "max_count": 203406
+    },
+    {
+      "layer": 31,
+      "observed_rows": 518111,
+      "experts_observed": 380,
+      "retained_router_mass_fraction": 0.9979169772019569,
+      "retained_route_occurrence_fraction": 0.9966779962852234,
+      "min_count": 0,
+      "max_count": 139582
+    },
+    {
+      "layer": 32,
+      "observed_rows": 518111,
+      "experts_observed": 381,
+      "retained_router_mass_fraction": 0.9972716288346006,
+      "retained_route_occurrence_fraction": 0.9960928578367698,
+      "min_count": 0,
+      "max_count": 207664
+    },
+    {
+      "layer": 33,
+      "observed_rows": 518111,
+      "experts_observed": 380,
+      "retained_router_mass_fraction": 0.9971580498301099,
+      "retained_route_occurrence_fraction": 0.9959645069621503,
+      "min_count": 0,
+      "max_count": 319584
+    },
+    {
+      "layer": 34,
+      "observed_rows": 518111,
+      "experts_observed": 381,
+      "retained_router_mass_fraction": 0.9974805727103232,
+      "retained_route_occurrence_fraction": 0.9960497525305066,
+      "min_count": 0,
+      "max_count": 144794
+    },
+    {
+      "layer": 35,
+      "observed_rows": 518111,
+      "experts_observed": 380,
+      "retained_router_mass_fraction": 0.9968952912300484,
+      "retained_route_occurrence_fraction": 0.9955797760196817,
+      "min_count": 0,
+      "max_count": 141759
+    },
+    {
+      "layer": 36,
+      "observed_rows": 518111,
+      "experts_observed": 379,
+      "retained_router_mass_fraction": 0.9983133335923129,
+      "retained_route_occurrence_fraction": 0.9963820494064013,
+      "min_count": 0,
+      "max_count": 187203
+    },
+    {
+      "layer": 37,
+      "observed_rows": 518111,
+      "experts_observed": 379,
+      "retained_router_mass_fraction": 0.997902130892776,
+      "retained_route_occurrence_fraction": 0.9964019936525829,
+      "min_count": 0,
+      "max_count": 201266
+    },
+    {
+      "layer": 38,
+      "observed_rows": 518111,
+      "experts_observed": 367,
+      "retained_router_mass_fraction": 0.9987885968779487,
+      "retained_route_occurrence_fraction": 0.998128135991451,
+      "min_count": 0,
+      "max_count": 150356
+    },
+    {
+      "layer": 39,
+      "observed_rows": 518111,
+      "experts_observed": 366,
+      "retained_router_mass_fraction": 0.9994052580519226,
+      "retained_route_occurrence_fraction": 0.9975458926755078,
+      "min_count": 0,
+      "max_count": 100798
+    }
+  ]
+}

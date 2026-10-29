@@ -1,0 +1,8 @@
+{
+  "step": "70.7",
+  "status": "failed",
+  "returncode": 1,
+  "seconds": 0.35436713695526123,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/work/run.py\", line 179, in <module>\n    assert np.allclose(evolution_operator_3nu_su3_coefficients(hamiltonian, L), target)\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'evolution_operator_3nu_su3_coefficients' is not defined\n"
+}

@@ -1,0 +1,8 @@
+{
+  "step": "78.3",
+  "status": "failed",
+  "returncode": 1,
+  "seconds": 0.7739859400317073,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/work/run.py\", line 167, in <module>\n    assert np.allclose(pendulum_analysis(g, L, beta, A, alpha, initial_state, t0, tf, min_dt, max_dt, num_timesteps), target)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/numpy/core/numeric.py\", line 2241, in allclose\n    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/numpy/core/numeric.py\", line 2351, in isclose\n    return within_tol(x, y, atol, rtol)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/local/lib/python3.12/site-packages/numpy/core/numeric.py\", line 2332, in within_tol\n    return less_equal(abs(x-y), atol + rtol * abs(y))\n                          ~^~\nValueError: operands could not be broadcast together with shapes (10001,2) (2,2) \n"
+}

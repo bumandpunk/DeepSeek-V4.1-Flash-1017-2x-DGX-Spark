@@ -1,0 +1,210 @@
+[
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T00:19:14.763358+00:00",
+    "role": "head",
+    "name": "codex-alpha10-build",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "final_build_record_verified",
+    "utc": "2026-10-29T00:19:15.291495+00:00",
+    "result": {
+      "image_id": "sha256:a981e975f1eb5649506a916c1766760fd95b631e3a264e27e721d5fe0dd922b3",
+      "source_sha256": "23765ad763f3c67a71c3464978c32c45c63b9c1964c5361618f82b78adf0ecc2"
+    }
+  },
+  {
+    "event": "final_image_engram_cuda_checks_passed",
+    "utc": "2026-10-29T00:19:21.645718+00:00",
+    "result": {
+      "head": {
+        "passed": true,
+        "torch": "2.13.0a0+9186a08b2c.nv26.07",
+        "gpu": "NVIDIA GB10",
+        "exact_cases": 8,
+        "measurements": {
+          "reference": {
+            "peak_extra_bytes": 629145600
+          },
+          "sum_cast": {
+            "peak_extra_bytes": 524288000
+          }
+        },
+        "peak_saved_bytes": 104857600
+      },
+      "worker": {
+        "passed": true,
+        "torch": "2.13.0a0+9186a08b2c.nv26.07",
+        "gpu": "NVIDIA GB10",
+        "exact_cases": 8,
+        "measurements": {
+          "reference": {
+            "peak_extra_bytes": 629145600
+          },
+          "sum_cast": {
+            "peak_extra_bytes": 524288000
+          }
+        },
+        "peak_saved_bytes": 104857600
+      }
+    }
+  },
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T00:25:32.509091+00:00",
+    "role": "head",
+    "name": "codex-alpha10-prebuild",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "restore_before_public_takeover",
+    "utc": "2026-10-29T00:25:32.512524+00:00"
+  },
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T00:26:55.686159+00:00",
+    "role": "head",
+    "name": "codex-alpha10-initial-restore",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "start_baseline_empty_rank_cache",
+    "utc": "2026-10-29T00:26:55.687691+00:00"
+  },
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T00:33:49.280112+00:00",
+    "role": "head",
+    "name": "codex-alpha10-start-baseline",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "baseline_validation_running",
+    "utc": "2026-10-29T00:33:49.282326+00:00"
+  },
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T01:30:14.395883+00:00",
+    "role": "client",
+    "name": "codex-alpha10-baseline",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "capture",
+    "utc": "2026-10-29T01:30:15.516507+00:00",
+    "data": {
+      "captured": "baseline"
+    }
+  },
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T01:30:36.824837+00:00",
+    "role": "head",
+    "name": "codex-alpha10-stop-baseline",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "inject_impossible_memory_requirement",
+    "utc": "2026-10-29T01:30:36.825566+00:00"
+  },
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T01:32:00.865453+00:00",
+    "role": "head",
+    "name": "codex-alpha10-recovery-test",
+    "status": {
+      "ExecMainStatus": "1",
+      "ActiveState": "failed",
+      "SubState": "failed"
+    }
+  },
+  {
+    "event": "injected_startup_failure_recovered",
+    "utc": "2026-10-29T01:32:01.227180+00:00",
+    "result": {
+      "phase": "restored",
+      "api": {
+        "passed": 5,
+        "checks": [
+          "model_listing",
+          "chat_generation",
+          "completion_generation",
+          "streaming_generation",
+          "invalid_key_rejected"
+        ]
+      },
+      "recovery_armed": false
+    }
+  },
+  {
+    "event": "start_edit",
+    "utc": "2026-10-29T01:32:01.227901+00:00"
+  },
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T01:33:24.533301+00:00",
+    "role": "head",
+    "name": "codex-alpha10-start-edit",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "edit_validation_running",
+    "utc": "2026-10-29T01:33:24.534522+00:00"
+  },
+  {
+    "event": "validation_interrupted",
+    "utc": "2026-10-29T01:36:58.454027+00:00",
+    "error": "client codex-alpha10-edit unexpected state: {'ExecMainStatus': '1', 'ActiveState': 'failed', 'SubState': 'failed'}"
+  },
+  {
+    "event": "capture",
+    "utc": "2026-10-29T01:36:59.576477+00:00",
+    "data": {
+      "captured": "failure-before-recovery"
+    }
+  },
+  {
+    "event": "unit_complete",
+    "utc": "2026-10-29T01:38:26.747603+00:00",
+    "role": "head",
+    "name": "codex-alpha10-emergency-restore-1793237823",
+    "status": {
+      "ExecMainStatus": "0",
+      "ActiveState": "active",
+      "SubState": "exited"
+    }
+  },
+  {
+    "event": "emergency_restore_finished",
+    "utc": "2026-10-29T01:38:26.748339+00:00"
+  }
+]

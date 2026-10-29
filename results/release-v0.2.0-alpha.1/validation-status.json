@@ -1,0 +1,20 @@
+{
+  "state": "full_regression_running",
+  "recorded_utc": "2026-10-29T02:40:59.779723+00:00",
+  "version": "v0.2.0-alpha.1 candidate",
+  "image_id": "sha256:a809d87bd2c1213dcd6bc22400a4795c5ffb3659a6fbb24ca7935a8069cc9120",
+  "source_sha256": "0c33ef518500a75f079fbe66495b03e58d774838b1c417abda0cf123490a51b5",
+  "completed": [
+    "No-cache application build; identical image on both GB10 hosts",
+    "Nine CUDA exactness/workspace cases passed on each GB10 in the final image",
+    "Fresh native compilation on both hosts",
+    "Clean Linux Python environment CPU/lifecycle/native sanitizer CI",
+    "Separate layered diagnostic: 58 paired requests in each of three profiles, 836 edit assertions, and original-service restoration"
+  ],
+  "pending": [
+    "Final-image startup from empty rank caches and full paired programming regression",
+    "Final-image failure recovery and final original-service restoration",
+    "Final evidence archive and version tag"
+  ],
+  "scope": "Public source preview. Diagnostic results and final-image GPU microtests are separate; this status is not a completed clean-deployment quality certificate."
+}

@@ -1,0 +1,29 @@
+{"event": "ready", "ready_after_s": 0.06625008583068848, "probe_started_unix": 1793189329.0229588}
+{"event": "begin", "section": "decode"}
+{"prompt": "code", "decode_tps_median": 94.86543848465486, "decode_tps_all": [95.084, 94.865, 95.16, 95.285, 94.753, 94.854, 94.836, 95.101, 94.778], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"prompt": "prose", "decode_tps_median": 57.36020420430449, "decode_tps_all": [57.414, 57.342, 57.454, 57.399, 57.34, 57.36, 58.446, 57.143, 57.31], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"prompt": "structured", "decode_tps_median": 139.36544031204238, "decode_tps_all": [138.411, 139.365, 140.029, 139.21, 139.89, 138.628, 139.615, 138.797, 139.555], "tokens_all": [384, 384, 384, 384, 384, 384, 384, 384, 384], "identical_texts": true}
+{"event": "end", "section": "decode"}
+{"event": "begin", "section": "concurrent"}
+{"streams": 2, "rep": 0, "aggregate_tps": 82.08159847703782, "per_stream_decode_tps": [72.822, 41.574]}
+{"streams": 2, "rep": 1, "aggregate_tps": 82.22834096443675, "per_stream_decode_tps": [73.018, 41.652]}
+{"streams": 2, "rep": 2, "aggregate_tps": 81.40600571947815, "per_stream_decode_tps": [70.466, 42.116]}
+{"streams": 4, "rep": 0, "aggregate_tps": 102.26960577566949, "per_stream_decode_tps": [59.905, 46.135, 92.141, 65.623]}
+{"streams": 4, "rep": 1, "aggregate_tps": 101.22408383280047, "per_stream_decode_tps": [67.227, 46.265, 91.937, 58.274]}
+{"streams": 4, "rep": 2, "aggregate_tps": 107.01241354118407, "per_stream_decode_tps": [74.045, 30.204, 120.052, 69.683]}
+{"event": "end", "section": "concurrent"}
+{"event": "begin", "section": "prefill"}
+{"length": 8192, "rep": 0, "prompt_tokens": 8192, "ttft_s": 6.860001601977274, "prefill_tps": 1194.1688173423752}
+{"length": 8192, "rep": 1, "prompt_tokens": 8192, "ttft_s": 4.211943506961688, "prefill_tps": 1944.9453646422123}
+{"length": 8192, "rep": 2, "prompt_tokens": 8192, "ttft_s": 4.432282291003503, "prefill_tps": 1848.2577286712637}
+{"length": 32768, "rep": 0, "prompt_tokens": 32768, "ttft_s": 19.123523863963783, "prefill_tps": 1713.4917305564045}
+{"length": 32768, "rep": 1, "prompt_tokens": 32768, "ttft_s": 17.09931384504307, "prefill_tps": 1916.3342048078223}
+{"length": 32768, "rep": 2, "prompt_tokens": 32768, "ttft_s": 16.220775997964665, "prefill_tps": 2020.125301287166}
+{"length": 131072, "rep": 0, "prompt_tokens": 131072, "ttft_s": 67.08361373608932, "prefill_tps": 1953.8601560083594}
+{"length": 131072, "rep": 1, "prompt_tokens": 131072, "ttft_s": 66.09399954602122, "prefill_tps": 1983.1149711061837}
+{"length": 131072, "rep": 2, "prompt_tokens": 131072, "ttft_s": 70.46090053697117, "prefill_tps": 1860.2089811671638}
+{"event": "end", "section": "prefill"}
+{"event": "begin", "section": "depth"}
+{"length": 131072, "prompt_tokens": 131072, "ttft_s": 67.63440298603382, "tokens": 512, "decode_tps": 97.12686059115194}
+{"event": "end", "section": "depth"}
+{"event": "complete", "label": "budget256-probe"}

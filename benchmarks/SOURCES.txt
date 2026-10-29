@@ -1,0 +1,10 @@
+kit_bench.py is copied from:
+https://github.com/bertholomus/TensorFold/blob/fe6f9f7b373db76422ddfa121577238474c0a1b7/tools/dsv41/kit_bench.py
+Canonical SHA256: 83a4fbeb987032f906cf00d3f6c9dd2fad47dd675e75dd498c4c4188d63a6c0d
+Measured copy SHA256: 1f4866e03fb4e3328c4aafd378f1e984fe11a927274a19fa6f504e0ab77a2561
+The measured copy has exactly one extra trailing newline; executable content is identical.
+run_suite.py records all requests/outputs and freezes filler seeds without changing timers.
+
+Historical experiments before wrapper v2 used the public driver's time-salted prefixes.
+Their long-context decode results are not matched-input comparisons. Later v2 runs
+use identical prompt tokens and archive all requests and complete outputs.

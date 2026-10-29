@@ -1,0 +1,13 @@
+name: CPU invariants
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  algorithms-and-exact-reads:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: PYTHONPATH=src python -m unittest discover -s tests -p 'test_algorithms.py' -v
+      - run: g++ -std=c++17 -O1 -g -fsanitize=address,undefined -pthread tests/test_tiered_store.cpp -o /tmp/spark1017-test
+      - run: /tmp/spark1017-test

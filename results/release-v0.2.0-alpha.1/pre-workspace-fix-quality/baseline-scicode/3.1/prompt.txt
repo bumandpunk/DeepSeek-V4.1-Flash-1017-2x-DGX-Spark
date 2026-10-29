@@ -1,0 +1,45 @@
+PROBLEM DESCRIPTION:
+You will be provided with problem steps along with background knowledge necessary for solving the problem. Your task will be to develop a Python solution focused on the next step of the problem-solving process.
+
+PROBLEM STEPS AND FUNCTION CODE:
+Here, you'll find the Python code for the initial steps of the problem-solving process. This code is integral to building the solution.
+
+
+
+NEXT STEP - PROBLEM STEP AND FUNCTION HEADER:
+This part will describe the next step in the problem-solving process. A function header will be provided, and your task is to develop the Python code for this next step based on the provided description and function header.
+
+Create a function to solve the matrix equation $Ax=b$ using the Gauss-Seidel iteration. The function takes a matrix $A$ and a vector $b$ as inputs. The method involves splitting the matrix $A$ into the difference of two matrices, $A=M-N$. For Gauss-Seidel, $M=D-L$, where $D$ is the diagonal component of $A$ and $L$ is the lower triangular component of $A$. The function should implement the corresponding iterative solvers until the norm of the increment is less than the given tolerance, $||x_k - x_{k-1}||_{l_2}<\epsilon$.
+Background
+Gauss-Seidel is considered as a fixed-point iterative solver.
+Convergence is guaranteed when A is diagonally dominant or symmetric positive definite.
+
+\begin{equation}
+x_{i}^{(k+1)} = \frac{b_i - \sum_{j>i} a_{ij}x_j^{(k)} - \sum_{j<i} a_{ij} x_j^{(k+1)}}{a_{ii}}
+\end{equation}
+
+def GS(A, b, eps, x_true, x0):
+    '''Solve a given linear system Ax=b Gauss-Seidel iteration
+    Input
+    A:      N by N matrix, 2D array
+    b:      N by 1 right hand side vector, 1D array
+    eps:    Float number indicating error tolerance
+    x_true: N by 1 true solution vector, 1D array
+    x0:     N by 1 zero vector, 1D array
+    Output
+    residual: Float number shows L2 norm of residual (||Ax - b||_2)
+    errors:   Float number shows L2 norm of error vector (||x-x_true||_2) 
+    '''
+
+    return residual, error
+
+DEPENDENCIES:
+Use only the following dependencies in your solution. Do not include these dependencies at the beginning of your code.
+
+import numpy as np
+
+RESPONSE GUIDELINES:
+Now, based on the instructions and information provided above, write the complete and executable Python program for the next step in a single block.
+Your response should focus exclusively on implementing the solution for the next step, adhering closely to the specified function header and the context provided by the initial steps.
+Your response should NOT include the dependencies and functions of all previous steps. If your next step function calls functions from previous steps, please make sure it uses the headers provided without modification.
+DO NOT generate EXAMPLE USAGE OR TEST CODE in your response. Please make sure your response python code in format of ```python```.

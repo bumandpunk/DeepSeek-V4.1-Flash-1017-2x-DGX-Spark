@@ -1,0 +1,8 @@
+{
+  "step": "10.5",
+  "status": "failed",
+  "returncode": 1,
+  "seconds": 0.40461529802996665,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/work/run.py\", line 92, in <module>\n    assert np.allclose(sum_real_cross(\n                       ^^^^^^^^^^^^^^^\n  File \"/work/run.py\", line 64, in sum_real_cross\n    cij = real_cij(d, lc, alpha)\n          ^^^^^^^^\nNameError: name 'real_cij' is not defined\n"
+}

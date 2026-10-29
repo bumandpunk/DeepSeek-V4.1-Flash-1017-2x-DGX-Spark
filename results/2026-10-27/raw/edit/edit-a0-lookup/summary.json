@@ -1,0 +1,80 @@
+[
+  {
+    "name": "bisect",
+    "rep": 0,
+    "tokens": 1119,
+    "tps": 148.15864013165228,
+    "ttft_s": 0.8921799630043097,
+    "request_sha256": "2a7d57fda05999ddffcb0263a9bc992ee86bfbb3674b4d31ec5af36dc4b2c65e",
+    "text_sha256": "d378d2856ff9a2add4a207b44a199f810f943f3affa5febb14ddb1cc2d365de9",
+    "grade": {
+      "passed": 204,
+      "total": 204
+    }
+  },
+  {
+    "name": "graphlib",
+    "rep": 0,
+    "tokens": 2140,
+    "tps": 188.57496693775292,
+    "ttft_s": 2.4110561790294014,
+    "request_sha256": "dc5ed1327ea6ec34c4d326068e33795a062c63d5433b6e071e1a989c2b72f3c2",
+    "text_sha256": "64dc237725390530f068a8dd4d43606ef1f3cdb911e07294feb3bc555c0f39f1",
+    "grade": {
+      "passed": 126,
+      "total": 126
+    }
+  },
+  {
+    "name": "textwrap",
+    "rep": 0,
+    "tokens": 4777,
+    "tps": 187.05520824812905,
+    "ttft_s": 3.1559212299762294,
+    "request_sha256": "7ca8aec0281153a69e590dfd21ae7c77c280c9068717a7fa0913c94efdfe77cb",
+    "text_sha256": "45cf85eceaaeec04d9ba0067ca39f655952b162f631abf5bd9af3f385b282ba1",
+    "grade": {
+      "passed": 88,
+      "total": 88
+    }
+  },
+  {
+    "name": "bisect",
+    "rep": 1,
+    "tokens": 1119,
+    "tps": 148.66244685256072,
+    "ttft_s": 0.8107072289567441,
+    "request_sha256": "2a7d57fda05999ddffcb0263a9bc992ee86bfbb3674b4d31ec5af36dc4b2c65e",
+    "text_sha256": "d378d2856ff9a2add4a207b44a199f810f943f3affa5febb14ddb1cc2d365de9",
+    "grade": {
+      "passed": 204,
+      "total": 204
+    }
+  },
+  {
+    "name": "graphlib",
+    "rep": 1,
+    "tokens": 2140,
+    "tps": 189.780425211776,
+    "ttft_s": 1.66079631698085,
+    "request_sha256": "dc5ed1327ea6ec34c4d326068e33795a062c63d5433b6e071e1a989c2b72f3c2",
+    "text_sha256": "64dc237725390530f068a8dd4d43606ef1f3cdb911e07294feb3bc555c0f39f1",
+    "grade": {
+      "passed": 126,
+      "total": 126
+    }
+  },
+  {
+    "name": "textwrap",
+    "rep": 1,
+    "tokens": 4777,
+    "tps": 189.64330936438552,
+    "ttft_s": 0.730291927990038,
+    "request_sha256": "7ca8aec0281153a69e590dfd21ae7c77c280c9068717a7fa0913c94efdfe77cb",
+    "text_sha256": "45cf85eceaaeec04d9ba0067ca39f655952b162f631abf5bd9af3f385b282ba1",
+    "grade": {
+      "passed": 88,
+      "total": 88
+    }
+  }
+]
